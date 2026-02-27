@@ -1,11 +1,4 @@
 ﻿Entries:
-- author: jessicamaybe
-  changes:
-  - message: Skeletons are now playable instruments!
-    type: Add
-  id: 9037
-  time: '2025-10-07T00:59:20.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/40009
 - author: Huaqas, Davyei
   changes:
   - message: 3 new Holy Books have been added to the Chaplain's loadout.
@@ -4004,3 +3997,11 @@
   id: 9547
   time: '2026-02-26T20:58:33.0000000+00:00'
   url: https://github.com/space-wizards/space-station-14/pull/42962
+- author: TriviaSolari
+  changes:
+  - message: Holosign projectors and dragon rifts no longer place signs at strange
+      angles.
+    type: Fix
+  id: 9548
+  time: '2026-02-27T00:08:28.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/42909
