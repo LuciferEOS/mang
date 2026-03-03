@@ -2,17 +2,15 @@
 
 using Content.Goobstation.Shared.VoiceMask;
 using Content.Server.VoiceMask;
+using Content.Shared.VoiceMask;
 using Content.Shared.Chat.RadioIconsEvents;
 using Content.Shared.Inventory;
 using Content.Shared.Popups;
 using Content.Shared.Roles.Jobs;
 using Robust.Shared.Prototypes;
 
-namespace Content.Goobstation.Server.IntrinsicVoiceModulator.VoiceMask;
+namespace Content.Goobstation.Server.VoiceMask;
 
-/// <summary>
-/// This handles...
-/// </summary>
 public sealed partial class VoiceMaskSystemGoob : EntitySystem
 {
     [Dependency] private readonly SharedJobSystem _job = default!;

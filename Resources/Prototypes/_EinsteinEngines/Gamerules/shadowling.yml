@@ -20,6 +20,3 @@
   - type: AntagObjectives
     objectives:
     - ShadowlingAscendObjective
-  - type: Tag
-    tags:
-      - RoundstartAntag

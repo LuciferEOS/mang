@@ -648,7 +648,7 @@ public sealed class FaxSystem : EntitySystem
         if (!Resolve(uid, ref component))
             return;
 
-        var faxName = printout.SenderFaxName ?? Loc.GetString("fax-machine-popup-source-unknown");
+        var faxName = printout?.SenderFaxName ?? Loc.GetString("fax-machine-popup-source-unknown"); // Trauma - nullable printout
 
         _popupSystem.PopupEntity(Loc.GetString("fax-machine-popup-received", ("from", faxName)), uid);
         if (printout != null) // Goobstation

@@ -4,6 +4,7 @@ using Content.Shared.Physics;
 using Content.Shared.Tag;
 using Robust.Shared.Map;
 using Robust.Shared.Physics.Components;
+using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Holosign;
 
@@ -13,9 +14,12 @@ namespace Content.Shared.Holosign;
 public sealed partial class HolosignSystem
 {
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
-    [Dependency] private readonly SharedMapSystem _map = default!;
-    [Dependency] private readonly TagSystem _tag = default!;
     [Dependency] private readonly IMapManager _mapMan = default!;
+    [Dependency] private readonly SharedMapSystem _map = default!;
+    [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private readonly TagSystem _tag = default!;
+
+    public static readonly ProtoId<TagPrototype> HolosignTag = "Holosign";
 
     // FIXME: one of these is causing puddles to block projectors??
     private const int BlockMask = (int) (
@@ -44,7 +48,7 @@ public sealed partial class HolosignSystem
             if (!_physicsQuery.TryComp(entity, out var physics))
                 continue;
 
-            if (_tag.HasTag(entity, ent.Comp.HolosignTag))
+            if (_tag.HasTag(entity, HolosignTag))
                 return null; // no stacking holosigns
 
             if ((physics.CollisionLayer & BlockMask) != 0) // overlapping with something that blocks the field

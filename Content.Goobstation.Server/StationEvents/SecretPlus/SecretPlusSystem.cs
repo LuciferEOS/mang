@@ -154,8 +154,7 @@ public sealed class SecretPlusSystem : GameRuleSystem<SecretPlusComponent>
         if (selectedRules == null)
             return;
 
-        var available = _event.AvailableEvents(scheduler.Comp.IgnoreTimings,
-                            scheduler.Comp.IgnoreTimings ? int.MaxValue : null,
+        var available = _event.AvailableEvents(scheduler.Comp.IgnoreTimings ? int.MaxValue : null,
                             scheduler.Comp.IgnoreTimings ? TimeSpan.MaxValue : null,
                             1f / GetRamping(scheduler));
 
