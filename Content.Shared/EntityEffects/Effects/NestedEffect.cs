@@ -1,13 +1,7 @@
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
-using Content.Shared.EntityConditions;
-using Content.Shared.EntityEffects;
 using Content.Shared.Localizations;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Utility;
-using System.Text;
 
-namespace Content.Trauma.Shared.EntityEffects;
+namespace Content.Shared.EntityEffects.Effects;
 
 /// <summary>
 /// Applies the effect of an <see cref="EntityEffectPrototype"/>.
@@ -58,23 +52,14 @@ public sealed partial class NestedEffect : EntityEffectBase<NestedEffect>
 }
 
 /// <summary>
-/// Handles <see cref="NestedEffect"/> and provides API for applying one directly in code.
+/// Handles <see cref="NestedEffect"/>.
 /// </summary>
 public sealed class NestedEffectSystem : EntityEffectSystem<TransformComponent, NestedEffect>
 {
-    [Dependency] private readonly IPrototypeManager _proto = default!;
-    [Dependency] private readonly SharedEntityConditionsSystem _conditions = default!;
     [Dependency] private readonly SharedEntityEffectsSystem _effects = default!;
 
     protected override void Effect(Entity<TransformComponent> ent, ref EntityEffectEvent<NestedEffect> args)
     {
-        ApplyNestedEffect(ent, args.Effect.Proto, args.Scale, args.User);
-    }
-
-    public void ApplyNestedEffect(EntityUid target, ProtoId<EntityEffectPrototype> id, float scale = 1f, EntityUid? user = null)
-    {
-        var proto = _proto.Index(id);
-        if (_conditions.TryConditions(target, proto.Conditions))
-            _effects.ApplyEffects(target, proto.Effects, scale, user);
+        _effects.TryApplyEffect(ent, args.Effect.Proto, args.Scale, args.User);
     }
 }

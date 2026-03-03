@@ -1,9 +1,6 @@
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
-using Content.Shared.EntityConditions;
 using Robust.Shared.Prototypes;
 
-namespace Content.Trauma.Shared.EntityConditions;
+namespace Content.Shared.EntityConditions.Conditions;
 
 /// <summary>
 /// Uses the conditions of an <see cref="EntityConditionPrototype"/>.
@@ -21,21 +18,14 @@ public sealed partial class NestedCondition : EntityConditionBase<NestedConditio
 }
 
 /// <summary>
-/// Handles <see cref="NestedCondition"/> and provides API for applying one directly in code.
+/// Handles <see cref="NestedCondition"/>.
 /// </summary>
 public sealed class NestedConditionSystem : EntityConditionSystem<TransformComponent, NestedCondition>
 {
-    [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly SharedEntityConditionsSystem _conditions = default!;
 
     protected override void Condition(Entity<TransformComponent> ent, ref EntityConditionEvent<NestedCondition> args)
     {
-        args.Result = TryCondition(ent, args.Condition.Proto);
-    }
-
-    public bool TryCondition(EntityUid target, ProtoId<EntityConditionPrototype> id)
-    {
-        var condition = _proto.Index(id).Condition;
-        return _conditions.TryCondition(target, condition);
+        args.Result = _conditions.TryCondition(ent, args.Condition.Proto);
     }
 }

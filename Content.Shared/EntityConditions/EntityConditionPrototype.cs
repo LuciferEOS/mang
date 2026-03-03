@@ -1,15 +1,13 @@
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
-using Content.Shared.EntityConditions;
+using Content.Shared.EntityConditions.Conditions;
 using Robust.Shared.Prototypes;
 
-namespace Content.Trauma.Shared.EntityConditions;
+namespace Content.Shared.EntityConditions;
 
 /// <summary>
 /// A prototype for entity conditions which can be reused via <see cref="NestedCondition"/>.
 /// </summary>
 [Prototype]
-public sealed partial class EntityConditionPrototype: IPrototype
+public sealed partial class EntityConditionPrototype : IPrototype
 {
     [IdDataField]
     public string ID { get; private set; } = string.Empty;

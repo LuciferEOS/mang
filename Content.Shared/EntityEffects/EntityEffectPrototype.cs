@@ -1,10 +1,8 @@
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using Content.Shared.EntityConditions;
-using Content.Shared.EntityEffects;
+using Content.Shared.EntityEffects.Effects;
 using Robust.Shared.Prototypes;
 
-namespace Content.Trauma.Shared.EntityEffects;
+namespace Content.Shared.EntityEffects;
 
 /// <summary>
 /// A prototype for entity effects which can be reused via <see cref="NestedEffect"/>.
@@ -23,6 +21,7 @@ public sealed partial class EntityEffectPrototype: IPrototype
 
     /// <summary>
     /// Conditions checked for this effect, regardless of the <see cref="NestedEffect"/> using it.
+    /// Currently not included in the guidebook text!
     /// </summary>
     [DataField]
     public EntityCondition[]? Conditions;
