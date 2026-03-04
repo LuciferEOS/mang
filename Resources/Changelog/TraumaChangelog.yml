@@ -3520,3 +3520,12 @@ Entries:
   id: 416
   time: '2026-03-04T08:32:42.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/989
+- author: deltanedas
+  changes:
+  - type: Add
+    message: Added Library access level, currently used by the CuraDrobe.
+  - type: Fix
+    message: Fixed librarians not being able to open their doors.
+  id: 417
+  time: '2026-03-04T08:37:21.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/986
