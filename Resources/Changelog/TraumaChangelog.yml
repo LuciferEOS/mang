@@ -3607,3 +3607,10 @@ Entries:
   id: 427
   time: '2026-03-05T08:50:06.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1027
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed being able to read paper and CQC manuals while blind.
+  id: 428
+  time: '2026-03-05T09:40:04.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1028
