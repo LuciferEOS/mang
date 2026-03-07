@@ -3767,3 +3767,12 @@ Entries:
   id: 445
   time: '2026-03-07T13:40:44.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1093
+- author: JohnJJohn
+  changes:
+  - type: Tweak
+    message: Shivs no longer have durability
+  - type: Tweak
+    message: bats have double durability
+  id: 446
+  time: '2026-03-07T13:49:49.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1092
