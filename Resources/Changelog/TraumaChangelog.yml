@@ -3726,3 +3726,16 @@ Entries:
   id: 441
   time: '2026-03-07T10:09:25.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/988
+- author: JohnJJohn
+  changes:
+  - type: Fix
+    message: Fixed phones ringing endlessly sometimes
+  - type: Fix
+    message: Fixed phones having a ringing sprite endlessly sometimes
+  - type: Fix
+    message: >-
+      Fixed phones being engaged whenever someone calls and hangs up before the
+      call is picked up
+  id: 442
+  time: '2026-03-07T11:40:05.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1087
