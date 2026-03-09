@@ -4045,3 +4045,12 @@ Entries:
   id: 476
   time: '2026-03-09T15:38:19.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1162
+- author: JohnJJohn
+  changes:
+  - type: Add
+    message: >-
+      Mapped areas with ambient music on delta make sure your ambient music is
+      turned on!
+  id: 477
+  time: '2026-03-09T17:45:55.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1163
