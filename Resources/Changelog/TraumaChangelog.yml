@@ -4353,3 +4353,12 @@ Entries:
   id: 511
   time: '2026-03-13T22:44:33.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1265
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: >-
+      Fixed bald species like arachnids listing hair in markings even though you
+      can't use it.
+  id: 512
+  time: '2026-03-13T23:48:32.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1261
