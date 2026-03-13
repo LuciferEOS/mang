@@ -4362,3 +4362,10 @@ Entries:
   id: 512
   time: '2026-03-13T23:48:32.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1261
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed cadets getting mk58 magazines...
+  id: 513
+  time: '2026-03-13T23:51:48.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1271
