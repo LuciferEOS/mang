@@ -4425,3 +4425,10 @@ Entries:
   id: 519
   time: '2026-03-14T09:00:25.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1279
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed lit paper never turning to ash.
+  id: 520
+  time: '2026-03-14T13:51:20.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1287
