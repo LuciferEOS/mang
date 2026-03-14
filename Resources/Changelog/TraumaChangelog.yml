@@ -4416,3 +4416,12 @@ Entries:
   id: 518
   time: '2026-03-14T08:57:48.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1281
+- author: GeneRickUsername
+  changes:
+  - type: Fix
+    message: Allowed crafting to improve.
+  - type: Fix
+    message: Fixed racial mastery not appearing on the tab.
+  id: 519
+  time: '2026-03-14T09:00:25.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1279
