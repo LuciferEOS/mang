@@ -4658,3 +4658,10 @@ Entries:
   id: 546
   time: '2026-03-16T11:34:13.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1352
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed augments not working.
+  id: 547
+  time: '2026-03-16T12:05:01.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1354
