@@ -4672,3 +4672,10 @@ Entries:
   id: 548
   time: '2026-03-16T12:53:24.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1355
+- author: deltanedas
+  changes:
+  - type: Add
+    message: Borg subtypes now get their job's knowledge.
+  id: 549
+  time: '2026-03-16T13:39:40.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1356
