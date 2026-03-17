@@ -4781,3 +4781,14 @@ Entries:
   id: 561
   time: '2026-03-17T23:46:40.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1398
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: Heretic subgamemode only has 1 heretic.
+  - type: Fix
+    message: >-
+      Fixed heretics gamemode being able to have a heretic subgamemode, which
+      doubled heretic numbers...
+  id: 562
+  time: '2026-03-17T23:54:20.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1399
