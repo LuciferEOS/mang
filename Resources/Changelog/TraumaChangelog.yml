@@ -4883,3 +4883,12 @@ Entries:
   id: 573
   time: '2026-03-18T13:03:43.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1410
+- author: JohnJJohn
+  changes:
+  - type: Tweak
+    message: End round credits hides the sidebar now
+  - type: Tweak
+    message: End round credits are a bit slower now
+  id: 574
+  time: '2026-03-18T18:02:25.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1419
