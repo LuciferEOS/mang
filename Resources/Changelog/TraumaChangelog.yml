@@ -4910,3 +4910,10 @@ Entries:
   id: 576
   time: '2026-03-19T06:21:02.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1427
+- author: deltanedas
+  changes:
+  - type: Remove
+    message: Removed soyjak meme
+  id: 577
+  time: '2026-03-19T08:47:06.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1433
