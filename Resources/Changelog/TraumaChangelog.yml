@@ -4975,3 +4975,10 @@ Entries:
   id: 584
   time: '2026-03-19T22:44:02.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1445
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed chef beacon and other radial menus not having backgrounds.
+  id: 585
+  time: '2026-03-20T00:09:46.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1450
