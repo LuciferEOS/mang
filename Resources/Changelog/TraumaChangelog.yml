@@ -5210,3 +5210,10 @@ Entries:
   id: 613
   time: '2026-03-22T11:26:58.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1525
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed autodocs using linux ��������
+  id: 614
+  time: '2026-03-22T11:40:03.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1526
