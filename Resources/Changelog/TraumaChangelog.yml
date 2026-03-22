@@ -5164,3 +5164,12 @@ Entries:
   id: 607
   time: '2026-03-22T08:02:15.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1511
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: >-
+      You can now use bruise packs with minor bleeding instead of literally any
+      level of bleeding from a scratch making your bruise packs unusable.
+  id: 608
+  time: '2026-03-22T08:51:47.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1517
