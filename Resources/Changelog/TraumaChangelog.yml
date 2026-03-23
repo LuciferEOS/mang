@@ -5268,3 +5268,10 @@ Entries:
   id: 621
   time: '2026-03-23T08:26:52.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1541
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed slime flesh heretics losing their slime core when ascending.
+  id: 622
+  time: '2026-03-23T08:37:00.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1540
