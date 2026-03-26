@@ -5519,3 +5519,10 @@ Entries:
   id: 648
   time: '2026-03-26T20:20:23.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1606
+- author: TurboTrackerss14
+  changes:
+  - type: Add
+    message: Majority of Antagonist roletimers have been lowered.
+  id: 649
+  time: '2026-03-26T20:23:05.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1604
