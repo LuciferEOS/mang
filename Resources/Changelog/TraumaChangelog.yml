@@ -5568,3 +5568,10 @@ Entries:
   id: 655
   time: '2026-03-27T15:17:57.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1622
+- author: momoyawn
+  changes:
+  - type: Tweak
+    message: Justice can now Parry/Reflect depending on its mode.
+  id: 656
+  time: '2026-03-27T22:44:46.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1624
