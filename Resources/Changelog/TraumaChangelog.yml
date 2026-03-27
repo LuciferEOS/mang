@@ -5561,3 +5561,10 @@ Entries:
   id: 654
   time: '2026-03-27T14:59:54.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1621
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: Raiders can no longer play cadet :(
+  id: 655
+  time: '2026-03-27T15:17:57.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1622
