@@ -5636,3 +5636,10 @@ Entries:
   id: 662
   time: '2026-03-28T11:48:38.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1635
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed unidentified corpses being alive...
+  id: 663
+  time: '2026-03-28T12:44:11.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1636
