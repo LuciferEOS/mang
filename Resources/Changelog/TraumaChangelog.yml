@@ -5838,3 +5838,10 @@ Entries:
   id: 687
   time: '2026-03-30T10:14:28.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1710
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed cancer mice getting cancer
+  id: 688
+  time: '2026-03-30T10:36:52.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1711
