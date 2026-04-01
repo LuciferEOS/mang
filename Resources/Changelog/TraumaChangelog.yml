@@ -6081,3 +6081,16 @@ Entries:
   id: 703
   time: '2026-04-01T12:13:28.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1769
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: Fixed fire going out immediately for old mobs.
+  - type: Fix
+    message: Fixed xeno neurotoxin action not stopping you from shooting neurotoxin.
+  - type: Remove
+    message: >-
+      Librarian no longer has service access, every map should be updated with
+      library-locked doors instead.
+  id: 704
+  time: '2026-04-01T12:51:14.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1772
