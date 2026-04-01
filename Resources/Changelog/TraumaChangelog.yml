@@ -6042,3 +6042,12 @@ Entries:
   id: 698
   time: '2026-03-31T23:06:37.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1755
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: >-
+      Glowing hot metals now glow in-hand and if you had it equipped (forged
+      armour when)
+  id: 699
+  time: '2026-04-01T00:47:04.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1758
