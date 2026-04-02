@@ -10,6 +10,9 @@
   practical:
     GunsmithingKnowledge: 2
     WeaponsKnowledge: 2
+  entityWhitelist: # mango edit - kill skills
+    components:
+    - Revolutionary
 
 - type: construction
   id: RevResistance
@@ -23,6 +26,9 @@
   practical:
     GunsmithingKnowledge: 2
     WeaponsKnowledge: 2
+  entityWhitelist: # mango edit - kill skills
+    components:
+    - Revolutionary
 
 - type: construction
   id: RPG2
@@ -36,6 +42,9 @@
   practical:
     GunsmithingKnowledge: 4
     WeaponsKnowledge: 3
+  entityWhitelist: # mango edit - kill skills
+    components:
+    - Revolutionary
 
 - type: construction
   id: Flamethrower
@@ -49,6 +58,9 @@
   practical:
     GunsmithingKnowledge: 4
     WeaponsKnowledge: 3
+  entityWhitelist: # mango edit - kill skills
+    components:
+    - Revolutionary
 
 - type: construction
   id: Devastator
@@ -62,6 +74,9 @@
   practical:
     GunsmithingKnowledge: 2
     WeaponsKnowledge: 2
+  entityWhitelist: # mango edit - kill skills
+    components:
+    - Revolutionary
 
 - type: construction
   id: RevIED
@@ -75,3 +90,6 @@
   practical:
     MechanicsKnowledge: 2
     WeaponsKnowledge: 2
+  entityWhitelist: # mango edit - kill skills
+    components:
+    - Revolutionary
