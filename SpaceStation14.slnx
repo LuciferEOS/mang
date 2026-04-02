@@ -26,6 +26,24 @@
   <Project Path="Content.Benchmarks/Content.Benchmarks.csproj" />
   <Project Path="Content.Client/Content.Client.csproj" />
   <Project Path="Content.IntegrationTests/Content.IntegrationTests.csproj" />
+  <!-- mango -->
+  <Project Path="Content.Mango.Client/Content.Mango.Client.csproj">
+    <BuildType Solution="DebugOpt|*" Project="Debug" />
+    <BuildType Solution="Tools|*" Project="Debug" />
+  </Project>
+  <Project Path="Content.Mango.Common/Content.Mango.Common.csproj">
+    <BuildType Solution="DebugOpt|*" Project="Debug" />
+    <BuildType Solution="Tools|*" Project="Debug" />
+  </Project>
+  <Project Path="Content.Mango.Server/Content.Mango.Server.csproj">
+    <BuildType Solution="DebugOpt|*" Project="Debug" />
+    <BuildType Solution="Tools|*" Project="Debug" />
+  </Project>
+  <Project Path="Content.Mango.Shared/Content.Mango.Shared.csproj">
+    <BuildType Solution="DebugOpt|*" Project="Debug" />
+    <BuildType Solution="Tools|*" Project="Debug" />
+  </Project>
+  <!-- mango -->
   <Project Path="Content.MapRenderer/Content.MapRenderer.csproj" />
   <Project Path="Content.Packaging/Content.Packaging.csproj" />
   <Project Path="Content.PatreonParser/Content.PatreonParser.csproj">
@@ -62,6 +80,7 @@
   <Project Path="Content.Tools/Content.Tools.csproj" />
   <Project Path="Content.YAMLLinter/Content.YAMLLinter.csproj" />
   <Project Path="Pow3r/Pow3r.csproj" />
+  <Folder Name="/RobustToolbox/.github/" />
   <Folder Name="/RobustToolbox/.github/workflows/">
     <File Path="RobustToolbox/.github/workflows/benchmarks.yml" />
     <File Path="RobustToolbox/.github/workflows/build-all-configurations.yml" />
