@@ -5,7 +5,6 @@ using Content.Client.Construction.UI;
 using Content.Goobstation.Shared.Factory;
 using Content.Shared.Construction.Prototypes;
 using Content.Shared.Whitelist;
-using Content.Trauma.Common.Knowledge.Systems;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
@@ -18,7 +17,6 @@ namespace Content.Goobstation.Client.Factory.UI;
 public sealed class ConstructorBUI : BoundUserInterface
 {
     [Dependency] private readonly IPrototypeManager _proto = default!;
-    private readonly CommonKnowledgeSystem _knowledge = default!;
     private readonly ConstructionSystem _construction;
     private readonly EntityWhitelistSystem _whitelist;
     private readonly SpriteSystem _sprite;
@@ -31,7 +29,6 @@ public sealed class ConstructorBUI : BoundUserInterface
 
     public ConstructorBUI(EntityUid owner, Enum uiKey) : base(owner, uiKey)
     {
-        _knowledge = EntMan.System<CommonKnowledgeSystem>();
         _construction = EntMan.System<ConstructionSystem>();
         _whitelist = EntMan.System<EntityWhitelistSystem>();
         _sprite = EntMan.System<SpriteSystem>();
@@ -124,16 +121,17 @@ public sealed class ConstructorBUI : BoundUserInterface
         var isEmptyCategory = string.IsNullOrEmpty(category) || category == _forAllCategoryName;
 
         _recipes.Clear();
-        var skills = _knowledge.GetSkillMasteries(user);
+        // var skills = _knowledge.GetSkillMasteries(user); // mango edit - kill skills, also WHERE ARE THE COMMENTS YOU FUCKING CHUD, I HAD TO FIGURE OUT TS ON MY OWN
         var useKnowledge = _construction.IsKnowledgeHolder(user);
         // FUCK YOU, copy pasta
         bool CanUnderstand(ConstructionPrototype recipe)
         {
-            foreach (var (id, needed) in recipe.Theory)
-            {
-                if (!skills.TryGetValue(id, out var mastery) || mastery < needed)
-                    return false;
-            }
+            // mango edit - kill skills, yes this is horrible, no i do not care, if trauma refactors it im gonna kms. MAKE A CVAR PLEASE
+            // foreach (var (id, needed) in recipe.Theory)
+            // {
+            //     if (!skills.TryGetValue(id, out var mastery) || mastery < needed)
+            //         return false;
+            // }
             return true;
         }
         foreach (var recipe in _proto.EnumeratePrototypes<ConstructionPrototype>())

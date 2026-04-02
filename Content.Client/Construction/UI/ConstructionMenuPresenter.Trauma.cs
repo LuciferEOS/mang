@@ -9,7 +9,7 @@ namespace Content.Client.Construction.UI;
 internal sealed partial class ConstructionMenuPresenter
 {
     [Dependency] private readonly IConfigurationManager _cfg = default!;
-    private CommonKnowledgeSystem _knowledge = default!;
+    // private CommonKnowledgeSystem _knowledge = default!; // mango edit - kill skills
 
     private bool _autoFocusSearch;
     private bool _useSkills;
@@ -17,21 +17,22 @@ internal sealed partial class ConstructionMenuPresenter
 
     private void InitializeTrauma()
     {
-        _knowledge = _entManager.System<CommonKnowledgeSystem>();
+        // _knowledge = _entManager.System<CommonKnowledgeSystem>(); // mango edit - kill skills
 
         _cfg.OnValueChanged(GoobCVars.AutoFocusSearchOnBuildMenu, x => _autoFocusSearch = x, true);
     }
 
     bool CanUnderstand(ConstructionPrototype recipe)
     {
-        if (!_useSkills)
-            return true; // for mobs that dont use the knowledge system, let them build anything
-
-        foreach (var (id, needed) in recipe.Theory)
-        {
-            if (!_skills.TryGetValue(id, out var mastery) || mastery < needed)
-                return false;
-        }
+        // mango edit - kill skills, let whoever build whatever
+        // if (!_useSkills)
+        //     return true; // for mobs that dont use the knowledge system, let them build anything
+        //
+        // foreach (var (id, needed) in recipe.Theory)
+        // {
+        //     if (!_skills.TryGetValue(id, out var mastery) || mastery < needed)
+        //         return false;
+        // }
 
         return true;
     }

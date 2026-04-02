@@ -619,13 +619,14 @@ namespace Content.Client.Construction.UI
             }
             else
             {
-                // <Trauma> - update recipes whenever opening the window
-                if (_playerManager.LocalEntity is { } player)
-                {
-                    _useSkills = _constructionSystem!.IsKnowledgeHolder(player);
-                    _skills = _knowledge.GetSkillMasteries(player);
-                }
-                // </Trauma>
+                // mango edit - kill skills, no you dont
+                // // <Trauma> - update recipes whenever opening the window
+                // if (_playerManager.LocalEntity is { } player)
+                // {
+                //     _useSkills = _constructionSystem!.IsKnowledgeHolder(player);
+                //     _skills = _knowledge.GetSkillMasteries(player);
+                // }
+                // // </Trauma>
                 WindowOpen = true;
                 _uiManager.GetActiveUIWidget<GameTopMenuBar>()
                     .CraftingButton.SetClickPressed(true); // This does not call CraftingButtonToggled
