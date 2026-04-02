@@ -7,6 +7,9 @@
   theory:
     RevolutionaryKnowledge: 3
   useQuality: false
+  entityWhitelist: # mango edit - kill skills
+    components:
+    - Revolutionary
 
 - type: construction
   id: PowerArmorFrame
@@ -17,3 +20,6 @@
   theory:
     RevolutionaryKnowledge: 2
   useQuality: false
+  entityWhitelist: # mango edit - kill skills
+    components:
+    - Revolutionary
