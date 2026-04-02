@@ -18,9 +18,12 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Trauma.Client.Knowledge;
 
+// mango edit - kill skills
+// do not dare to touch this system, half of it was lazy commented out.
+// I just wanna make it work man
 public sealed class KnowledgeSystem : SharedKnowledgeSystem
 {
-    private WeakReference<CharacterWindow>? _activeWindow;
+    // private WeakReference<CharacterWindow>? _activeWindow;
     private bool _showPopups;
     private TimeSpan _nextPopup;
     private TimeSpan _popupCooldown = TimeSpan.FromSeconds(3);
@@ -30,19 +33,19 @@ public sealed class KnowledgeSystem : SharedKnowledgeSystem
         base.Initialize();
 
         SubscribeLocalEvent<KnowledgeHolderComponent, GetPerformedAttackTypesEvent>(OnGetAttackTypes);
-        SubscribeLocalEvent<KnowledgeHolderComponent, UpdateExperienceEvent>(OnUpdateExperienceEvent);
+        // SubscribeLocalEvent<KnowledgeHolderComponent, UpdateExperienceEvent>(OnUpdateExperienceEvent);
         Subs.CVar(_cfg, TraumaCVars.SkillPopups, x => _showPopups = x, true);
         SubscribeAllEvent<SkillPopupEvent>(OnSkillPopup);
 
-        CharacterWindow.OnOpened += EnsureKnowledgeTab;
-        LobbyUIController.OnProfileEditorCreated += AddProfileEditorTab;
+        // CharacterWindow.OnOpened += EnsureKnowledgeTab;
+        // LobbyUIController.OnProfileEditorCreated += AddProfileEditorTab;
     }
 
     public override void Shutdown()
     {
         base.Shutdown();
-        CharacterWindow.OnOpened -= EnsureKnowledgeTab;
-        LobbyUIController.OnProfileEditorCreated -= AddProfileEditorTab;
+        // CharacterWindow.OnOpened -= EnsureKnowledgeTab;
+        // LobbyUIController.OnProfileEditorCreated -= AddProfileEditorTab;
     }
 
     private void OnGetAttackTypes(Entity<KnowledgeHolderComponent> ent, ref GetPerformedAttackTypesEvent args)
@@ -54,54 +57,54 @@ public sealed class KnowledgeSystem : SharedKnowledgeSystem
         args.AttackTypes = combo.LastAttacks;
     }
 
-    private void EnsureKnowledgeTab(CharacterWindow window)
-    {
-        _activeWindow = new WeakReference<CharacterWindow>(window);
-
-        KnowledgeTab? knowledgeTab = null;
-        foreach (var child in window.Tabs.Children)
-        {
-            if (child is KnowledgeTab)
-            {
-                knowledgeTab = (KnowledgeTab) child;
-                break;
-            }
-        }
-
-        TabContainer.SetTabTitle(window.CharacterTab, Loc.GetString("trauma-character-title"));
-
-        if (knowledgeTab == null)
-        {
-            knowledgeTab = new KnowledgeTab();
-            window.Tabs.AddChild(knowledgeTab);
-        }
-
-        if (_player.LocalEntity is {} player)
-            knowledgeTab.UpdateKnowledgeTab(player);
-    }
-
-    private void AddProfileEditorTab(HumanoidProfileEditor editor)
-    {
-        // place it before markings tab
-        var above = editor.MarkingsTab;
-        var index = above.GetPositionInParent();
-
-        var tab = new KnowledgeProfileEditor(_proto, this);
-        tab.OnSave += knowledge =>
-        {
-            editor.Profile = editor.Profile?.WithKnowledge(knowledge);
-            editor.IsDirty = true;
-        };
-
-        editor.OnSetProfile += profile =>
-        {
-            if (profile is not null)
-                tab.SetProfile(profile.Species, profile.Knowledge);
-        };
-        editor.TabContainer.AddChild(tab);
-        tab.SetPositionInParent(index);
-        TabContainer.SetTabTitle(tab, Loc.GetString("knowledge-editor-tab"));
-    }
+    // private void EnsureKnowledgeTab(CharacterWindow window)
+    // {
+    //     _activeWindow = new WeakReference<CharacterWindow>(window);
+    //
+    //     KnowledgeTab? knowledgeTab = null;
+    //     foreach (var child in window.Tabs.Children)
+    //     {
+    //         if (child is KnowledgeTab)
+    //         {
+    //             knowledgeTab = (KnowledgeTab) child;
+    //             break;
+    //         }
+    //     }
+    //
+    //     TabContainer.SetTabTitle(window.CharacterTab, Loc.GetString("trauma-character-title"));
+    //
+    //     if (knowledgeTab == null)
+    //     {
+    //         knowledgeTab = new KnowledgeTab();
+    //         window.Tabs.AddChild(knowledgeTab);
+    //     }
+    //
+    //     if (_player.LocalEntity is {} player)
+    //         knowledgeTab.UpdateKnowledgeTab(player);
+    // }
+    //
+    // private void AddProfileEditorTab(HumanoidProfileEditor editor)
+    // {
+    //     // place it before markings tab
+    //     var above = editor.MarkingsTab;
+    //     var index = above.GetPositionInParent();
+    //
+    //     var tab = new KnowledgeProfileEditor(_proto, this);
+    //     tab.OnSave += knowledge =>
+    //     {
+    //         editor.Profile = editor.Profile?.WithKnowledge(knowledge);
+    //         editor.IsDirty = true;
+    //     };
+    //
+    //     editor.OnSetProfile += profile =>
+    //     {
+    //         if (profile is not null)
+    //             tab.SetProfile(profile.Species, profile.Knowledge);
+    //     };
+    //     editor.TabContainer.AddChild(tab);
+    //     tab.SetPositionInParent(index);
+    //     TabContainer.SetTabTitle(tab, Loc.GetString("knowledge-editor-tab"));
+    // }
 
     /// <summary>
     /// Returns the martial arts that a knowledge entity has, along with some helper data for the client.
@@ -134,17 +137,17 @@ public sealed class KnowledgeSystem : SharedKnowledgeSystem
             .ToList();
     }
 
-    public void OnUpdateExperienceEvent(Entity<KnowledgeHolderComponent> ent, ref UpdateExperienceEvent args)
-    {
-        var localPlayer = _player.LocalEntity;
-        if (localPlayer != ent.Owner)
-            return;
-
-        if (_activeWindow is not { } || !_activeWindow.TryGetTarget(out var window))
-            return;
-
-        EnsureKnowledgeTab(window);
-    }
+    // public void OnUpdateExperienceEvent(Entity<KnowledgeHolderComponent> ent, ref UpdateExperienceEvent args)
+    // {
+    //     var localPlayer = _player.LocalEntity;
+    //     if (localPlayer != ent.Owner)
+    //         return;
+    //
+    //     if (_activeWindow is not { } || !_activeWindow.TryGetTarget(out var window))
+    //         return;
+    //
+    //     EnsureKnowledgeTab(window);
+    // }
 
     private void OnSkillPopup(SkillPopupEvent args)
     {
