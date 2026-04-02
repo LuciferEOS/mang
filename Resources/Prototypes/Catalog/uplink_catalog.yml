@@ -1106,10 +1106,10 @@
       tags:
       - NukeOpsUplink
       - ContravendUplink
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle
+#  - !type:BuyerWhitelistCondition # mango edit - GAMBLING GAMBLING GAMBLING GAMBLING GAMBLINGGAMBLINGGAMBLING
+#    blacklist:
+#      components:
+#      - SurplusBundle
 
 - type: listing # mango edit - why
   id: UplinkStarterKit
