@@ -6148,3 +6148,10 @@ Entries:
   id: 708
   time: '2026-04-02T03:23:23.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1780
+- author: GeneRickUsername
+  changes:
+  - type: Fix
+    message: Tweaked a bunch of shitcode
+  id: 709
+  time: '2026-04-02T03:29:32.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1342
