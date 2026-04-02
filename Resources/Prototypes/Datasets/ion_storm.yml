@@ -117,6 +117,7 @@
   - SMOOTH
   - SOFT
   - SOLAR-POWERED
+  - SOPPING
   - SLIPPERY
   - SPACE
   - SPESS
@@ -233,6 +234,9 @@
   - THE TOOL ROOM
   - THE WIZARD'S DEN
   - TIDELAND
+  - RUSSIAN BALANCE BUREAU
+  - RAIDER DEN
+  - GOOB
   # </Goob>
   - ALPHA COMPLEX
   - A HAUNTED PIZZERIA # fnaf
@@ -349,6 +353,7 @@
   - TIME
   - WEALTHINESS
   - WONDER
+  - MANGO # mango edit
 
 # Crew is any specific job. Using jobs instead of specific crewmembers since "THE CLOWN" is easier than
 # seeing "JOHN SMITH" and having to figure out who john smith is.
@@ -395,6 +400,11 @@
   - STATION ENGINEERS
   - VIROLOGISTS
   - WARDENS
+  # mango start
+  - RAIDERS
+  - MARAUDERS
+  - VALIDS
+  # mango end
 
 # only including complex dangerous or funny drinks no water allowed
 - type: dataset
@@ -929,10 +939,27 @@
   - TRASH
   - VEGETABLES
   # Goobstation - THE ROT CONSUMES
+  - BALDMINS
+  - SHITMINS
+  - CHUDMINS
+  - SHITCODERS
+  - CHUDTAINERS
+  - MAINTAINERS WHO DONT PLAY THE GAME
+  - SHITCODE
+  - SUPERCODE
+  - GOIDACODE
   - JOB
   - EMPLOYMENT
-  - FIVE HUNDRED CIGARETTES
   - CHUDS
+  - DURK'S STEAK AND WINE
+  - THE SWAP
+  - FIVE HUNDRED CIGARETTES
+  - RUSSIAN RAIDERS
+  - FEDERAL AGENTS
+  # MANGO
+  - CHUD VOXES
+  - ROUGE ONIS
+  - MANGO FLAVOURED PEOPLE
 
 # Specific actions that either harm humans or must be done to not
 # harm humans. Make sure they're plural and "not" can be tacked

@@ -44,7 +44,7 @@
   icon: { sprite: /Textures/Objects/Weapons/Melee/e_sword.rsi, state: icon }
   productEntity: EnergySword
   cost:
-    Telecrystal: 37 # goob - desword is 74
+    Telecrystal: 33 # MANGO
   categories:
   - UplinkWeaponry
 
@@ -65,7 +65,7 @@
   description: uplink-energycrossbow-desc
   productEntity: WeaponEnergyCrossbow
   cost:
-    Telecrystal: 30 # Trauma
+    Telecrystal: 25 # MANGO
   categories:
   - UplinkWeaponry
   conditions:
@@ -98,16 +98,17 @@
   - UplinkWeaponry
 
 # Trauma - needs to be readable
-#- type: listing
-#  id: UplinkGlovesKnuckleDusters
-#  name: uplink-gloves-knuckleduster-name
-#  description: uplink-gloves-knuckleduster-desc
-#  icon: { sprite: Clothing/Hands/Gloves/KnuckleDusters/syndicateknuckleduster.rsi, state: syndicateknuckleduster }
-#  productEntity: ClothingHandsKnuckleDustersSyndicate
-#  cost:
-#    Telecrystal: 20 # Trauma - was 4, 5x
-#  categories:
-#  - UplinkWeaponry
+# mango edit - nuh uh
+- type: listing
+  id: UplinkGlovesKnuckleDusters
+  name: uplink-gloves-knuckleduster-name
+  description: uplink-gloves-knuckleduster-desc
+  icon: { sprite: Clothing/Hands/Gloves/KnuckleDusters/syndicateknuckleduster.rsi, state: syndicateknuckleduster }
+  productEntity: ClothingHandsKnuckleDustersSyndicate
+  cost:
+    Telecrystal: 20 # Trauma - was 4, 5x
+  categories:
+  - UplinkWeaponry
 
 - type: listing
   id: UplinkEshield
@@ -155,7 +156,7 @@
   icon: { sprite: /Textures/Objects/Weapons/Guns/Shotguns/hushpup.rsi, state: icon }
   productEntity: BriefcaseWeaponHushpupFilled
   cost:
-    Telecrystal: 50 # Trauma - was 10, 5x
+    Telecrystal: 30 # mango
   categories:
   - UplinkWeaponry
 
@@ -169,7 +170,7 @@
     Telecrystal: 50 # Trauma - was 14, made cheaper and 5x: you could just buy guns so its not so crazy
   categories:
   - UplinkWeaponry
-  # conditions: # Trauma, this gun is fine for nukies
+  # conditions: # Trauma, this gun is fine for nukies # mango: tf you mean it wasnt available for nukies??
   # - !type:StoreWhitelistCondition
   #   blacklist:
   #     tags:
@@ -185,11 +186,12 @@
     Telecrystal: 60 # Trauma - was 14, tiny bit cheaper and 5x
   categories:
   - UplinkWeaponry
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist: # Trauma - move big guns to nukies
-      tags:
-      - NukeOpsUplink
+  # mango - fuck off
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist: # Trauma - move big guns to nukies
+#      tags:
+#      - NukeOpsUplink
 
 # - type: listing - Trauma
 #   id: UplinkBulldogBundle
@@ -217,40 +219,42 @@
   productEntity: ClothingBackpackDuffelSyndicateFilledRifle
   categories:
   - UplinkWeaponry
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
+  # mango - fuck off
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist:
+#      tags:
+#      - NukeOpsUplink
+
+#- type: listing
+#  id: UplinkGrenadeLauncher
+#  name: uplink-grenade-launcher-name
+#  description: uplink-grenade-launcher-desc
+#  icon: { sprite: /Textures/Objects/Weapons/Guns/Launchers/china_lake.rsi, state: icon }
+#  productEntity: BriefcaseWeaponChinaLakeFilled
+#  cost:
+#    Telecrystal: 60 # goob
+#  categories:
+#  - UplinkWeaponry
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist: # Trauma - was blacklist
+#      tags:
+#      - NukeOpsUplink
+
 
 - type: listing
-  id: UplinkGrenadeLauncher
-  name: uplink-grenade-launcher-name
-  description: uplink-grenade-launcher-desc
+  id: UplinkGrenadeLauncherBundle
+  name: uplink-grenade-launcher-bundle-name
+  description: uplink-grenade-launcher-bundle-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Launchers/china_lake.rsi, state: icon }
-  productEntity: BriefcaseWeaponChinaLakeFilled
+  productEntity: ClothingBackpackDuffelSyndicateFilledGrenadeLauncher
   cost:
-    Telecrystal: 60 # goob
+    Telecrystal: 150 # goob
   categories:
   - UplinkWeaponry
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist: # Trauma - was blacklist
-      tags:
-      - NukeOpsUplink
-
-
-# - type: listing - Trauma
-#   id: UplinkGrenadeLauncherBundle
-#   name: uplink-grenade-launcher-bundle-name
-#   description: uplink-grenade-launcher-bundle-desc
-#   icon: { sprite: /Textures/Objects/Weapons/Guns/Launchers/china_lake.rsi, state: icon }
-#   productEntity: ClothingBackpackDuffelSyndicateFilledGrenadeLauncher
-#   cost:
-#     Telecrystal: 150 # goob
-#   categories:
-#   - UplinkWeaponry
-#   conditions:
+  # mango - fuck off
+#  conditions:
 #   - !type:StoreWhitelistCondition
 #     whitelist:
 #       tags:
@@ -266,13 +270,14 @@
     Telecrystal: 100 # goob
   categories:
   - UplinkWeaponry
-  # <Trauma>
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
-  # </Trauma>
+  # mango - fuck off
+#  # <Trauma>
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist:
+#      tags:
+#      - NukeOpsUplink
+#  # </Trauma>
 
 # Explosives
 
@@ -285,11 +290,12 @@
     Telecrystal: 10 # Trauma - was 1, 5x and doubled because its pretty strong
   categories:
   - UplinkExplosives
-  conditions:
-  - !type:StoreWhitelistCondition
-    blacklist: # Trauma - inverted, theres a nukie listing separately
-      tags:
-      - NukeOpsUplink
+  # mango - fuck off
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    blacklist: # Trauma - inverted, theres a nukie listing separately
+#      tags:
+#      - NukeOpsUplink
 
 - type: listing
   id: UplinkSmokeGrenade
@@ -391,7 +397,7 @@
   description: uplink-c4-bundle-desc
   productEntity: ClothingBackpackDuffelSyndicateC4tBundle
   cost:
-    Telecrystal: 52 # goob - you're buying bulk so its some discount
+    Telecrystal: 50 # mango edit - let the people suffer
   categories:
   - UplinkExplosives
   conditions: # Goob, two times cheaper for nukies
@@ -432,10 +438,10 @@
   description: uplink-exploding-syndicate-bomb-desc
   productEntity: SyndicateBomb
   cost:
-    Telecrystal: 52 # goob
+    Telecrystal: 50 # mangoe - have two
   categories:
     - UplinkExplosives
-  restockTime: 1800
+#  restockTime: 1800 # mango
   conditions:
   - !type:StoreWhitelistCondition
     blacklist:
@@ -496,7 +502,7 @@
   icon: { sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi, state: red-icon }
   productEntity: MagazinePistol # Trauma
   cost:
-    Telecrystal: 6
+    Telecrystal: 3 # mango
   categories:
   - UplinkAmmo
 
@@ -508,7 +514,7 @@
   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi, state: red-icon }
   productEntity: MagazinePistolSubMachineGun
   cost:
-    Telecrystal: 10 # Trauma - was 2
+    Telecrystal: 5 # mango
   categories:
   - UplinkAmmo
 
@@ -523,13 +529,14 @@
     Telecrystal: 5 # Trauma - was 2, cheaper and 5x
   categories:
   - UplinkAmmo
-  # <Trauma>
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
-  # </Trauma>
+  # mango edit
+#  # <Trauma>
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist:
+#      tags:
+#      - NukeOpsUplink
+#  # </Trauma>
 
 - type: listing
   id: UplinkMagazineShotgunSlug
@@ -541,13 +548,14 @@
     Telecrystal: 4 # Trauma - was 2, cheaper (slug -1) and 5x
   categories:
   - UplinkAmmo
-  # <Trauma>
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
-  # </Trauma>
+  # mango edit
+#  # <Trauma>
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist:
+#      tags:
+#      - NukeOpsUplink
+#  # </Trauma>
 
 # For the Cobra
 - type: listing
@@ -568,7 +576,7 @@
   description: uplink-mosin-ammo-desc
   productEntity: MagazineBoxLightRifle
   cost:
-    Telecrystal: 9 # goob
+    Telecrystal: 6 # mango
   categories:
   - UplinkAmmo
 
@@ -582,13 +590,14 @@
     Telecrystal: 5 # goob - on par with c20
   categories:
   - UplinkAmmo
-  # <Trauma>
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
-  # </Trauma>
+  # mango edit
+#  # <Trauma>
+#  conditions:
+#  - !type:StoreWhitelistCondition
+#    whitelist:
+#      tags:
+#      - NukeOpsUplink
+#  # </Trauma>
 
 # for the hristov
 - type: listing
@@ -752,10 +761,10 @@
       whitelist:
         tags:
           - NukeOpsUplink
-    # - !type:BuyerWhitelistCondition # Trauma
-    #   blacklist:
-    #     components:
-    #       - SurplusBundle
+    - !type:BuyerWhitelistCondition # mango edit
+      blacklist:
+        components:
+          - SurplusBundle
 
 # Deception
 - type: listing
@@ -987,7 +996,7 @@
   description: uplink-soap-desc
   productEntity: SoapSyndie
   cost:
-    Telecrystal: 5 # goob
+    Telecrystal: 2 # mango - slipocalypse is like, almost the same price
   categories:
   - UplinkDisruption
 
@@ -1097,29 +1106,29 @@
       tags:
       - NukeOpsUplink
       - ContravendUplink
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle
+#  - !type:BuyerWhitelistCondition # mango edit - GAMBLING GAMBLING GAMBLING GAMBLING GAMBLINGGAMBLINGGAMBLING
+#    blacklist:
+#      components:
+#      - SurplusBundle
 
-#- type: listing # Goob
-#  id: UplinkStarterKit
-#  name: uplink-starter-kit-name
-#  description: uplink-starter-kit-desc
-#  productEntity: ClothingBackpackDuffelSyndicateFilledStarterKit
-#  cost:
-#    Telecrystal: 200
-#  categories:
-#  - UplinkDisruption
-#  conditions:
-#    - !type:StoreWhitelistCondition
-#      whitelist:
-#        tags:
-#        - NukeOpsUplink
-#    - !type:BuyerWhitelistCondition
-#      blacklist:
-#        components:
-#        - SurplusBundle
+- type: listing # mango edit - why
+  id: UplinkStarterKit
+  name: uplink-starter-kit-name
+  description: uplink-starter-kit-desc
+  productEntity: ClothingBackpackDuffelSyndicateFilledStarterKit
+  cost:
+    Telecrystal: 200
+  categories:
+  - UplinkDisruption
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+        - NukeOpsUplink
+    - !type:BuyerWhitelistCondition
+      blacklist:
+        components:
+        - SurplusBundle
 
 - type: listing
   id: UplinkSingarityBeacon
@@ -1160,7 +1169,7 @@
   icon: { sprite: /Textures/Objects/Misc/guardian_info.rsi, state: icon }
   productEntity: BoxHoloparasite
   cost:
-    Telecrystal: 60 # Trauma - was 12, 5x
+    Telecrystal: 47 # mango edit - its dogwater
   categories:
   - UplinkAllies
   conditions:
@@ -2001,7 +2010,7 @@
   icon: { sprite: /Textures/Objects/Fun/figurines.rsi, state: holoclown }
   productEntity: BoxHoloclown
   cost:
-    Telecrystal: 60 # goob
+    Telecrystal: 47 # mango
   categories:
   - UplinkJob
   conditions:

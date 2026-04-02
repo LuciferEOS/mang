@@ -77,7 +77,7 @@
   description: uplink-carpcaller-desc
   productEntity: CarpCaller
   cost:
-    Telecrystal: 40 # you can't really do much with it
+    Telecrystal: 20 # mango
   categories:
     -  UplinkDisruption
 
@@ -361,16 +361,16 @@
       tags:
       - NukeOpsUplink
 
-# - type: listing - Miserable to fight against
-#   id: UplinkDualettaBundle
-#   name: uplink-dualetta-bundle-name
-#   description: uplink-dualetta-bundle-desc
-#   icon: { sprite: /Textures/_Goobstation/Objects/Weapons/Guns/Pistols/Dualetta.rsi, state: icon }
-#   productEntity: BriefcaseSyndieDualettaBundleFilled
-#   cost:
-#     Telecrystal: 50
-#   categories:
-#   - UplinkWeaponry
+- type: listing # mango edit
+  id: UplinkDualettaBundle
+  name: uplink-dualetta-bundle-name
+  description: uplink-dualetta-bundle-desc
+  icon: { sprite: /Textures/_Goobstation/Objects/Weapons/Guns/Pistols/Dualetta.rsi, state: icon }
+  productEntity: BriefcaseSyndieDualettaBundleFilled
+  cost:
+    Telecrystal: 50
+  categories:
+  - UplinkWeaponry
 
 - type: listing
   id: UplinkPistolAnaconda
@@ -408,11 +408,11 @@
     Telecrystal: 4
   categories:
   -  UplinkWearables
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
+#  conditions: # mango edit
+#  - !type:StoreWhitelistCondition
+#    whitelist:
+#      tags:
+#      - NukeOpsUplink
 
 - type: listing
   id: UplinkClothingHeadHelmetSwatSyndicate
@@ -451,7 +451,7 @@
   icon: { sprite: /Textures/Clothing/OuterClothing/Hardsuits/syndiecommander.rsi, state: icon }
   productEntity: ClothingOuterHardsuitSyndieCommander
   cost:
-    Telecrystal: 100 # novelty item for the larp, doesnt come with bundle though because bulky fuck
+    Telecrystal: 75 # novelty item for the larp, doesnt come with bundle though because bulky fuck
   categories:
   - UplinkWearables
   conditions:
@@ -522,7 +522,7 @@
   icon: { sprite: /Textures/_Goobstation/Objects/Weapons/Melee/hisgrace.rsi, state: icon }
   productEntity: HisGrace
   cost:
-    Telecrystal: 125
+    Telecrystal: 100 # mango
   categories:
   - UplinkJob
   conditions:
@@ -827,16 +827,16 @@
 #  categories:
 #  - UplinkImplants
 
-#- type: listing - Warden exclusive martial art
-#  id: UplinkKravMagaImplanter
-#  name: uplink-krav-maga-implant-name
-#  description: uplink-krav-maga-implant-desc
-#  icon: { sprite: /Textures/_Goobstation/Clothing/Hands/Gloves/kravgloves.rsi, state: icon }
-#  productEntity: KravMagaImplanter
-#  cost:
-#    Telecrystal: 40
-#  categories:
-#    - UplinkImplants
+- type: listing # mango
+  id: UplinkKravMagaImplanter
+  name: uplink-krav-maga-implant-name
+  description: uplink-krav-maga-implant-desc
+  icon: { sprite: /Textures/_Goobstation/Clothing/Hands/Gloves/kravgloves.rsi, state: icon }
+  productEntity: KravMagaImplanter
+  cost:
+    Telecrystal: 40
+  categories:
+    - UplinkImplants
 
 - type: listing
   id: UplinkBinaryImplant
@@ -878,7 +878,7 @@
   icon: { sprite: _Goobstation/Objects/Misc/sandevistan.rsi, state: icon }
   productEntity: AutosurgeonSandevistan
   cost:
-    Telecrystal: 66 # The urge to make it 65...
+    Telecrystal: 65 # The urge to make it 65... # mango dont worry twin i got u
   categories:
   - UplinkImplants
   conditions:
@@ -984,7 +984,7 @@
   description: uplink-clothing-explosive-gloves-desc
   productEntity: ClothingHandsGlovesExplosiveShock
   cost:
-    Telecrystal: 10 # goob
+    Telecrystal: 5 # mango - trust
   categories:
   - UplinkDeception
 
@@ -1225,15 +1225,15 @@
     whitelist:
     - Chef
 
-# - type: listing
-#   id: UplinkCapoeiraManual
-#   name: uplink-capoeira-name
-#   description: uplink-capoeira-desc
-#   productEntity: CapoeiraManual
-#   cost:
-#     Telecrystal: 35
-#   categories:
-#   - UplinkWeaponry
+- type: listing
+  id: UplinkCapoeiraManual # mango edit
+  name: uplink-capoeira-name
+  description: uplink-capoeira-desc
+  productEntity: CapoeiraManual
+  cost:
+    Telecrystal: 35
+  categories:
+  - UplinkWeaponry
 
 - type: listing
   id: UplinkMysteriousScroll
