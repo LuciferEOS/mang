@@ -1,4 +1,4 @@
-<p align="center"> <img alt="Space Station 14" width="750" height="600" src="https://github.com/Trauma-Station/Trauma-Station/blob/master/Resources/Textures/Logo/logo.png" /></p>
+<p align="center"> <img alt="Space Station 14" width="750" height="600" src="https://github.com/Mango-Station/Mango-Station/blob/master/Resources/Textures/Logo/logo.png" /></p>
 
 This is a fork from the primary repo for Trauma Station called MANGO Station. To prevent people forking RobustToolbox, a "content" pack is loaded by the client and server. This content pack contains everything needed to play the game on one specific server this is the content pack for Trauma Station.
 
