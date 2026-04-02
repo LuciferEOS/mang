@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>../bin/Content.Server/</OutputPath>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <OutputType Condition="'$(FullRelease)' != 'True'">Exe</OutputType>
+    <NoWarn>0618</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+  </PropertyGroup>
+  <Import Project="../MSBuild/Content.props" />
+
+  <ItemGroup>
+    <PackageReference Include="Serilog" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Content.Mango.Shared/Content.Mango.Shared.csproj" />
+    <ProjectReference Include="../Content.Goobstation.Server/Content.Goobstation.Server.csproj" />
+    <ProjectReference Include="../Content.Lavaland.Server/Content.Lavaland.Server.csproj" />
+    <ProjectReference Include="../Content.Medical.Server/Content.Medical.Server.csproj" />
+    <ProjectReference Include="../Content.Server/Content.Server.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Test\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Test\ShitPoo14ServerComponent.cs" />
+  </ItemGroup>
+
+  <Import Project="../RobustToolbox/Imports/Server.props" />
+  <Import Project="../RobustToolbox/Imports/Shared.props" />
+  <Import Project="../RobustToolbox/MSBuild/Robust.Properties.targets" />
+</Project>

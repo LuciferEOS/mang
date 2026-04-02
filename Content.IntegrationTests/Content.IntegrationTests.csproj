@@ -22,6 +22,11 @@
     <ProjectReference Include="../Content.Lavaland.Shared/Content.Lavaland.Shared.csproj" />
     <ProjectReference Include="../Content.Medical.Shared/Content.Medical.Shared.csproj" />
     <!-- /Trauma -->
+    <!-- mango -->
+    <ProjectReference Include="../Content.Mango.Client/Content.Mango.Client.csproj" />
+    <ProjectReference Include="../Content.Mango.Server/Content.Mango.Server.csproj" />
+    <ProjectReference Include="../Content.Mango.Shared/Content.Mango.Shared.csproj" />
+    <!-- mango -->
     <ProjectReference Include="..\Content.Server\Content.Server.csproj" />
     <ProjectReference Include="..\Content.Shared\Content.Shared.csproj" />
     <ProjectReference Include="..\Content.Tests\Content.Tests.csproj" />
