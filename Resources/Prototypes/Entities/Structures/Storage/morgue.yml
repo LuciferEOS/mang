@@ -171,3 +171,7 @@
           False: { visible: false }
   - type: Transform
     anchored: true
+  - type: Speech # mango
+  - type: Vocal # mango
+    sounds:
+      Unsexed: UnisexSilicon

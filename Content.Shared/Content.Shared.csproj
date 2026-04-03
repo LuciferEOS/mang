@@ -25,6 +25,9 @@
     <ProjectReference Include="../Content.Trauma.Common/Content.Trauma.Common.csproj" />
     <ProjectReference Include="../Content.Common/Content.Common.csproj" />
     <!-- </Trauma> -->
+    <!-- mango -->
+    <ProjectReference Include="../Content.Mango.Common/Content.Mango.Common.csproj" />
+    <!-- mango -->
     <ProjectReference Include="..\Content.Shared.Database\Content.Shared.Database.csproj" />
   </ItemGroup>
 
