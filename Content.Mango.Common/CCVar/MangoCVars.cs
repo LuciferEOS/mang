@@ -6,8 +6,8 @@ namespace Content.Mango.Common.CCVar;
 public sealed partial class MangoCVars
 {
     /// <summary>
-    /// Whether something funny would roll on the start of the shift
+    /// % chance for anything in <see cref="FunnyThingsSystem"/> to roll
     /// </summary>
-    public static readonly CVarDef<int> FunProb =
-        CVarDef.Create("mango.fun_value", 100, CVar.SERVER); // 100%
+    public static readonly CVarDef<float> FunProb =
+        CVarDef.Create("mango.fun_value", 100f, CVar.SERVER); // 100%
 }

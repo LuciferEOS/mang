@@ -1,8 +1,4 @@
-using Content.Goobstation.Common.Morgue;
-using Content.Mango.Common.CCVar;
-using Content.Shared.Chat; // Goob
-using Robust.Shared.Configuration; // mango
-using Robust.Shared.Random; // mango
+using Content.Goobstation.Common.Morgue; // Goob
 using Content.Shared.Database;
 using Content.Shared.Examine;
 using Content.Shared.Mind;
@@ -32,11 +28,6 @@ public abstract class SharedCrematoriumSystem : EntitySystem
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
 
-    [Dependency] private readonly IConfigurationManager _cfg = default!; // mango
-    [Dependency] private readonly IRobustRandom _gambling = default!; // mango
-    [Dependency] private readonly SharedChatSystem _chat = default!; // mango
-    private bool _funAllowed; // mango
-
     public override void Initialize()
     {
         base.Initialize();
@@ -44,15 +35,7 @@ public abstract class SharedCrematoriumSystem : EntitySystem
         SubscribeLocalEvent<CrematoriumComponent, ExaminedEvent>(OnExamine);
         SubscribeLocalEvent<CrematoriumComponent, GetVerbsEvent<AlternativeVerb>>(AddCremateVerb);
         SubscribeLocalEvent<ActiveCrematoriumComponent, StorageOpenAttemptEvent>(OnAttemptOpen);
-
-        _cfg.OnValueChanged(MangoCVars.FunProb, OnFunProbChanged, invokeImmediately: true); // mango
     }
-    // mango edit start - fun
-    private void OnFunProbChanged(int prob)
-    {
-        _funAllowed = _gambling.Prob(prob / 100f);
-    }
-    // mango edit end
 
     private void OnExamine(Entity<CrematoriumComponent> ent, ref ExaminedEvent args)
     {
@@ -113,20 +96,6 @@ public abstract class SharedCrematoriumSystem : EntitySystem
     {
         if (!Resolve(ent, ref ent.Comp))
             return false;
-
-        // mango start - fun
-        if (_funAllowed)
-        {
-            if (_gambling.Prob(0.20f))
-                _chat.TrySendInGameICMessage(ent.Owner, Loc.GetString("crematorium-fun-success"), InGameICChatType.Speak, true);
-            else
-            {
-                var number = _gambling.Next(1, 13);
-                _chat.TrySendInGameICMessage(ent.Owner, Loc.GetString($"crematorium-fun-fail-{number}"), InGameICChatType.Speak, true);
-                return false;
-            }
-        }
-        // mango end
 
         if (HasComp<ActiveCrematoriumComponent>(ent))
             return false;
