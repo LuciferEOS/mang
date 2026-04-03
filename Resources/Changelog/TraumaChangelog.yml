@@ -6322,3 +6322,14 @@ Entries:
   id: 731
   time: '2026-04-03T22:32:49.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1831
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: >-
+      Fixed cosmic cult monument and effigy placement getting blocked by
+      puddles, areas, ghosts, etc.
+  - type: Fix
+    message: Fixed IPCs taking poison damage from surgery...
+  id: 732
+  time: '2026-04-03T23:07:27.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1825
