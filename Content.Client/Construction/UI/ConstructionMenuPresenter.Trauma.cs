@@ -14,7 +14,7 @@ internal sealed partial class ConstructionMenuPresenter
     // private CommonKnowledgeSystem _knowledge = default!; // mango edit - kill skills
 
     private bool _autoFocusSearch;
-    private bool _useSkills;
+    // private bool _useSkills; // mango edit - kill skills, linter dies cuz of this
     private Dictionary<EntProtoId, int> _skills = new();
 
     private void InitializeTrauma()
