@@ -6315,3 +6315,10 @@ Entries:
   id: 730
   time: '2026-04-03T21:02:18.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1836
+- author: GeneRickUsername
+  changes:
+  - type: Fix
+    message: Fixed User Actions Panel not displaying the right thing in separated mode.
+  id: 731
+  time: '2026-04-03T22:32:49.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1831
