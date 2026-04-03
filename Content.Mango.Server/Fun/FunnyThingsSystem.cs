@@ -20,6 +20,6 @@ public sealed class FunnyThingsSystem : EntitySystem
     {
         var prob = _cfg.GetCVar(MangoCVars.FunProb);
         if (_gambling.Prob(prob / 100f))
-            _gameTicker.AddGameRule("CrematoriumFunRule");
+            _gameTicker.AddGameRule("CrematoriumFunRule"); // todo i have no fucking idea how to make this system expandable without making its either be 100% hell shift with random shit or 100% nothing
     }
 }
