@@ -3,3 +3,9 @@
   id: CrematoriumFunRule
   components:
   - type: CrematoriumFunRule
+
+- type: entity
+  parent: BaseGameRule
+  id: FentbotFunRule
+  components:
+  - type: FentbotFunRule
