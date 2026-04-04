@@ -1,6 +1,8 @@
 using Content.Mango.Common.CCVar;
 using Content.Server.GameTicking;
 using Robust.Shared.Configuration;
+using Robust.Shared.GameObjects;
+using Robust.Shared.IoC;
 using Robust.Shared.Random;
 
 namespace Content.Mango.Server.Fun;
@@ -25,6 +27,8 @@ public sealed class FunnyThingsSystem : EntitySystem
             _gameTicker.AddGameRule("FentbotFunRule");
         if (_gambling.Prob(prob / 100f))
             _gameTicker.AddGameRule("EngiSentryFunRule");
+        if (_gambling.Prob(prob / 100f))
+            _gameTicker.AddGameRule("FunSkeletonGibRule");
     }
 
     public bool CheckRule<T>() where T : Component
