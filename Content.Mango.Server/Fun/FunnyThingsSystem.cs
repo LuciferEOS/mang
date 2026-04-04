@@ -26,4 +26,12 @@ public sealed class FunnyThingsSystem : EntitySystem
         if (_gambling.Prob(prob / 100f))
             _gameTicker.AddGameRule("EngiSentryFunRule");
     }
+
+    public bool CheckRule<T>() where T : Component
+    {
+        var eqe = EntityQueryEnumerator<T>();
+        while (eqe.MoveNext(out _, out _))
+            return true;
+        return false;
+    }
 }

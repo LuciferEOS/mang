@@ -17,6 +17,7 @@ public sealed class CrematoriumFunRuleSystem : GameRuleSystem<CrematoriumFunRule
     [Dependency] private readonly ChatSystem _chat = default!;
     [Dependency] private readonly IPrototypeManager _protoMan = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] private readonly FunnyThingsSystem _fun = default!;
 
     private const float CancelProb = 0.8f; // todo put this inside a gamerule idk
     private static readonly ProtoId<LocalizedDatasetPrototype> Dataset = "CrematoriumFun";
@@ -30,15 +31,7 @@ public sealed class CrematoriumFunRuleSystem : GameRuleSystem<CrematoriumFunRule
 
     private void OnInit(EntityUid uid, ActiveCrematoriumComponent comp, ComponentInit args)
     {
-        var ruleActive = false;
-        var eqe = EntityQueryEnumerator<CrematoriumFunRuleComponent>();
-        while (eqe.MoveNext(out var rule, out _))
-        {
-            ruleActive = true;
-            break;
-        }
-
-        if (!ruleActive) // this is goida
+        if (!_fun.CheckRule<CrematoriumFunRuleComponent>())
             return;
 
         if (_gambling.Prob(CancelProb))

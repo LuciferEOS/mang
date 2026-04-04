@@ -7,6 +7,7 @@ namespace Content.Mango.Server.Fun.Systems;
 
 public sealed class FentbotFunRuleSystem : GameRuleSystem<FentbotFunRuleComponent>
 {
+    [Dependency] private readonly FunnyThingsSystem _fun = default!;
     public override void Initialize()
     {
         base.Initialize();
@@ -15,14 +16,7 @@ public sealed class FentbotFunRuleSystem : GameRuleSystem<FentbotFunRuleComponen
     }
     private void OnInit(EntityUid uid, MedibotComponent comp, ComponentInit args)
     {
-        var ruleActive = false;
-        var eqe = EntityQueryEnumerator<FentbotFunRuleComponent>();
-        while (eqe.MoveNext(out var rule, out _))
-        {
-            ruleActive = true;
-            break;
-        }
-        if (!ruleActive)
+        if (!_fun.CheckRule<FentbotFunRuleComponent>())
             return;
         FentUp(uid, comp);
     }
