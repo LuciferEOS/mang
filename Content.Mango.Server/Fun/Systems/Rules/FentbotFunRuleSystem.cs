@@ -3,7 +3,7 @@ using Content.Mango.Server.Fun.Components.Rules;
 using Content.Server.GameTicking.Rules;
 using Content.Shared.Silicons.Bots;
 
-namespace Content.Mango.Server.Fun.Systems;
+namespace Content.Mango.Server.Fun.Systems.Rules;
 
 public sealed class FentbotFunRuleSystem : GameRuleSystem<FentbotFunRuleComponent>
 {

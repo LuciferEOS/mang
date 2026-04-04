@@ -29,6 +29,8 @@ public sealed class FunnyThingsSystem : EntitySystem
             _gameTicker.AddGameRule("EngiSentryFunRule");
         if (_gambling.Prob(prob / 100f))
             _gameTicker.AddGameRule("FunSkeletonGibRule");
+        if (_gambling.Prob(prob / 100f))
+            _gameTicker.AddGameRule("HeartRipFunRule");
     }
 
     public bool CheckRule<T>() where T : Component
