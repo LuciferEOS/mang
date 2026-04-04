@@ -22,4 +22,5 @@
     - type: SurgeryIgnoreClothing
     # mango start
     - type: HeartRipAbility
+      activeOnlyWhenFunned: true
     # /mango

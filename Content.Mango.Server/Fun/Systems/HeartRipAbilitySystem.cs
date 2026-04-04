@@ -11,7 +11,9 @@ using Content.Shared.DoAfter;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Humanoid;
 using Content.Shared.Popups;
+using Content.Shared.Stunnable;
 using Content.Shared.Verbs;
+using Robust.Server.Audio;
 
 namespace Content.Mango.Server.Fun.Systems;
 
@@ -22,6 +24,8 @@ public sealed class HeartRipAbilitySystem : EntitySystem
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedHandsSystem _hands = default!;
     [Dependency] private readonly FunnyThingsSystem _fun = default!;
+    [Dependency] private readonly SharedStunSystem _stunSystem = default!;
+    [Dependency] private readonly AudioSystem _audio = default!;
 
     public override void Initialize()
     {
@@ -74,6 +78,8 @@ public sealed class HeartRipAbilitySystem : EntitySystem
         var (organUid, _) = hearts.First(); // fuck you bro
         _body.RemoveOrgan((args.Target.Value, targetBody), organUid);
         _hands.TryPickupAnyHand(uid, organUid);
+        _stunSystem.TryAddParalyzeDuration(args.Target.Value, comp.ParalyzeTime);
+        _audio.PlayPvs(comp.Sound, uid);
         _popup.PopupEntity(Loc.GetString("fun-popup-heart-rip-success", ("user", uid), ("target", args.Target.Value), ("heart", organUid)), uid,  PopupType.LargeCaution);
     }
 }
