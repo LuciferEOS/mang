@@ -1,0 +1,20 @@
+using Robust.Shared.Prototypes;
+
+namespace Content.Mango.Server.Fun.Components;
+
+[RegisterComponent]
+public sealed partial class SpawnOnDamageComponent : Component
+{
+    [DataField]
+    public EntProtoId Spawn = "WeaponTurretFunEngi";
+
+    [DataField]
+    public bool Active;
+
+    // required ammount of items in a stack
+    [DataField]
+    public int StackRequired = 30;
+
+    [DataField]
+    public bool EngiOnly = true; // will spawn the entity only if hit by engineering staff
+}

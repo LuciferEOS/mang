@@ -23,5 +23,7 @@ public sealed class FunnyThingsSystem : EntitySystem
             _gameTicker.AddGameRule("CrematoriumFunRule"); // todo i have no fucking idea how to make this system expandable without making its either be 100% hell shift with random shit or 100% nothing
         if (_gambling.Prob(prob / 100f)) // this is what i was talking about
             _gameTicker.AddGameRule("FentbotFunRule");
+        if (_gambling.Prob(prob / 100f))
+            _gameTicker.AddGameRule("EngiSentryFunRule");
     }
 }
