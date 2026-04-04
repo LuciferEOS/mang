@@ -3,13 +3,12 @@ using Content.Server.Chat.Systems;
 using Content.Server.GameTicking.Rules;
 using Content.Shared.Chat;
 using Content.Shared.Dataset;
-using Content.Shared.GameTicking.Components;
 using Content.Shared.Morgue;
 using Content.Shared.Morgue.Components;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
-namespace Content.Mango.Server.Fun.Systems;
+namespace Content.Mango.Server.Fun.Systems.Rules;
 
 public sealed class CrematoriumFunRuleSystem : GameRuleSystem<CrematoriumFunRuleComponent>
 {

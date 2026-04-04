@@ -10,7 +10,7 @@ using Robust.Shared.Audio;
 using Robust.Shared.GameObjects;
 using Robust.Shared.IoC;
 
-namespace Content.Mango.Server.Fun.Systems;
+namespace Content.Mango.Server.Fun.Systems.Rules;
 
 public sealed class FunSkeletonGibSystem : GameRuleSystem<FunSkeletonGibRuleComponent>
 {

@@ -4,7 +4,7 @@ using Content.Server.GameTicking.Rules;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Stacks;
 
-namespace Content.Mango.Server.Fun.Systems;
+namespace Content.Mango.Server.Fun.Systems.Rules;
 
 public sealed class EngiSentryFunRuleSystem : GameRuleSystem<EngiSentryFunRuleComponent>
 {

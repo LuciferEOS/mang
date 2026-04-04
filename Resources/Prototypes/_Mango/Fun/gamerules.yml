@@ -21,3 +21,9 @@
   id: FunSkeletonGibRule
   components:
   - type: FunSkeletonGibRule
+
+- type: entity
+  parent: BaseGameRule
+  id: HeartRipFunRule
+  components:
+  - type: HeartRipFunRule

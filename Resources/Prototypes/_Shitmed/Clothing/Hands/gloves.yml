@@ -20,3 +20,6 @@
   - type: ClothingGrantComponent
     component:
     - type: SurgeryIgnoreClothing
+    # mango start
+    - type: HeartRipAbility
+    # /mango
