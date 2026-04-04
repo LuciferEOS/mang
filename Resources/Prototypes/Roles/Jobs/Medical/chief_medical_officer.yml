@@ -45,6 +45,11 @@
         reviveChance: 0.9 # excellent training and experience
         inhaleChance: 1 # great kisser too
       # </Trauma>
+        # mango start
+      - type: HeartRipAbility
+        activeOnlyWhenFunned: true
+      # /mango
+
 
 - type: startingGear
   id: CMOGear
