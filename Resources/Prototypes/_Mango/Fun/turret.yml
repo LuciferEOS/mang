@@ -18,7 +18,7 @@
         acts: [ "Destruction" ]
     - trigger:
         !type:DamageTrigger
-        damage: 50
+        damage: 65
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -31,7 +31,7 @@
     soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
   - type: BallisticAmmoProvider
     proto: CartridgePistol
-    capacity: 50
+    capacity: 65
   - type: Repairable
     qualityNeeded: "Anchoring"
     doAfterDelay: 8

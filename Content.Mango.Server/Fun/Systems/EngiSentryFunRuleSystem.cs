@@ -8,6 +8,8 @@ namespace Content.Mango.Server.Fun.Systems;
 
 public sealed class EngiSentryFunRuleSystem : GameRuleSystem<EngiSentryFunRuleComponent>
 {
+    [Dependency] private readonly FunnyThingsSystem _fun = default!;
+
     public override void Initialize()
     {
         base.Initialize();
@@ -18,14 +20,7 @@ public sealed class EngiSentryFunRuleSystem : GameRuleSystem<EngiSentryFunRuleCo
 
     private void OnInit(EntityUid uid, SpawnOnDamageComponent comp, ComponentInit args)
     {
-        var ruleActive = false;
-        var eqe = EntityQueryEnumerator<EngiSentryFunRuleComponent>();
-        while (eqe.MoveNext(out _, out _))
-        {
-            ruleActive = true;
-            break;
-        }
-        if (!ruleActive)
+        if (!_fun.CheckRule<EngiSentryFunRuleComponent>())
             return;
         comp.Active = true;
     }
@@ -38,7 +33,7 @@ public sealed class EngiSentryFunRuleSystem : GameRuleSystem<EngiSentryFunRuleCo
             return;
 
         if (comp.EngiOnly
-            || args.Origin != null && !HasComp<MangoEngineeringStaffComponent>(args.Origin.Value))
+            && (args.Origin == null || !HasComp<MangoEngineeringStaffComponent>(args.Origin.Value)))
             return;
 
         if (TryComp<StackComponent>(uid, out var stack) && stack.Count != comp.StackRequired)
