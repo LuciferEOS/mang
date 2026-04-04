@@ -6391,3 +6391,20 @@ Entries:
   id: 740
   time: '2026-04-04T14:47:31.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1862
+- author: Big tobacco
+  changes:
+  - type: Add
+    message: >-
+      Added chemlab menthols, a cigarette that has a higher capacity for
+      reagents than regular ones
+  - type: Add
+    message: >-
+      Added hydroponic herbals, a botany-branded cigarette, 2 packs and 1 carton
+      can be found in the nutrimax vendor
+  - type: Add
+    message: Added interdyne herbals carton to the uplink, 5 packs for 15 TC
+  - type: Tweak
+    message: Changed all cigarette sprites to be more unique
+  id: 741
+  time: '2026-04-04T16:04:17.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1774
