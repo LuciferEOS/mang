@@ -9,3 +9,9 @@
   id: FentbotFunRule
   components:
   - type: FentbotFunRule
+
+- type: entity
+  parent: BaseGameRule
+  id: EngiSentryFunRule
+  components:
+  - type: EngiSentryFunRule

@@ -48,6 +48,7 @@
     - MetalRod
     - TileSteel
   # </Trauma>
+  - type: SpawnOnDamage # mango - fun
   - type: Material
   - type: PhysicalComposition
     materialComposition:

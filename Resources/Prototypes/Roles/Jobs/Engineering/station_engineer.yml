@@ -23,6 +23,9 @@
     components:
     - type: EngineeringStaff
   # </Trauma>
+  # mango
+    - type: MangoEngineeringStaff
+  # /mango
 - type: startingGear
   id: StationEngineerGear
   equipment:
