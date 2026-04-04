@@ -6,13 +6,13 @@ namespace Content.Mango.Server.Fun.Components;
 public sealed partial class HeartRipAbilityComponent : Component
 {
     [DataField]
-    public TimeSpan Duration =  TimeSpan.FromSeconds(6);
+    public float Duration = 6f;
 
     [DataField]
     public bool ActiveOnlyWhenFunned;
 
     [DataField]
-    public TimeSpan ParalyzeTime =  TimeSpan.FromSeconds(6);
+    public TimeSpan ParalyzeTime = TimeSpan.FromSeconds(6);
 
     [DataField]
     public SoundSpecifier Sound = new SoundPathSpecifier("/Audio/Effects/gib1.ogg");

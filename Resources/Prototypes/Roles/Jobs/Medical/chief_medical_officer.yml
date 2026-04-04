@@ -48,7 +48,8 @@
         # mango start
       - type: HeartRipAbility
         activeOnlyWhenFunned: true
-      # /mango
+        duration: 16
+        # /mango
 
 
 - type: startingGear

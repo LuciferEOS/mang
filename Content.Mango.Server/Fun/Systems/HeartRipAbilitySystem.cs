@@ -53,7 +53,7 @@ public sealed class HeartRipAbilitySystem : EntitySystem
             Text = Loc.GetString("verb-heart-rip-fun"),
             Act = () =>
             {
-                _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, user, ability.Duration,
+                _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, user, TimeSpan.FromSeconds(ability.Duration),
                         new HeartRipDoAfterEvent(), user, target)
                     {
                         BreakOnMove = true,
