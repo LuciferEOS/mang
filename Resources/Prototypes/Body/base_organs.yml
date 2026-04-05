@@ -113,7 +113,7 @@
     - Eyes
     - Tongue
     - Ears
-    - BrainChip # everyone starts with a brain chip so
+#    - BrainChip # everyone starts with a brain chip so # mango edit - kill chips
   - type: ChildOrgan
     parents: [ Torso ]
   - type: Woundable
