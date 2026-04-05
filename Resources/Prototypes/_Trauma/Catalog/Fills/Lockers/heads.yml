@@ -2,7 +2,7 @@
   id: LockerFillQuarterMasterTrauma
   table: !type:AllSelector
     children:
-    - id: BoxSkillChipsCargo
+#    - id: BoxSkillChipsCargo # mango edit - kill chips
     - id: CargoMegaphone
     - id: ArmoryOverrideKeyComponents
 
@@ -19,7 +19,7 @@
   id: LockerFillChiefEngineerTrauma
   table: !type:AllSelector
     children:
-    - id: BoxSkillChipsEngi
+#    - id: BoxSkillChipsEngi # mango edit - kill chips
     - id: RCDRechargingCE # replaces regular RCD
     - id: RPD
     - id: BaseHandheldStationMapPowerCe
@@ -33,7 +33,7 @@
   id: LockerFillChiefMedicalOfficerTrauma
   table: !type:AllSelector
     children:
-    - id: BoxSkillChipsMed
+#    - id: BoxSkillChipsMed # mango edit - kill chips
     - id: ClothingBackpackDuffelSurgeryFilled
     - id: ChemistryHotplateFlatPack
     - id: Multitool # for linking cloning machines
@@ -48,7 +48,7 @@
   id: LockerFillResearchDirectorTrauma
   table: !type:AllSelector
     children:
-    - id: BoxSkillChipsSci
+#    - id: BoxSkillChipsSci # mango edit - kill chips
     - id: AnomalyLocator # added anomaly locator to (try) reduce the amount of anoms that crit
     - id: CigarCase # RD needs cigs for uhh... science...
       prob: 0.15
@@ -61,7 +61,7 @@
   id: LockerFillHeadOfSecurityTrauma
   table: !type:AllSelector
     children:
-    - id: BoxSkillChipsSec
+#    - id: BoxSkillChipsSec # mango edit - kill chips
     - id: ClothingBeltSheathHeadOfSecurityFilled
     - id: TelescopicShield
     - id: ArmoryOverrideKeyComponents

@@ -58,20 +58,21 @@ public sealed class DurabilitySystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-
-        SubscribeLocalEvent<DurabilityComponent, ExaminedEvent>(OnExamined);
-        SubscribeLocalEvent<DurabilityComponent, AttemptMeleeEvent>(OnAttemptMelee);
-        SubscribeLocalEvent<DurabilityComponent, MeleeHitEvent>(OnMeleeHit);
-        SubscribeLocalEvent<DurabilityComponent, GetMeleeDamageEvent>(OnGetMeleeDamage);
-        SubscribeLocalEvent<DurabilityComponent, AttemptShootEvent>(OnAttemptShoot);
-        SubscribeLocalEvent<DurabilityComponent, GunShotEvent>(OnGunShot);
-        SubscribeLocalEvent<DurabilityComponent, GunRefreshModifiersEvent>(OnGunRefreshModifiers);
-        SubscribeLocalEvent<DurabilityComponent, DurabilityDamageChangedEvent>(OnDurabilityDamageChanged);
-        SubscribeLocalEvent<GunComponent, DurabilityStateChangedEvent>(OnStateChangeGun);
-        SubscribeLocalEvent<DurabilityComponent, DurabilityStateChangedEvent>(OnDurabilityStateChanged);
-        SubscribeLocalEvent<DurabilityComponent, InteractUsingEvent>(OnInteractUsing);
-        SubscribeLocalEvent<DurabilityComponent, RepairItemDoAfterEvent>(OnRepairItemDoAfter);
-        SubscribeLocalEvent<DurabilityComponent, RepairToolDoAfterEvent>(OnRepairToolDoAfter);
+        // mango edit - kill durability
+        // SubscribeLocalEvent<DurabilityComponent, ExaminedEvent>(OnExamined);
+        // SubscribeLocalEvent<DurabilityComponent, AttemptMeleeEvent>(OnAttemptMelee);
+        // SubscribeLocalEvent<DurabilityComponent, MeleeHitEvent>(OnMeleeHit);
+        // SubscribeLocalEvent<DurabilityComponent, GetMeleeDamageEvent>(OnGetMeleeDamage);
+        // SubscribeLocalEvent<DurabilityComponent, AttemptShootEvent>(OnAttemptShoot);
+        // SubscribeLocalEvent<DurabilityComponent, GunShotEvent>(OnGunShot);
+        // SubscribeLocalEvent<DurabilityComponent, GunRefreshModifiersEvent>(OnGunRefreshModifiers);
+        // SubscribeLocalEvent<DurabilityComponent, DurabilityDamageChangedEvent>(OnDurabilityDamageChanged);
+        // SubscribeLocalEvent<GunComponent, DurabilityStateChangedEvent>(OnStateChangeGun);
+        // SubscribeLocalEvent<DurabilityComponent, DurabilityStateChangedEvent>(OnDurabilityStateChanged);
+        // SubscribeLocalEvent<DurabilityComponent, InteractUsingEvent>(OnInteractUsing);
+        // SubscribeLocalEvent<DurabilityComponent, RepairItemDoAfterEvent>(OnRepairItemDoAfter);
+        // SubscribeLocalEvent<DurabilityComponent, RepairToolDoAfterEvent>(OnRepairToolDoAfter);
+        // /mango
     }
 
     public bool DamageEntity(EntityUid uid, FixedPoint2 amount, DurabilityComponent? comp = null, EntityUid? attacker = null, HashSet<EntityUid>? targets = null)
