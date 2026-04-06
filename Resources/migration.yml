@@ -15,6 +15,7 @@ CrateVendingMachineRestockAutoDrobeFilled: null
 CrateVendingMachineRestockHappyHonkFilled: null
 CrateVendingMachineRestockDiscountDansFilled: null
 CrateVendingMachineRestockDonutFilled: null
+CrateVendingMachineRestockPTechFilled: null
 
 # 2026-01-07
 GunSafeDisabler: GunSafePhaser
