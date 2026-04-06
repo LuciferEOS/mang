@@ -10,6 +10,11 @@
 
 # <Trauma> - too lazy to port debugoks multi migration thing
 
+# 2026-04-06 - mango - fix trauma upstream fail idk
+CrateVendingMachineRestockAutoDrobeFilled: null
+CrateVendingMachineRestockHappyHonkFilled: null
+CrateVendingMachineRestockDiscountDansFilled: null
+
 # 2026-01-07
 GunSafeDisabler: GunSafePhaser
 WeaponDisabler: WeaponLaserSidearm
