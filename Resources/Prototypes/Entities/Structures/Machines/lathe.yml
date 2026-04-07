@@ -251,7 +251,7 @@
     - UpgradeKits
     - ConstructionBagOfHolding
     # Einstein Engines Packs
-    - Translators
+#    - Translators # mango edit start - kill translators
     # <Trauma>
     - BotanyTrauma
     - TraumaScienceClothing
@@ -605,8 +605,8 @@
     - Janitor
     - Genetics
     # Einstein Engines Packs
-    - Translators # Language
-    - TranslatorImplanters # Language
+#    - Translators # Language # mango edit start - kill translators
+#    - TranslatorImplanters # Language # mango edit start - kill translators
     - TraumaCybernetics # Trauma
   - type: Machine
     board: MedicalTechFabCircuitboard
