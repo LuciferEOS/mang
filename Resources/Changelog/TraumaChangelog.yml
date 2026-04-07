@@ -6480,3 +6480,12 @@ Entries:
   id: 750
   time: '2026-04-07T10:02:14.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1900
+- author: deltanedas
+  changes:
+  - type: Fix
+    message: >-
+      Fixed biomass reclaimer not working and bonking clown heads instead of
+      mincing them.
+  id: 751
+  time: '2026-04-07T14:09:34.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1902
