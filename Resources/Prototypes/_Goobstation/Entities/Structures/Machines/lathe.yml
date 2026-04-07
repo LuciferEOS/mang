@@ -224,8 +224,8 @@
     - XenobioPack
     - XenobagHoldingPack
     # Einstein Engines Packs
-    - Translators
-    - TranslatorImplanters
+#    - Translators # mango edit start - kill translators
+#    - TranslatorImplanters # mango edit start - kill translators
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - MechBoardsSecurity
@@ -287,7 +287,7 @@
     - ServiceTools
     - ServiceBoardsGoob # goob
     # Einstein Engines Packs
-    - Translators
+#    - Translators # mango edit start - kill translators
   - type: EmagLatheRecipes
     emagStaticPacks:
     - ServiceBoardsEvilStatic # Donk Co microwave circiutboard
