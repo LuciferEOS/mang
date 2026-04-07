@@ -5,27 +5,29 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 # Tier 2
-- type: technology
-  id: BasicTranslation
-  name: research-technology-basic-translation
-  icon:
-    sprite: _EinsteinEngines/Objects/Devices/translator.rsi
-    state: icon
-  discipline: CivilianServices
-  tier: 2
-  cost: 7500
-  recipeUnlocks:
-  - BasicGalaticCommonTranslatorImplanter
-  - BubblishTranslator
-  - DraconicTranslator
-  - SolCommonTranslator
-  - RootSpeakTranslator
-  - MofficTranslator
-  - ChevalTranslatorImplanter
-  - NewKinPidginTranslator
-  position: -3, 4
-  technologyPrerequisites:
-  - AdvancedEntertainment
+# mango edit start
+#- type: technology
+#  id: BasicTranslation
+#  name: research-technology-basic-translation
+#  icon:
+#    sprite: _EinsteinEngines/Objects/Devices/translator.rsi
+#    state: icon
+#  discipline: CivilianServices
+#  tier: 2
+#  cost: 7500
+#  recipeUnlocks:
+#  - BasicGalaticCommonTranslatorImplanter
+#  - BubblishTranslator
+#  - DraconicTranslator
+#  - SolCommonTranslator
+#  - RootSpeakTranslator
+#  - MofficTranslator
+#  - ChevalTranslatorImplanter
+#  - NewKinPidginTranslator
+#  position: -3, 4
+#  technologyPrerequisites:
+#  - AdvancedEntertainment
+# mango edit end
 
 # Tier 3
 - type: technology
@@ -47,6 +49,6 @@
   - NewKinPidginTranslatorImplanter
   - AnimalTranslator
   - XenoTranslator
-  position: -3, 5
+  position: -3, 4 # mango edit
   technologyPrerequisites:
-  - BasicTranslation
+  - AdvancedEntertainment # mango edit
