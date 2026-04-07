@@ -19,8 +19,8 @@
 
 - type: trait
   id: Foreigner
-  name: trait-language-foreigner-name
-  description: trait-language-foreigner-desc
+  name: trait-language-foreigner-mango-name # mango edit
+  description: trait-language-foreigner-mango-desc # mango edit
   category: LanguageTraits
   cost: -2
   blacklist:
@@ -28,7 +28,7 @@
       - BorgChassis
   components:
   - type: ForeignerTrait
-    baseTranslator: TranslatorForeigner
+    baseTranslator: MangoTranslator # mango edit (this is important)
 
 # Not commented since this is another general-ish language.
 - type: trait

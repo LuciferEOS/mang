@@ -40,6 +40,7 @@
   blacklist:
     components:
     - BorgChassis
+    - MindShield
   components:
   - type: LanguageSpeaker
   languagesSpoken:
@@ -67,22 +68,19 @@
     understood:
     - TauCetiBasic
     - RaiderSpeak
-    requires:
-    - TauCetiBasic
-    - RaiderSpeak
 
 - type: entity
-  parent: BaseSubdermalImplant
-  id: RaiderSpeakTranslatorImplant
-  name: raiderspeak translator implant
-  description: An implant giving the ability to understand and speak Raiderspeak. гойда!
+  id: MangoTranslator # cant eat. thats it. its so bad holy shit GOIDA
+  name: foreigner mangoe
   categories: [ HideSpawnMenu ]
+  parent: BaseItem
+  description: MANGO MANGO MANGO
   components:
-  - type: KnowledgeGrantOnWear
-    skills:
-      LanguageRaiderSpeak: 65
+  - type: Sprite
+    sprite: _RMC14/Objects/Kitchen/Plants/mango.rsi
+    state: produce
 
-- type: font
+- type: font # goida
   id: Soviet
   path: "/Fonts/_Mango/Soviet/Red October.ttf"
 
