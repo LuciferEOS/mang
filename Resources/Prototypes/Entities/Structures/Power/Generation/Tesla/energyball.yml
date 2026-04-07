@@ -122,6 +122,9 @@
     follow: true
     location: tesla ball
   - type: Sprite
+    # mango
+    noRot: true
+    # /mango
     drawdepth: Effects
     sprite: Structures/Power/Generation/Tesla/energy_ball.rsi
     layers:
@@ -160,6 +163,8 @@
     interfaces:
       enum.SelfRenamerUIKey.Key:
         type: SelfRenamerBoundUserInterface
+  - type: MovementSpeedModifier # no lightning (ha get it) fast tesla
+    baseSprintSpeed: 2.5
   # mango end
 
 - type: entity
