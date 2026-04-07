@@ -225,7 +225,7 @@
     - XenobagHoldingPack
     # Einstein Engines Packs
 #    - Translators # mango edit start - kill translators
-    - TranslatorImplanters
+#    - TranslatorImplanters # mango edit start - kill translators
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - MechBoardsSecurity
