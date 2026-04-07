@@ -192,7 +192,6 @@
   - type: SupermatterImmune # Goobstation
   - type: ContainmentFieldIgnore # goob
   # mango start
-  - type: SelfRenamer
   - type: GhostTakeoverAvailable
   - type: InputMover
   - type: GhostRole
@@ -204,6 +203,7 @@
       settings: default
     mindRoles:
     - MindRoleGhostRoleFreeAgent
+  - type: SelfRenamer
   - type: UserInterface
     interfaces:
       enum.SelfRenamerUIKey.Key:

@@ -155,6 +155,11 @@
     - MindRoleGhostRoleFreeAgent
     raffle:
       settings: default
+  - type: SelfRenamer
+  - type: UserInterface
+    interfaces:
+      enum.SelfRenamerUIKey.Key:
+        type: SelfRenamerBoundUserInterface
   # mango end
 
 - type: entity

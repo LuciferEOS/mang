@@ -104,4 +104,9 @@
         settings: default
       mindRoles:
       - MindRoleGhostRoleFreeAgent
+    - type: SelfRenamer
+    - type: UserInterface
+      interfaces:
+        enum.SelfRenamerUIKey.Key:
+          type: SelfRenamerBoundUserInterface
     # mango end
