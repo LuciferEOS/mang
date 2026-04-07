@@ -77,7 +77,7 @@
   description: uplink-carpcaller-desc
   productEntity: CarpCaller
   cost:
-    Telecrystal: 20 # mango
+    Telecrystal: 35 # mango
   categories:
     -  UplinkDisruption
 
