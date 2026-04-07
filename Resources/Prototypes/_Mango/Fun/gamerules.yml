@@ -27,3 +27,9 @@
   id: HeartRipFunRule
   components:
   - type: HeartRipFunRule
+
+- type: entity
+  parent: BaseGameRule
+  id: WilhelmFtlFunRule
+  components:
+  - type: WilhelmFtlFunRule

@@ -20,6 +20,9 @@ public sealed class FunnyThingsSystem : EntitySystem
 
     private void OnRoundStartAttempt(RoundStartAttemptEvent ev)
     {
+        if (ev.Forced) // integration tests force round starts
+            return;
+
         var prob = _cfg.GetCVar(MangoCVars.FunProb);
         if (_gambling.Prob(prob / 100f))
             _gameTicker.AddGameRule("CrematoriumFunRule"); // todo i have no fucking idea how to make this system expandable without making its either be 100% hell shift with random shit or 100% nothing
@@ -31,6 +34,8 @@ public sealed class FunnyThingsSystem : EntitySystem
             _gameTicker.AddGameRule("FunSkeletonGibRule");
         if (_gambling.Prob(prob / 100f))
             _gameTicker.AddGameRule("HeartRipFunRule");
+        if (_gambling.Prob(prob / 100f))
+            _gameTicker.AddGameRule("WilhelmFtlFunRule");
     }
 
     public bool CheckRule<T>() where T : Component

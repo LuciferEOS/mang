@@ -10,6 +10,33 @@
 
 # <Trauma> - too lazy to port debugoks multi migration thing
 
+# 2026-04-06 - mango migration - fix trauma upstream fail idk
+CrateVendingMachineRestockAutoDrobeFilled: null
+CrateVendingMachineRestockHappyHonkFilled: null
+CrateVendingMachineRestockDiscountDansFilled: null
+CrateVendingMachineRestockDonutFilled: null
+CrateVendingMachineRestockPTechFilled: null
+CrateVendingMachineRestockBoozeFilled: null
+LockerShaftMinerFilledHardsuit: null
+AiRemoteBrain: null
+CardDeckBlack: null
+CardBoxSyndicate: null
+MachineFTLDriveAutomated: null
+BSOManual: null
+HeadHuman: null
+LeftArmHuman: null
+LeftLegHuman: null
+RightArmHuman: null
+RightLegHuman: null
+HeadSkeleton: null
+ChestSkeleton: null
+RightArmSkeleton: null
+RightHandSkeleton: null
+TorsoSkeleton: null
+LeftLegSkeleton: null
+BioSynthHeart: null
+MedicalCyberneticEyes: null
+
 # 2026-01-07
 GunSafeDisabler: GunSafePhaser
 WeaponDisabler: WeaponLaserSidearm

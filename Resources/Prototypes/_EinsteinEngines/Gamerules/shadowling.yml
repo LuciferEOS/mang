@@ -12,6 +12,10 @@
   parent: BaseShadowlingRule
   id: Shadowling
   components:
+  # mango
+  - type: DynamicRuleCost
+    cost: 300
+  # /mango
   - type: GameRule
     minPlayers: 30
   - type: AntagSelection
