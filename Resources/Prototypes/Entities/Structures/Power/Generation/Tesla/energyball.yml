@@ -143,6 +143,19 @@
     - TeslaEngine
     - SingularityTeslaEngine
     - Power
+  # mango start
+  - type: GhostTakeoverAvailable
+  - type: InputMover
+  - type: GhostRole
+    prob: 1
+    name: ghost-role-information-tesla-mango-name
+    description: ghost-role-information-tesla-mango-description
+    rules: ghost-role-information-freeagent-rules
+    mindRoles:
+    - MindRoleGhostRoleFreeAgent
+    raffle:
+      settings: default
+  # mango end
 
 - type: entity
   id: TeslaMiniEnergyBall

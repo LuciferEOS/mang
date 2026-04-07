@@ -191,3 +191,21 @@
             scale: .9,.9
   - type: SupermatterImmune # Goobstation
   - type: ContainmentFieldIgnore # goob
+  # mango start
+  - type: SelfRenamer
+  - type: GhostTakeoverAvailable
+  - type: InputMover
+  - type: GhostRole
+    prob: 1
+    name: ghost-role-information-singu-mango-name
+    description: ghost-role-information-singu-mango-description
+    rules: ghost-role-information-freeagent-rules
+    raffle:
+      settings: default
+    mindRoles:
+    - MindRoleGhostRoleFreeAgent
+  - type: UserInterface
+    interfaces:
+      enum.SelfRenamerUIKey.Key:
+        type: SelfRenamerBoundUserInterface
+  # mango end
