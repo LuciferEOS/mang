@@ -183,6 +183,10 @@
         type: HumanoidMarkingModifierBoundUserInterface
       enum.StrippingUiKey.Key:
         type: StrippableBoundUserInterface
+      # mango
+      enum.SelfRenamerUIKey.Key:
+        type: SelfRenamerBoundUserInterface
+      # /mango
   - type: Puller
   - type: Speech
     speechSounds: Alto
