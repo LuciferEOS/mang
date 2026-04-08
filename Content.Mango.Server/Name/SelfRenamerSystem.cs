@@ -15,12 +15,12 @@ public sealed class SelfRenamerSystem : SharedSelfRenamerSystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<SelfRenamerComponent, ComponentInit>(OnInit);
+        SubscribeLocalEvent<SelfRenamerComponent, MapInitEvent>(OnInit);
         SubscribeLocalEvent<SelfRenamerComponent, SelfRenamerActionEvent>(OnAction);
 
         Subs.BuiEvents<SelfRenamerComponent>(SelfRenamerUIKey.Key, subs => { subs.Event<SelfRenamerNameMessage>(OnNameMessage); });
     }
-    private void OnInit(Entity<SelfRenamerComponent> ent, ref ComponentInit args)
+    private void OnInit(Entity<SelfRenamerComponent> ent, ref MapInitEvent args)
     {
         _actions.AddAction(ent, ref ent.Comp.ActionEntity, ent.Comp.ActionPrototype);
     }
