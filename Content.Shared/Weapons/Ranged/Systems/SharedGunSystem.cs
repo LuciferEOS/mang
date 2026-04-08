@@ -517,7 +517,7 @@ public abstract partial class SharedGunSystem : EntitySystem
         // <Trauma> - prevent shooting with 0,0 direction
         if (mapDirection == Vector2.Zero)
             return;
-        var recoilScale = GetRecoilScale(user, gunUid);
+        var recoilScale = 1; // mango edit - kill skills, changed to 1, was trying to GetRecoilScale from SharedGunSystem.Trauma
         var mapAngle = mapDirection.ToAngle();
         var angle = GetRecoilAngle(Timing.CurTime, (gunUid, gun), mapDirection.ToAngle(), user, recoilScale); // Trauma - pass gunUid and user
         // </Trauma>

@@ -7,6 +7,10 @@
   - delta
   - omicron
   - octarine
+  # mango start - kill chud lock
+  - green
+  - blue
+  # mango end
   # intentionally no epsilon, NT won't sell you guns to kill their deathsquads
   category: cargoproduct-category-name-armory
   group: market
