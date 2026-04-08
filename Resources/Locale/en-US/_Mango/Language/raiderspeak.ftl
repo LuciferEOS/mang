@@ -4,4 +4,4 @@ language-RaiderSpeak-description = An ancient and robust language, created in th
 chat-language-RaiderSpeak-name = Raiderspeak
 
 trait-language-raiderspeak-name = Raiderspeak
-trait-language-raiderspeak-desc = Ancient and robust language mostly speaked by tiders.
+trait-language-raiderspeak-desc = Ancient and robust language mostly speaked by tiders. Mindshielded can't have this language.
