@@ -9,5 +9,5 @@ public sealed partial class MangoCVars
     /// % chance for anything in <see cref="FunnyThingsSystem"/> to roll
     /// </summary>
     public static readonly CVarDef<float> FunProb =
-        CVarDef.Create("mango.fun_value", 65f, CVar.SERVER); // 65%
+        CVarDef.Create("mango.fun_value", 10f, CVar.SERVER); // 10%
 }
