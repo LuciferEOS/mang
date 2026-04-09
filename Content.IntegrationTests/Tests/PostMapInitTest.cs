@@ -83,6 +83,9 @@ namespace Content.IntegrationTests.Tests
             "/Maps/_Goobstation/Shuttles/consul.yml",
             "/Maps/_Trauma/centcomm.yml",
             // </Trauma>
+            // mango
+            "/Maps/_Mango/dev.yml",
+            // /mango
             "/Maps/Shuttles/AdminSpawn/**" // admin gaming
         };
 
