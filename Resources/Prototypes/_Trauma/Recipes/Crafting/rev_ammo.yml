@@ -7,7 +7,7 @@
   theory:
     RevolutionaryKnowledge: 2
     WeaponsKnowledge: 2
-  entityWhitelist: # mango edit - kill skills
+  entityWhitelist: # inky edit - kill skills
     components:
     - Revolutionary
 
@@ -15,7 +15,7 @@
   parent: RevRPG2HE
   id: RevRPG2AP
   targetNode: AP
-  entityWhitelist: # mango edit - kill skills
+  entityWhitelist: # inky edit - kill skills
     components:
     - Revolutionary
 
@@ -24,6 +24,6 @@
   id: RevFlamethrowerAmmo
   graph: RevFlamethrowerAmmo
   targetNode: FlamethrowerAmmo
-  entityWhitelist: # mango edit - kill skills
+  entityWhitelist: # inky edit - kill skills
     components:
     - Revolutionary

@@ -58,7 +58,7 @@ public sealed class DurabilitySystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        // mango edit - kill durability
+        // inky edit - kill durability
         // SubscribeLocalEvent<DurabilityComponent, ExaminedEvent>(OnExamined);
         // SubscribeLocalEvent<DurabilityComponent, AttemptMeleeEvent>(OnAttemptMelee);
         // SubscribeLocalEvent<DurabilityComponent, MeleeHitEvent>(OnMeleeHit);
@@ -72,7 +72,7 @@ public sealed class DurabilitySystem : EntitySystem
         // SubscribeLocalEvent<DurabilityComponent, InteractUsingEvent>(OnInteractUsing);
         // SubscribeLocalEvent<DurabilityComponent, RepairItemDoAfterEvent>(OnRepairItemDoAfter);
         // SubscribeLocalEvent<DurabilityComponent, RepairToolDoAfterEvent>(OnRepairToolDoAfter);
-        // /mango
+        // /inky
     }
 
     public bool DamageEntity(EntityUid uid, FixedPoint2 amount, DurabilityComponent? comp = null, EntityUid? attacker = null, HashSet<EntityUid>? targets = null)

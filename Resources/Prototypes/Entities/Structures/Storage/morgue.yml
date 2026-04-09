@@ -171,9 +171,9 @@
           False: { visible: false }
   - type: Transform
     anchored: true
-  # mango start
+  # inky start
   - type: Speech
   - type: Vocal
     sounds:
       Unsexed: UnisexSilicon
-  # /mango
+  # /inky

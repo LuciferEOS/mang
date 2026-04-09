@@ -59,9 +59,9 @@ public sealed class RechargeableBlockingSystem : EntitySystem
 
         var batteryUse = delta.GetTotal().Float();
         _battery.TryUseCharge(battery.AsNullable(), batteryUse);
-        // mango
+        // inky
         CheckCharge(ent);
-        // /mango
+        // /inky
     }
 
     private void AttemptToggle(Entity<RechargeableBlockingComponent> ent, ref ItemToggleActivateAttemptEvent args)
@@ -93,7 +93,7 @@ public sealed class RechargeableBlockingSystem : EntitySystem
         }
 
         var charge = _battery.GetCharge(battery.AsNullable());
-        if (charge < 3) // mango edit - was 1
+        if (charge < 3) // inky edit - was 1
         {
             SetDischarged(ent, user);
             return;
@@ -113,7 +113,7 @@ public sealed class RechargeableBlockingSystem : EntitySystem
 
     private void SetDischarged(Entity<RechargeableBlockingComponent> ent, EntityUid? user = null, bool discharged = true)
     {
-        if (ent.Comp.Discharged == discharged) // mango edit
+        if (ent.Comp.Discharged == discharged) // inky edit
             return;
 
         ent.Comp.Discharged = discharged;

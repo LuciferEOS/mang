@@ -21,14 +21,14 @@ public sealed class StationAlertLevelLockSystem : SharedStationAlertLevelLockSys
 
     public void OnInit(Entity<StationAlertLevelLockComponent> ent, ref MapInitEvent args)
     {
-        // mango start
+        // inky start
         if (ent.Comp.Chudded != true)
         {
             ent.Comp.Enabled = false;
             Dirty(ent);
             return;
         }
-        // mango end
+        // inky end
         // for non-station mapped safes don't lock them because that's chuddy
         if (_station.GetOwningStation(ent.Owner) is not {} station)
         {

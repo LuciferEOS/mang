@@ -46,10 +46,10 @@
   parent: BaseGameRule
   id: Changeling
   components:
-  # mango
+  # inky
   - type: DynamicRuleCost
     cost: 100
-  # /mango
+  # /inky
   - type: ChangelingRule
   - type: GameRule
     minPlayers: 15
@@ -82,10 +82,10 @@
   parent: BaseTraitorRule
   id: CorporateAgent
   components:
-  # mango
+  # inky
   - type: DynamicRuleCost
     cost: 125
-  # /mango
+  # /inky
   - type: TraitorRule
     objectiveIssuers: CorporateFlavor
   - type: AntagRandomObjectives
@@ -258,10 +258,10 @@
   id: BlobGameMode
   parent: BlobRule
   components:
-  # mango
+  # inky
   - type: DynamicRuleCost
     cost: 350 # since its appearantly /3 times the goob chaos score? idk
-  # /mango
+  # /inky
   - type: GameRule
     minPlayers: 20
   - type: AntagSelection
@@ -384,10 +384,10 @@
   parent: BaseGameRule
   id: Devil
   components:
-  # mango
+  # inky
   - type: DynamicRuleCost
     cost: 100
-  # /mango
+  # /inky
   - type: DevilRule
   - type: GameRule
     minPlayers: 15

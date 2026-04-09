@@ -11,7 +11,7 @@
   theory:
     RevolutionaryKnowledge: 2
   useQuality: false
-  entityWhitelist: # mango edit - kill skills, this one is required cuz tiders can do rev shit
+  entityWhitelist: # inky edit - kill skills, this one is required cuz tiders can do rev shit
     components:
     - Revolutionary
 

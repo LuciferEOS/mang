@@ -21,10 +21,10 @@
   parent: BaseGameRule
   id: Heretic
   components:
-  # mango
+  # inky
   - type: DynamicRuleCost
     cost: 100
-  # /mango
+  # /inky
   - type: HereticRule
   - type: GameRule
     minPlayers: 15

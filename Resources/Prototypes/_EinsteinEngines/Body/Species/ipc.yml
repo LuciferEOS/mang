@@ -328,7 +328,7 @@
     - Eyes
     - Tongue
     - Ears
-#    - BrainChip # USB 6.0 # mango edit - kill chips
+#    - BrainChip # USB 6.0 # inky edit - kill chips
 
 - type: entity
   parent: [ OrganBaseArmLeft, OrganIPCExternal ]

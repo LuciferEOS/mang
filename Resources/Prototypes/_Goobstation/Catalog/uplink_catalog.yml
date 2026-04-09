@@ -77,7 +77,7 @@
   description: uplink-carpcaller-desc
   productEntity: CarpCaller
   cost:
-    Telecrystal: 35 # mango
+    Telecrystal: 35 # inky
   categories:
     -  UplinkDisruption
 
@@ -361,7 +361,7 @@
       tags:
       - NukeOpsUplink
 
-- type: listing # mango edit
+- type: listing # inky edit
   id: UplinkDualettaBundle
   name: uplink-dualetta-bundle-name
   description: uplink-dualetta-bundle-desc
@@ -408,7 +408,7 @@
     Telecrystal: 4
   categories:
   -  UplinkWearables
-#  conditions: # mango edit
+#  conditions: # inky edit
 #  - !type:StoreWhitelistCondition
 #    whitelist:
 #      tags:
@@ -522,7 +522,7 @@
   icon: { sprite: /Textures/_Goobstation/Objects/Weapons/Melee/hisgrace.rsi, state: icon }
   productEntity: HisGrace
   cost:
-    Telecrystal: 100 # mango
+    Telecrystal: 100 # inky
   categories:
   - UplinkJob
   conditions:
@@ -827,7 +827,7 @@
 #  categories:
 #  - UplinkImplants
 
-- type: listing # mango
+- type: listing # inky
   id: UplinkKravMagaImplanter
   name: uplink-krav-maga-implant-name
   description: uplink-krav-maga-implant-desc
@@ -878,7 +878,7 @@
   icon: { sprite: _Goobstation/Objects/Misc/sandevistan.rsi, state: icon }
   productEntity: AutosurgeonSandevistan
   cost:
-    Telecrystal: 65 # The urge to make it 65... # mango dont worry twin i got u
+    Telecrystal: 65 # The urge to make it 65... # inky dont worry twin i got u
   categories:
   - UplinkImplants
   conditions:
@@ -984,7 +984,7 @@
   description: uplink-clothing-explosive-gloves-desc
   productEntity: ClothingHandsGlovesExplosiveShock
   cost:
-    Telecrystal: 5 # mango - trust
+    Telecrystal: 5 # inky - trust
   categories:
   - UplinkDeception
 
@@ -1226,7 +1226,7 @@
     - Chef
 
 - type: listing
-  id: UplinkCapoeiraManual # mango edit
+  id: UplinkCapoeiraManual # inky edit
   name: uplink-capoeira-name
   description: uplink-capoeira-desc
   productEntity: CapoeiraManual

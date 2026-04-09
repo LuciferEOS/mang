@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 # Tier 2
-# mango edit start
+# inky edit start
 #- type: technology
 #  id: BasicTranslation
 #  name: research-technology-basic-translation
@@ -48,8 +48,8 @@
 #  - NewKinPidginTranslatorImplanter
 #  - AnimalTranslator
 #  - XenoTranslator
-#  position: -3, 4 # mango edit
+#  position: -3, 4 # inky edit
 #  technologyPrerequisites:
-#  - AdvancedEntertainment # mango edit
+#  - AdvancedEntertainment # inky edit
 
-# mango edit end
+# inky edit end

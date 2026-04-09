@@ -57,7 +57,7 @@ namespace Content.IntegrationTests.Tests.GameRules
             {
                 Assert.That(sGameTicker.RunLevel, Is.EqualTo(GameRunLevel.PreRoundLobby));
                 maxTime.RoundMaxTime = TimeSpan.FromSeconds(3);
-                sGameTicker.StartRound(force: true); // mango edit - force the roundstart
+                sGameTicker.StartRound(force: true); // inky edit - force the roundstart
             });
 
             // MisandryBox/JobObjectiveRule - either this or fucking every preset.yml.

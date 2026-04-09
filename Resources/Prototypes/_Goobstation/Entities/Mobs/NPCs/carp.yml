@@ -38,7 +38,7 @@
       - Dragonmind
 
 # carp but with dragon compound to make it follow the carp caller
-# mango edit start
+# inky edit start
 - type: entity
   id: MobCarpSleepy
   name: sleepy carp
@@ -51,5 +51,5 @@
     reflectProb: 1
     spread: 120
   - type: Sprite
-    sprite: _Mango/Mobs/Animals/carp.rsi
-# /mango
+    sprite: _Inky/Mobs/Animals/carp.rsi
+# /inky

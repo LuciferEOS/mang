@@ -10,7 +10,7 @@
   practical:
     GunsmithingKnowledge: 2
     WeaponsKnowledge: 2
-  entityWhitelist: # mango edit - kill skills
+  entityWhitelist: # inky edit - kill skills
     components:
     - Revolutionary
 
@@ -26,7 +26,7 @@
   practical:
     GunsmithingKnowledge: 2
     WeaponsKnowledge: 2
-  entityWhitelist: # mango edit - kill skills
+  entityWhitelist: # inky edit - kill skills
     components:
     - Revolutionary
 
@@ -42,7 +42,7 @@
   practical:
     GunsmithingKnowledge: 4
     WeaponsKnowledge: 3
-  entityWhitelist: # mango edit - kill skills
+  entityWhitelist: # inky edit - kill skills
     components:
     - Revolutionary
 
@@ -58,7 +58,7 @@
   practical:
     GunsmithingKnowledge: 4
     WeaponsKnowledge: 3
-  entityWhitelist: # mango edit - kill skills
+  entityWhitelist: # inky edit - kill skills
     components:
     - Revolutionary
 
@@ -74,7 +74,7 @@
   practical:
     GunsmithingKnowledge: 2
     WeaponsKnowledge: 2
-  entityWhitelist: # mango edit - kill skills
+  entityWhitelist: # inky edit - kill skills
     components:
     - Revolutionary
 
@@ -90,6 +90,6 @@
   practical:
     MechanicsKnowledge: 2
     WeaponsKnowledge: 2
-  entityWhitelist: # mango edit - kill skills
+  entityWhitelist: # inky edit - kill skills
     components:
     - Revolutionary

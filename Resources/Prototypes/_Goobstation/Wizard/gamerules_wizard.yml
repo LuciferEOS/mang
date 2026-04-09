@@ -68,11 +68,11 @@
 - type: entity
   parent: BaseWizardRule
   id: Wizard
-  # mango
+  # inky
   components:
   - type: DynamicRuleCost
     cost: 450 # idk
-  # /mango
+  # /inky
 
 - type: entity
   parent: BaseWizardRule

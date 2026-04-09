@@ -2,10 +2,10 @@
   parent: BaseGameRule
   id: CosmicCult
   components:
-  # mango
+  # inky
   - type: DynamicRuleCost
     cost: 225
-  # /mango
+  # /inky
   - type: CosmicCultRule
   - type: LoadMapRule
     mapPath: /Maps/_DV/Nonstations/cosmicvoid.yml

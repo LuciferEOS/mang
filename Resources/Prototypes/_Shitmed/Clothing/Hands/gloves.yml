@@ -20,7 +20,7 @@
   - type: ClothingGrantComponent
     component:
     - type: SurgeryIgnoreClothing
-    # mango start
+    # inky start
     - type: HeartRipAbility
       activeOnlyWhenFunned: true
-    # /mango
+    # /inky

@@ -11,22 +11,22 @@ namespace Content.Client.Construction.UI;
 internal sealed partial class ConstructionMenuPresenter
 {
     [Dependency] private readonly IConfigurationManager _cfg = default!;
-    // private CommonKnowledgeSystem _knowledge = default!; // mango edit - kill skills
+    // private CommonKnowledgeSystem _knowledge = default!; // inky edit - kill skills
 
     private bool _autoFocusSearch;
-    // private bool _useSkills; // mango edit - kill skills, linter dies cuz of this
+    // private bool _useSkills; // inky edit - kill skills, linter dies cuz of this
     private Dictionary<EntProtoId, int> _skills = new();
 
     private void InitializeTrauma()
     {
-        // _knowledge = _entManager.System<CommonKnowledgeSystem>(); // mango edit - kill skills
+        // _knowledge = _entManager.System<CommonKnowledgeSystem>(); // inky edit - kill skills
 
         _cfg.OnValueChanged(GoobCVars.AutoFocusSearchOnBuildMenu, x => _autoFocusSearch = x, true);
     }
 
     bool CanUnderstand(ConstructionPrototype recipe)
     {
-        // mango edit - kill skills, let whoever build whatever
+        // inky edit - kill skills, let whoever build whatever
         // if (!_useSkills)
         //     return true; // for mobs that dont use the knowledge system, let them build anything
         //

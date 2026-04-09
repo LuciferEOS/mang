@@ -30,6 +30,6 @@ public sealed partial class DamageOnHitComponent : Component
     [DataField]
     public TargetBodyPart? TargetParts;
 
-    // Mango
+    // inky
     [DataField] public bool Active; // true by default to disable this shit, but if someone decides to make something cool with it they can yaml it
 }

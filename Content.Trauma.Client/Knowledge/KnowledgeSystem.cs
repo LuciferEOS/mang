@@ -18,9 +18,9 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Trauma.Client.Knowledge;
 
-// mango edit - kill skills
+// inky edit - kill skills
 // do not dare to touch this system, half of it was lazy commented out.
-// I just wanna make it work man
+// I just wanna make it work man - lucifer
 public sealed class KnowledgeSystem : SharedKnowledgeSystem
 {
     // private WeakReference<CharacterWindow>? _activeWindow;

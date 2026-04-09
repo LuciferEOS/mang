@@ -93,12 +93,12 @@
       - TauCetiBasic
       understands:
       - TauCetiBasic
-    # mango start
+    # inky start
     - type: GhostTakeoverAvailable
     - type: GhostRole
       prob: 0.1
-      name: ghost-role-information-supermatter-mango-name
-      description: ghost-role-information-supermatter-mango-description
+      name: ghost-role-information-supermatter-inky-name
+      description: ghost-role-information-supermatter-inky-description
       rules: ghost-role-information-freeagent-rules
       raffle:
         settings: default
@@ -109,4 +109,4 @@
       interfaces:
         enum.SelfRenamerUIKey.Key:
           type: SelfRenamerBoundUserInterface
-    # mango end
+    # inky end

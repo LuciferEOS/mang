@@ -619,7 +619,7 @@ namespace Content.Client.Construction.UI
             }
             else
             {
-                // mango edit - kill skills, no you dont
+                // inky edit - kill skills, no you dont
                 // // <Trauma> - update recipes whenever opening the window
                 // if (_playerManager.LocalEntity is { } player)
                 // {

@@ -167,10 +167,10 @@
         type: HumanoidMarkingModifierBoundUserInterface
       enum.StrippingUiKey.Key:
         type: StrippableBoundUserInterface
-      # mango
+      # inky
       enum.SelfRenamerUIKey.Key:
         type: SelfRenamerBoundUserInterface
-      # /mango
+      # /inky
   - type: StepTriggerImmune
     whitelist:
       types:

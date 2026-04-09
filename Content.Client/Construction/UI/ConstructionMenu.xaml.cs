@@ -94,7 +94,7 @@ namespace Content.Client.Construction.UI
             RobustXamlLoader.Load(this);
 
             // <Trauma>
-            // _knowledge = _system.GetEntitySystem<CommonKnowledgeSystem>(); // mango edit - kill skills
+            // _knowledge = _system.GetEntitySystem<CommonKnowledgeSystem>(); // inky edit - kill skills
             // </Trauma>
             Title = Loc.GetString("construction-menu-title");
 
@@ -178,7 +178,7 @@ namespace Content.Client.Construction.UI
         {
             // <Trauma> - disable button if you lack the theory, show the requirements
             BuildButton.Disabled = !understands;
-            // AddSkillRequirements(proto); // mango edit - kill skills
+            // AddSkillRequirements(proto); // inky edit - kill skills
             // </Trauma>
             BuildButton.Text = Loc.GetString(isItem ? "construction-menu-place-ghost" : "construction-menu-craft");
             TargetName.SetMessage(name);
