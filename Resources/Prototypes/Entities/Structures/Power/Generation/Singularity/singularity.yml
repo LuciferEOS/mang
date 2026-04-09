@@ -96,7 +96,7 @@
     sound:
       path: /Audio/Effects/singularity.ogg
   - type: Physics
-    bodyType: KinematicController # mango edit
+    bodyType: KinematicController # inky edit
     bodyStatus: InAir
   - type: CanMoveInAir
   - type: EventHorizon # To make the singularity consume things.
@@ -191,13 +191,13 @@
             scale: .9,.9
   - type: SupermatterImmune # Goobstation
   - type: ContainmentFieldIgnore # goob
-  # mango start
+  # inky start
   - type: GhostTakeoverAvailable
   - type: InputMover
   - type: GhostRole
     prob: 1
-    name: ghost-role-information-singu-mango-name
-    description: ghost-role-information-singu-mango-description
+    name: ghost-role-information-singu-inky-name
+    description: ghost-role-information-singu-inky-description
     rules: ghost-role-information-freeagent-rules
     raffle:
       settings: default
@@ -208,4 +208,4 @@
     interfaces:
       enum.SelfRenamerUIKey.Key:
         type: SelfRenamerBoundUserInterface
-  # mango end
+  # inky end

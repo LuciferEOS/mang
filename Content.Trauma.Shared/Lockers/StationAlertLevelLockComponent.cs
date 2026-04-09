@@ -20,7 +20,7 @@ public sealed partial class StationAlertLevelLockComponent : Component
     [DataField, AutoNetworkedField]
     public EntityUid? StationId;
 
-    // mango
+    // inky
     /// <summary>
     /// if false, doesnt work at all.
     /// </summary>

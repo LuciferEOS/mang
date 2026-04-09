@@ -18,13 +18,13 @@
       - NanoTrasen
       - Assistant
   # </Trauma>
-  # mango
+  # inky
     - type: LanguageSpeaker
       speaks:
       - RaiderSpeak
       understands:
       - RaiderSpeak
-  # /mango
+  # /inky
 
 - type: startingGear
   id: PassengerGear

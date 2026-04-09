@@ -54,10 +54,10 @@
   components:
   # I LOVE GOIDA COPY PASTING THE ENTIRE THING
   # this just has ghost roles removed, pref roles added and players are picked roundstart
-  # mango
+  # inky
   - type: DynamicRuleCost
     cost: 100
-  # /mango
+  # /inky
   - type: AntagSelection
     selectionTime: PrePlayerSpawn
     definitions:

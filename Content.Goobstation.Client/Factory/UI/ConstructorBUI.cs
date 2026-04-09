@@ -121,12 +121,12 @@ public sealed class ConstructorBUI : BoundUserInterface
         var isEmptyCategory = string.IsNullOrEmpty(category) || category == _forAllCategoryName;
 
         _recipes.Clear();
-        // var skills = _knowledge.GetSkillMasteries(user); // mango edit - kill skills, also WHERE ARE THE COMMENTS YOU FUCKING CHUD, I HAD TO FIGURE OUT TS ON MY OWN
+        // var skills = _knowledge.GetSkillMasteries(user); // inky edit - kill skills, also WHERE ARE THE COMMENTS YOU FUCKING CHUD, I HAD TO FIGURE OUT TS ON MY OWN
         var useKnowledge = _construction.IsKnowledgeHolder(user);
         // FUCK YOU, copy pasta
         bool CanUnderstand(ConstructionPrototype recipe)
         {
-            // mango edit - kill skills, yes this is horrible, no i do not care, if trauma refactors it im gonna kms. MAKE A CVAR PLEASE
+            // inky edit - kill skills, yes this is horrible, no i do not care, if trauma refactors it im gonna kms. MAKE A CVAR PLEASE
             // foreach (var (id, needed) in recipe.Theory)
             // {
             //     if (!skills.TryGetValue(id, out var mastery) || mastery < needed)

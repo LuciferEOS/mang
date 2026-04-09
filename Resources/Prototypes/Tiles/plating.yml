@@ -17,7 +17,7 @@
   id: Plating
   parent: BasePlating
   name: tiles-plating
-  sprite: /Textures/Tiles/plating.png # mango edit - de-barratry textures
+  sprite: /Textures/Tiles/plating.png # inky edit - de-barratry textures
 
 - type: tile
   id: PlatingRCD
@@ -59,7 +59,7 @@
   id: PlatingDamaged
   parent: BasePlating
   name: tiles-plating
-  sprite: /Textures/Tiles/plating_damaged.png # mango edit - de-barratry textures
+  sprite: /Textures/Tiles/plating_damaged.png # inky edit - de-barratry textures
   variants: 3
   placementVariants:
   - 1.0
@@ -88,7 +88,7 @@
 - type: tile
   id: Lattice
   name: tiles-lattice
-  sprite: /Textures/Tiles/lattice.png # mango edit - de-barratry textures
+  sprite: /Textures/Tiles/lattice.png # inky edit - de-barratry textures
   baseTurf: Space
   isSubfloor: true
   deconstructTools: [ Cutting ]

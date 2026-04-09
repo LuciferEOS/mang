@@ -7,7 +7,7 @@
   theory:
     RevolutionaryKnowledge: 3
   useQuality: false
-  entityWhitelist: # mango edit - kill skills
+  entityWhitelist: # inky edit - kill skills
     components:
     - Revolutionary
 
@@ -20,6 +20,6 @@
   theory:
     RevolutionaryKnowledge: 2
   useQuality: false
-  entityWhitelist: # mango edit - kill skills
+  entityWhitelist: # inky edit - kill skills
     components:
     - Revolutionary

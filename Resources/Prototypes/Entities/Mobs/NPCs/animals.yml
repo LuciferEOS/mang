@@ -1432,10 +1432,10 @@
         type: HumanoidMarkingModifierBoundUserInterface
       enum.StrippingUiKey.Key:
         type: StrippableBoundUserInterface
-      # mango
+      # inky
       enum.SelfRenamerUIKey.Key:
         type: SelfRenamerBoundUserInterface
-      # /mango
+      # /inky
   # stupid monkey needs clever mutation to be literate
   - type: BlockReading
   - type: BlockWriting

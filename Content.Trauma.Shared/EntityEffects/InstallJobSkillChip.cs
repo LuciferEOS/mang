@@ -28,9 +28,9 @@ public sealed class InstallJobSkillChipSystem : EntityEffectSystem<MindContainer
 
     public static readonly ProtoId<OrganCategoryPrototype> Head = "Head";
 
-    // mango
+    // inky
     public static readonly ProtoId<OrganCategoryPrototype> BrainChip = "BrainChip";
-    // /mango
+    // /inky
 
     protected override void Effect(Entity<MindContainerComponent> ent, ref EntityEffectEvent<InstallJobSkillChip> args)
     {
@@ -40,10 +40,10 @@ public sealed class InstallJobSkillChipSystem : EntityEffectSystem<MindContainer
             _body.GetOrgan(ent.Owner, Head) is not {} part)
             return;
 
-        // mango
+        // inky
         if (!_part.HasOrganSlot(part, BrainChip))
             return;
-        // /mango
+        // /inky
 
         var id = "SkillChip" + job;
         if (!_proto.HasIndex<EntityPrototype>(id))

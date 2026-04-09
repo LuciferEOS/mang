@@ -21,10 +21,10 @@ public sealed class DamageOnHitSystem : EntitySystem
     // Looks for a hit, then damages the held item an appropriate amount.
     private void DamageItem(EntityUid uid, DamageOnHitComponent component, MeleeHitEvent args)
     {
-        // mango start
+        // inky start
         if (component.Active != true)
             return;
-        // mango end
+        // inky end
         if (args.HitEntities.Any())
             _damage.TryChangeDamage(uid, component.Damage, component.IgnoreResistances, targetPart: component.TargetParts); // Goob - added targetPart
     }

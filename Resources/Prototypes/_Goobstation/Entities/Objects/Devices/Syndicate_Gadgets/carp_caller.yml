@@ -54,7 +54,7 @@
         layer:
         - MachineLayer
   - type: MobCaller
-    spawnProto: MobCarpSleepy # mango edit
+    spawnProto: MobCarpSleepy # inky edit
     maxAlive: 5
   - type: Destructible
     thresholds:

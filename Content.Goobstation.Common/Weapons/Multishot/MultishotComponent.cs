@@ -28,12 +28,12 @@ public sealed partial class MultishotComponent : Component
     /// Spread multiplier of the gun while dual-wielding.
     /// </summary>
     [DataField]
-    public float SpreadMultiplier = 1.1f; // mango edit
+    public float SpreadMultiplier = 1.1f; // inky edit
     /// <summary>
     /// Flat spread increase of the gun while dual-wielding.
     /// </summary>
     [DataField]
-    public float SpreadAddition = 1f; // mango edit
+    public float SpreadAddition = 1f; // inky edit
 
     [DataField]
     public string ExamineMessage = "multishot-component-examine";

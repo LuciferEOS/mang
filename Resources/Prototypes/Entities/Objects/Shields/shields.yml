@@ -624,13 +624,13 @@
       energy: 0.7 # WD EDIT
       color: "#678AD9" # WD EDIT
     - type: ItemTogglePointLight
-    # mango
+    # inky
     - type: Reflect
       reflectProb: 1
       damageOnReflectModifier: 1 # Goob edit
       reflects:
       - Energy
-    # /mango
+    # /inky
     - type: Blocking
       passiveBlockModifier:
         coefficients:
@@ -660,15 +660,15 @@
       maxCharge: 35
       startingCharge: 35
     - type: BatterySelfRecharger
-      autoRechargeRate: 1 # mango edit - was 3
+      autoRechargeRate: 1 # inky edit - was 3
     - type: RechargeableBlocking
       dischargedRechargeRate: 2
-      chargedRechargeRate: 1 # mango edit - was 2
-      # mango edit
+      chargedRechargeRate: 1 # inky edit - was 2
+      # inky edit
 #      discharged: false
-      # /mango
+      # /inky
       # WD EDIT END
-  # <mango>
+  # <inky>
 #    - type: Parry
 #      reflects:
 #      - energy
@@ -681,7 +681,7 @@
 #        params:
 #          variation: 0.2
 #          volume: -11
-#    # </mango>
+#    # </inky>
 
 
 - type: entity

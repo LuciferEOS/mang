@@ -122,9 +122,9 @@
     follow: true
     location: tesla ball
   - type: Sprite
-    # mango
+    # inky
     noRot: true
-    # /mango
+    # /inky
     drawdepth: Effects
     sprite: Structures/Power/Generation/Tesla/energy_ball.rsi
     layers:
@@ -146,13 +146,13 @@
     - TeslaEngine
     - SingularityTeslaEngine
     - Power
-  # mango start
+  # inky start
   - type: GhostTakeoverAvailable
   - type: InputMover
   - type: GhostRole
     prob: 1
-    name: ghost-role-information-tesla-mango-name
-    description: ghost-role-information-tesla-mango-description
+    name: ghost-role-information-tesla-inky-name
+    description: ghost-role-information-tesla-inky-description
     rules: ghost-role-information-freeagent-rules
     mindRoles:
     - MindRoleGhostRoleFreeAgent
@@ -165,7 +165,7 @@
         type: SelfRenamerBoundUserInterface
   - type: MovementSpeedModifier # no lightning (ha get it) fast tesla
     baseSprintSpeed: 2.5
-  # mango end
+  # inky end
 
 - type: entity
   id: TeslaMiniEnergyBall

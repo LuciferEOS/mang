@@ -897,9 +897,9 @@ public abstract partial class SharedMeleeWeaponSystem : EntitySystem // Trauma -
         {
             // <Trauma>
             var staminaDamage = component.HeavyStaminaCost * entities.Count;
-            // mango edit - kill skills
+            // inky edit - kill skills
             // AdjustStaminaDamage(user, ref staminaDamage);
-            // /mango
+            // /inky
             // </Trauma>
             // make it not immediate to prevent annoying stamcrits
             _stamina.TakeStaminaDamage(user, staminaDamage, stamina, visual: false, immediate: false);

@@ -44,7 +44,7 @@
   icon: { sprite: /Textures/Objects/Weapons/Melee/e_sword.rsi, state: icon }
   productEntity: EnergySword
   cost:
-    Telecrystal: 33 # MANGO
+    Telecrystal: 33 # inky
   categories:
   - UplinkWeaponry
 
@@ -65,7 +65,7 @@
   description: uplink-energycrossbow-desc
   productEntity: WeaponEnergyCrossbow
   cost:
-    Telecrystal: 25 # MANGO
+    Telecrystal: 25 # inky
   categories:
   - UplinkWeaponry
   conditions:
@@ -98,7 +98,7 @@
   - UplinkWeaponry
 
 # Trauma - needs to be readable
-# mango edit - nuh uh
+# inky edit - nuh uh
 - type: listing
   id: UplinkGlovesKnuckleDusters
   name: uplink-gloves-knuckleduster-name
@@ -156,7 +156,7 @@
   icon: { sprite: /Textures/Objects/Weapons/Guns/Shotguns/hushpup.rsi, state: icon }
   productEntity: BriefcaseWeaponHushpupFilled
   cost:
-    Telecrystal: 30 # mango
+    Telecrystal: 30 # inky
   categories:
   - UplinkWeaponry
 
@@ -170,7 +170,7 @@
     Telecrystal: 50 # Trauma - was 14, made cheaper and 5x: you could just buy guns so its not so crazy
   categories:
   - UplinkWeaponry
-  # conditions: # Trauma, this gun is fine for nukies # mango: tf you mean it wasnt available for nukies??
+  # conditions: # Trauma, this gun is fine for nukies # inky: tf you mean it wasnt available for nukies??
   # - !type:StoreWhitelistCondition
   #   blacklist:
   #     tags:
@@ -186,7 +186,7 @@
     Telecrystal: 60 # Trauma - was 14, tiny bit cheaper and 5x
   categories:
   - UplinkWeaponry
-  # mango - fuck off
+  # inky - fuck off
 #  conditions:
 #  - !type:StoreWhitelistCondition
 #    whitelist: # Trauma - move big guns to nukies
@@ -219,7 +219,7 @@
   productEntity: ClothingBackpackDuffelSyndicateFilledRifle
   categories:
   - UplinkWeaponry
-  # mango - fuck off
+  # inky - fuck off
 #  conditions:
 #  - !type:StoreWhitelistCondition
 #    whitelist:
@@ -253,7 +253,7 @@
     Telecrystal: 150 # goob
   categories:
   - UplinkWeaponry
-  # mango - fuck off
+  # inky - fuck off
 #  conditions:
 #   - !type:StoreWhitelistCondition
 #     whitelist:
@@ -270,7 +270,7 @@
     Telecrystal: 100 # goob
   categories:
   - UplinkWeaponry
-  # mango - fuck off
+  # inky - fuck off
 #  # <Trauma>
 #  conditions:
 #  - !type:StoreWhitelistCondition
@@ -290,7 +290,7 @@
     Telecrystal: 10 # Trauma - was 1, 5x and doubled because its pretty strong
   categories:
   - UplinkExplosives
-  # mango - fuck off
+  # inky - fuck off
 #  conditions:
 #  - !type:StoreWhitelistCondition
 #    blacklist: # Trauma - inverted, theres a nukie listing separately
@@ -397,7 +397,7 @@
   description: uplink-c4-bundle-desc
   productEntity: ClothingBackpackDuffelSyndicateC4tBundle
   cost:
-    Telecrystal: 50 # mango edit - let the people suffer
+    Telecrystal: 50 # inky edit - let the people suffer
   categories:
   - UplinkExplosives
   conditions: # Goob, two times cheaper for nukies
@@ -438,10 +438,10 @@
   description: uplink-exploding-syndicate-bomb-desc
   productEntity: SyndicateBomb
   cost:
-    Telecrystal: 50 # mangoe - have two
+    Telecrystal: 50 # inkye - have two
   categories:
     - UplinkExplosives
-#  restockTime: 1800 # mango
+#  restockTime: 1800 # inky
   conditions:
   - !type:StoreWhitelistCondition
     blacklist:
@@ -502,7 +502,7 @@
   icon: { sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi, state: red-icon }
   productEntity: MagazinePistol # Trauma
   cost:
-    Telecrystal: 3 # mango
+    Telecrystal: 3 # inky
   categories:
   - UplinkAmmo
 
@@ -514,7 +514,7 @@
   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi, state: red-icon }
   productEntity: MagazinePistolSubMachineGun
   cost:
-    Telecrystal: 5 # mango
+    Telecrystal: 5 # inky
   categories:
   - UplinkAmmo
 
@@ -529,7 +529,7 @@
     Telecrystal: 5 # Trauma - was 2, cheaper and 5x
   categories:
   - UplinkAmmo
-  # mango edit
+  # inky edit
 #  # <Trauma>
 #  conditions:
 #  - !type:StoreWhitelistCondition
@@ -548,7 +548,7 @@
     Telecrystal: 4 # Trauma - was 2, cheaper (slug -1) and 5x
   categories:
   - UplinkAmmo
-  # mango edit
+  # inky edit
 #  # <Trauma>
 #  conditions:
 #  - !type:StoreWhitelistCondition
@@ -576,7 +576,7 @@
   description: uplink-mosin-ammo-desc
   productEntity: MagazineBoxLightRifle
   cost:
-    Telecrystal: 6 # mango
+    Telecrystal: 6 # inky
   categories:
   - UplinkAmmo
 
@@ -590,7 +590,7 @@
     Telecrystal: 5 # goob - on par with c20
   categories:
   - UplinkAmmo
-  # mango edit
+  # inky edit
 #  # <Trauma>
 #  conditions:
 #  - !type:StoreWhitelistCondition
@@ -761,7 +761,7 @@
       whitelist:
         tags:
           - NukeOpsUplink
-    - !type:BuyerWhitelistCondition # mango edit
+    - !type:BuyerWhitelistCondition # inky edit
       blacklist:
         components:
           - SurplusBundle
@@ -996,7 +996,7 @@
   description: uplink-soap-desc
   productEntity: SoapSyndie
   cost:
-    Telecrystal: 2 # mango - slipocalypse is like, almost the same price
+    Telecrystal: 2 # inky - slipocalypse is like, almost the same price
   categories:
   - UplinkDisruption
 
@@ -1106,7 +1106,7 @@
       tags:
       - NukeOpsUplink
       - ContravendUplink
-#  - !type:BuyerWhitelistCondition # mango edit - GAMBLING GAMBLING GAMBLING GAMBLING GAMBLINGGAMBLINGGAMBLING
+#  - !type:BuyerWhitelistCondition # inky edit - GAMBLING GAMBLING GAMBLING GAMBLING GAMBLINGGAMBLINGGAMBLING
 #    blacklist:
 #      components:
 #      - SurplusBundle
@@ -1169,7 +1169,7 @@
   icon: { sprite: /Textures/Objects/Misc/guardian_info.rsi, state: icon }
   productEntity: BoxHoloparasite
   cost:
-    Telecrystal: 47 # mango edit - its dogwater
+    Telecrystal: 47 # inky edit - its dogwater
   categories:
   - UplinkAllies
   conditions:
@@ -2010,7 +2010,7 @@
   icon: { sprite: /Textures/Objects/Fun/figurines.rsi, state: holoclown }
   productEntity: BoxHoloclown
   cost:
-    Telecrystal: 47 # mango
+    Telecrystal: 47 # inky
   categories:
   - UplinkJob
   conditions:

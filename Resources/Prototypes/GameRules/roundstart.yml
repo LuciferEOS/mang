@@ -261,10 +261,10 @@
     sets:
     - groups: TraitorObjectiveGroups
     maxDifficulty: 5
-  # mango
+  # inky
   - type: DynamicRuleCost
     cost: 65
-  # /mango
+  # /inky
 
 # Goobstation - order swapped since admin verbs use .Last() for some reason
 # TODO: Fix that

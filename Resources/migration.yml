@@ -10,7 +10,7 @@
 
 # <Trauma> - too lazy to port debugoks multi migration thing
 
-# 2026-04-06 - mango migration - fix trauma upstream fail idk
+# 2026-04-06 - inky migration - fix trauma upstream fail idk
 CrateVendingMachineRestockAutoDrobeFilled: null
 CrateVendingMachineRestockHappyHonkFilled: null
 CrateVendingMachineRestockDiscountDansFilled: null
@@ -830,7 +830,7 @@ MagazineBoxCaselessRifle10x24: null
 MagazineBoxCaselessRifleBig: null
 MagazinePistolHighCapacityRubber: null
 
-# 2025-03-09 - Shitmed Woundmed, separating torsos into chest and groin # mango edit - disabled, idk idc
+# 2025-03-09 - Shitmed Woundmed, separating torsos into chest and groin # inky edit - disabled, idk idc
 #TorsoHuman: ChestHuman
 #TorsoSkeleton: ChestSkeleton
 # 2025-03-18

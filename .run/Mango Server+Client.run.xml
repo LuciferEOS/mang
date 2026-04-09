@@ -1,7 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Mango Server+Client" type="CompoundRunConfigurationType">
-    <toRun name="Content.Mango.Client" type="DotNetProject" />
-    <toRun name="Content.Mango.Server" type="DotNetProject" />
-    <method v="2" />
-  </configuration>
-</component>

@@ -45,11 +45,11 @@
         reviveChance: 0.9 # excellent training and experience
         inhaleChance: 1 # great kisser too
       # </Trauma>
-        # mango start
+        # inky start
       - type: HeartRipAbility
         activeOnlyWhenFunned: true
         duration: 16
-        # /mango
+        # /inky
 
 
 - type: startingGear

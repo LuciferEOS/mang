@@ -6,7 +6,7 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Client.Construction.UI;
 
-// mango edit - kill skills
+// inky edit - kill skills
 // NO FUCK OFF
 public sealed partial class ConstructionMenu
 {
