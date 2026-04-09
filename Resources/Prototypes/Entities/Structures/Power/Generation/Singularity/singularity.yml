@@ -96,7 +96,7 @@
     sound:
       path: /Audio/Effects/singularity.ogg
   - type: Physics
-    bodyType: Dynamic
+    bodyType: KinematicController # mango edit
     bodyStatus: InAir
   - type: CanMoveInAir
   - type: EventHorizon # To make the singularity consume things.
