@@ -6687,3 +6687,10 @@ Entries:
   id: 775
   time: '2026-04-10T14:32:20.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1963
+- author: NoElkaTheGod
+  changes:
+  - type: Add
+    message: PDAs now display the current in-game date
+  id: 776
+  time: '2026-04-10T19:45:03.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1958
