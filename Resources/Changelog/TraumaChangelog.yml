@@ -6749,3 +6749,12 @@ Entries:
   id: 781
   time: '2026-04-11T12:36:29.0000000+00:00'
   url: https://github.com/Trauma-Station/Trauma-Station/pull/1976
+- author: deltanedas
+  changes:
+  - type: Tweak
+    message: >-
+      Changed xeno evolution so a queen/praetorian can only ever be evolved to
+      once, even if an old one died.
+  id: 782
+  time: '2026-04-11T16:39:41.0000000+00:00'
+  url: https://github.com/Trauma-Station/Trauma-Station/pull/1971
