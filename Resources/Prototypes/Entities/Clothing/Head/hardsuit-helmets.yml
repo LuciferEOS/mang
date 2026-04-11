@@ -494,6 +494,10 @@
     tags:
     - CorgiWearable
     - WhitelistChameleon
+  # inky start - concussion
+  - type: ConcussionResistance
+    resistance: 0.5
+  # /inky
 
 #Chief Medical Officer's Hardsuit
 - type: entity
@@ -666,6 +670,10 @@
     tags:
     - CorgiWearable
     - WhitelistChameleon
+  # inky - concussion
+  - type: ConcussionResistance
+    resistance: 0.5 # a fucking combat hardsuit that is designed to go explode some spessmen
+  # /inky
 
 #Blood-red Medic Hardsuit
 - type: entity
@@ -725,6 +733,10 @@
     tags:
     - CorgiWearable
     - WhitelistChameleon
+  # inky - concussion
+  - type: ConcussionResistance
+    resistance: 0.75
+  # /inky
 
 #Syndicate Commander Hardsuit
 - type: entity
@@ -767,6 +779,10 @@
     tags:
     - CorgiWearable
     - WhitelistChameleon
+  # inky - concussion
+  - type: ConcussionResistance
+    resistance: 0.75
+  # /inky
 
 #Cybersun Juggernaut Hardsuit
 - type: entity
@@ -807,6 +823,10 @@
     tags:
     - CorgiWearable
     - WhitelistChameleon
+  # inky - concussion
+  - type: ConcussionResistance
+    resistance: 0.8
+  # /inky
 
 #Wizard Hardsuit
 - type: entity
@@ -852,6 +872,10 @@
     tags:
     - CorgiWearable
     - WhitelistChameleon
+  # inky - concussion
+  - type: ConcussionResistance
+    resistance: 0.9 # FIREBALL!!
+  # /inky
 
 #Organic Space Suit
 - type: entity

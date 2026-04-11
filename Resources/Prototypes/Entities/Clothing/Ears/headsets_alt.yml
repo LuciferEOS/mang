@@ -112,6 +112,10 @@
   - type: Clothing
     equippedPrefix: alt
   - type: FlashSoundSuppression # Goobstation
+  # inky - concussion
+  - type: ConcussionResistance
+    resistance: 0.5
+  # /inky
 
 - type: entity
   parent: [ClothingHeadsetAltLoudspeaker, BaseCommandContraband] # Goobstation

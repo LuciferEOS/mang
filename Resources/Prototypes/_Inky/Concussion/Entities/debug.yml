@@ -1,0 +1,10 @@
+#- type: entity
+#  name: brainrot stick 100dmg
+#  suffix: DEBUG
+#  parent: MeleeDebugGib
+#  id: MeleeDebugConcussion100
+#  components:
+#  - type: MeleeWeapon
+#    damage:
+#      types:
+#        Brain: 100

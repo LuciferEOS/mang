@@ -116,6 +116,10 @@
   #- type: HideLayerClothing    #Goobstation
   #  layers:
   #    Hair: HEAD
+  # inky - concussion
+  - type: ConcussionResistance
+    resistance: 0.2
+  # /inky
 
 #Syndicate SWAT Helmet
 - type: entity
