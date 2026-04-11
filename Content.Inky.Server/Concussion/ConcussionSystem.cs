@@ -1,4 +1,5 @@
 using Content.Goobstation.Shared.Flashbang;
+using Content.Inky.Common.CCVar;
 using Content.Inky.Common.Concussion;
 using Content.Inky.Shared.Concussion;
 using Content.Server.Ghost;
@@ -16,6 +17,7 @@ using Content.Trauma.Common.Language.Components;
 using Content.Trauma.Common.Language.Systems;
 using Robust.Server.Audio;
 using Robust.Shared.Audio;
+using Robust.Shared.Configuration;
 using Robust.Shared.Containers;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Timing;
@@ -27,7 +29,6 @@ public sealed class ConcussionSystem : SharedConcussionSystem
     private const float _absoluteCap = 200f; // imagine maxcapping yourself, having 4k concussion damage and being revived at med forced to sit for 11 hours to heal
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly InventorySystem _inventory = default!;
-    [Dependency] private readonly AudioSystem _audio = default!;
     [Dependency] private readonly CommonLanguageSystem _theTowerOfBabel = default!;
     [Dependency] private readonly MovementSpeedModifierSystem _movement = default!;
 
@@ -109,12 +110,6 @@ public sealed class ConcussionSystem : SharedConcussionSystem
         {
             EnsureComp<ConcussedComponent>(uid);
             EnsureComp<SlurredAccentComponent>(uid);
-            _audio.PlayGlobal(
-                ConcussionSound,
-                args.Target,
-                AudioParams.Default
-                    .WithLoop(false)
-                    .WithVolume(-10f));
         }
         else
         {

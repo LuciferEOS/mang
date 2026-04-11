@@ -8,7 +8,7 @@ namespace Content.Inky.Shared.Concussion;
 /// Entities with this component will have concussion states & could be concussed.
 /// To properly work, the entity should have <see cref="DamageableComponent"/>
 /// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(raiseAfterAutoHandleState: true)]
 public sealed partial class ConcussionThresholdComponent : Component
 {
     [AutoNetworkedField, ViewVariables]
