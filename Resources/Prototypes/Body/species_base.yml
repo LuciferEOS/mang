@@ -10,6 +10,17 @@
   id: BaseSpeciesMob
   save: false
   components:
+  # inky
+  - type: ConcussionThreshold
+    thresholds:
+      0: Sane
+      5: Minor
+      50: Hard
+      100: Overwhelmed
+    healRate: 3
+    speedModifierThresholds:
+      Hard: 0.7
+  # /inky
   # <Trauma>
   - type: Targeting
   - type: BodyStatus

@@ -49,6 +49,10 @@
   #  slots:
   #  - HeadTop
   #  - HeadSide
+  # inky - concussion
+  - type: ConcussionResistance
+    resistance: 0.2
+  # /inky
 
 #Basic Helmet (Security Helmet)
 - type: entity
@@ -116,6 +120,10 @@
   #- type: HideLayerClothing    #Goobstation
   #  layers:
   #    Hair: HEAD
+  # inky - concussion
+  - type: ConcussionResistance
+    resistance: 0.2
+  # /inky
 
 #Syndicate SWAT Helmet
 - type: entity
