@@ -9,7 +9,7 @@ using Robust.Shared.Player;
 
 namespace Content.Inky.Client.Concussion;
 
-public sealed class ConcussionSystem : EntitySystem
+public sealed class ConcussionSystem : SharedConcussionSystem
 {
     [Dependency] private readonly IPlayerManager _player = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;

@@ -114,7 +114,7 @@
   - type: FlashSoundSuppression # Goobstation
   # inky - concussion
   - type: ConcussionResistance
-    resistance: 0.5
+    resistance: 0.4
   # /inky
 
 - type: entity

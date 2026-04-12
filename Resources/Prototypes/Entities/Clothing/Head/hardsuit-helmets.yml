@@ -672,7 +672,7 @@
     - WhitelistChameleon
   # inky - concussion
   - type: ConcussionResistance
-    resistance: 0.5 # a fucking combat hardsuit that is designed to go explode some spessmen
+    resistance: 0.2 #
   # /inky
 
 #Blood-red Medic Hardsuit
@@ -735,7 +735,7 @@
     - WhitelistChameleon
   # inky - concussion
   - type: ConcussionResistance
-    resistance: 0.75
+    resistance: 0.35
   # /inky
 
 #Syndicate Commander Hardsuit
@@ -781,7 +781,7 @@
     - WhitelistChameleon
   # inky - concussion
   - type: ConcussionResistance
-    resistance: 0.75
+    resistance: 0.35
   # /inky
 
 #Cybersun Juggernaut Hardsuit

@@ -46,6 +46,6 @@ public sealed partial class ConcussionThresholdComponent : Component
     public TimeSpan NextUpdate = TimeSpan.Zero;
 
     [ViewVariables]
-    public TimeSpan UpdateInterval = TimeSpan.FromSeconds(1);
+    public TimeSpan UpdateInterval = TimeSpan.FromSeconds(0.5);
 }
 

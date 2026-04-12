@@ -5,6 +5,7 @@ using Content.Inky.Shared.Concussion;
 using Content.Server.Ghost;
 using Content.Server.Speech.Components;
 using Content.Shared.Damage.Components;
+using Content.Shared.EntityEffects;
 using Content.Shared.Explosion;
 using Content.Shared.FixedPoint;
 using Content.Shared.Gibbing;
@@ -20,17 +21,16 @@ using Robust.Shared.Audio;
 using Robust.Shared.Configuration;
 using Robust.Shared.Containers;
 using Robust.Shared.GameObjects;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
 namespace Content.Inky.Server.Concussion;
 
 public sealed class ConcussionSystem : SharedConcussionSystem
 {
-    private const float _absoluteCap = 200f; // imagine maxcapping yourself, having 4k concussion damage and being revived at med forced to sit for 11 hours to heal
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly CommonLanguageSystem _theTowerOfBabel = default!;
     [Dependency] private readonly MovementSpeedModifierSystem _movement = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
 
     private static readonly SoundSpecifier ConcussionSound =
         new SoundPathSpecifier("/Audio/_Inky/Ambient/highpitch.ogg");
@@ -73,33 +73,8 @@ public sealed class ConcussionSystem : SharedConcussionSystem
 
             UpdateConcussionState(uid, comp);
             Dirty(uid, comp);
-
             comp.NextUpdate = curTime + comp.UpdateInterval;
         }
-    }
-
-    private void AddConcussionDamage(EntityUid uid, ConcussionThresholdComponent comp, FixedPoint2 damage)
-    {
-        var ev = new BeforeConcussionDamageEvent(uid, comp, damage);
-        if (TryComp<InventoryComponent>(uid, out var inventoryComp))
-            _inventory.RelayEvent((uid, inventoryComp), ref ev);
-
-        if (ev.Cancelled)
-            return;
-
-        var cap = (FixedPoint2)_absoluteCap; // fuck you
-        foreach (var (threshold, state) in comp.Thresholds)
-        {
-            if (state == ConcussionState.Overwhelmed)
-            {
-                cap = threshold;
-                break;
-            }
-        }
-
-        comp.StoredDamage = FixedPoint2.Min(comp.StoredDamage + ev.Damage, cap);
-        UpdateConcussionState(uid, comp);
-        Dirty(uid, comp);
     }
 
     private void OnConcussion(EntityUid uid, ConcussionThresholdComponent comp, ConcussionStateChangedEvent args)
@@ -142,7 +117,10 @@ public sealed class ConcussionSystem : SharedConcussionSystem
 
     private void OnFlashbanged(Entity<ConcussionThresholdComponent> ent, ref GetFlashbangedEvent args)
     {
-        AddConcussionDamage(ent.Owner, ent.Comp, 65f); // todo unhardcode the damage
+        if (args.ConcussionDamage <= 0f)
+            return;
+
+        AddConcussionDamage(ent.Owner, ent.Comp, args.ConcussionDamage);
     }
 
     private void OnRefreshSpeed(EntityUid uid, ConcussionThresholdComponent comp, RefreshMovementSpeedModifiersEvent args)

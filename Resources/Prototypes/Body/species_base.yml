@@ -17,7 +17,7 @@
       5: Minor
       50: Hard
       100: Overwhelmed
-    healRate: 1
+    healRate: 3
     speedModifierThresholds:
       Hard: 0.7
   # /inky

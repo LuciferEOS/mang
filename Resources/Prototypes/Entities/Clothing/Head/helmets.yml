@@ -49,6 +49,10 @@
   #  slots:
   #  - HeadTop
   #  - HeadSide
+  # inky - concussion
+  - type: ConcussionResistance
+    resistance: 0.2
+  # /inky
 
 #Basic Helmet (Security Helmet)
 - type: entity
