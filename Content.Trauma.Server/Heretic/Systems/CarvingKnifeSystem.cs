@@ -27,7 +27,6 @@ using Robust.Server.Audio;
 using Robust.Server.GameObjects;
 using Robust.Shared.Map;
 using Robust.Shared.Player;
-using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
 namespace Content.Trauma.Server.Heretic.Systems;
@@ -275,7 +274,7 @@ public sealed class CarvingKnifeSystem : EntitySystem
         var flags = LookupFlags.Static | LookupFlags.Sundries | LookupFlags.Sensors;
         _carvings.Clear();
         _lookup.GetEntitiesInRange(coords, 0.5f, _carvings, flags);
-        return _carvings.Count == 0;
+        return _carvings.Count > 0;
     }
 
     private void OnCarvingSelected(Entity<CarvingKnifeComponent> ent, ref RuneCarvingSelectedMessage args)

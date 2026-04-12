@@ -62,4 +62,10 @@ public sealed class DCCVars
     /// </summary>
     public static readonly CVarDef<int> CosmicCultFinaleDelaySeconds =
         CVarDef.Create("cosmiccult.extra_entropy_for_finale", 150, CVar.SERVER);
+
+    /// <summary>
+    /// The offset for in-game date (the date will be server date + this amount of years).
+    /// </summary>
+    public static readonly CVarDef<int> YearOffset =
+        CVarDef.Create("game.current_year_offset", 739, CVar.SERVERONLY);
 }

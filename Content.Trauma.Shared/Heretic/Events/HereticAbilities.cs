@@ -10,10 +10,7 @@ using Content.Shared.Whitelist;
 using Content.Trauma.Shared.Heretic.Components;
 using Content.Trauma.Shared.Heretic.Components.StatusEffects;
 using Robust.Shared.Audio;
-using Robust.Shared.GameStates;
 using Robust.Shared.Map;
-using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization;
 
 namespace Content.Trauma.Shared.Heretic.Events;
 
@@ -399,13 +396,15 @@ public sealed partial class EventHereticCleave : WorldTargetActionEvent
     {
         DamageDict =
         {
-            {"Heat", 20f},
-            {"Bloodloss", 10f},
+            {"Blunt", 4f},
+            {"Slash", 4f},
+            {"Piercing", 4f},
+            {"Bloodloss", 3f},
         },
     };
 
     [DataField]
-    public FixedPoint2 BloodModifyAmount = -50f;
+    public FixedPoint2 BloodModifyAmount = 50f;
 
     [DataField]
     public EntProtoId Effect = "EffectCleave";
