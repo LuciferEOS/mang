@@ -165,7 +165,6 @@
       max: 6
       playerRatio: 10
       lateJoinAdditional: true
-      jobBlacklist: [ Chaplain ]
       blacklist:
         components:
         - CommandStaff
@@ -183,9 +182,19 @@
     - prefRoles: [ Shadowling ]
       max: 3
       playerRatio: 25
-      jobBlacklist: [ Chaplain ]
       blacklist:
         components:
         - CommandStaff
       mindRoles:
       - MindRoleShadowling
+
+- type: entity
+  id: TraitorReinforcementNukeOps
+  parent: TraitorReinforcement
+  components:
+  - type: AntagPlayerEffects
+    effects:
+    - !type:NestedEffect
+      proto: InstallHypoportNukie
+    - !type:NestedEffect
+      proto: InstallSkillChipNukie
