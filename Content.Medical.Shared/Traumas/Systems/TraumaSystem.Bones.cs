@@ -13,6 +13,7 @@ using Robust.Shared.Audio;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 using System.Linq;
+using Content.Medical.Shared.Body; // inkymed
 
 namespace Content.Medical.Shared.Traumas;
 
@@ -157,20 +158,39 @@ public partial class TraumaSystem
         if (!Resolve(body, ref body.Comp))
             return;
 
+        //inkymed start TODO INKYMED PUT ALL OF INKY SHIT IN TraumaSystem.Inky
+        if (!TryComp<BodyStatusComponent>(body.Owner, out var bodyStatus))
+            return;
+
+        foreach (var limbAlerts in bodyStatus.LimbAlerts.Values)
+            limbAlerts.Remove(_brokenBonesAlertId);
+        // /inkymed
+
         bool hasBrokenBones = false;
         foreach (var woundable in _body.GetOrgans<WoundableComponent>(body))
         {
             if (GetBone(woundable.AsNullable()) is not {} bone)
                 continue;
 
-            if (bone.Comp.BoneSeverity == BoneSeverity.Broken)
-            {
-                hasBrokenBones = true;
-                break;
-            }
+            //inkymed start
+            if (bone.Comp.BoneSeverity != BoneSeverity.Broken)
+                continue;
+
+            hasBrokenBones = true;
+
+            if (!TryComp<OrganComponent>(woundable.Owner, out var organ)
+                || organ.Category is not {} category)
+                continue;
+
+            var limbId = _proto.Index(category).ID;
+
+            bodyStatus.LimbAlerts.TryAdd(limbId, new HashSet<string>());
+            bodyStatus.LimbAlerts[limbId].Add(_brokenBonesAlertId);
         }
 
-        // Update the alert based on whether any bones are broken
+        Dirty(body.Owner, bodyStatus); // i guess it should be fine since it doesnt update that much compared to bleeding or whatever
+        // /inkymed
+
         if (hasBrokenBones)
             _alert.ShowAlert(body.Owner, _brokenBonesAlertId);
         else

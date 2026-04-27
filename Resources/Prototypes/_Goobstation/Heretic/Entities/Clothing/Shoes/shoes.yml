@@ -24,7 +24,7 @@
   - type: UnholyItem
   - type: Armor
     coverage:
-    - Foot
+    - Leg # inkymed
     modifiers:
       coefficients:
         Blunt: 0.5

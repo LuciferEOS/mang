@@ -1,0 +1,71 @@
+# lungs
+
+- type: alert
+  id: Hypoxia
+  category: Breathing
+  icons:
+  - sprite: /Textures/_Inky/Status/alerts.rsi
+    state: lung-oxy-minor
+  name: alerts-lung-oxy-minor-name
+  description: alerts-lung-oxy-minor-desc
+
+- type: alert
+  id: Asphyxia
+  category: Breathing
+  icons:
+  - sprite: /Textures/_Inky/Status/alerts.rsi
+    state: lung-oxy-major
+  name: alerts-lung-oxy-major-name
+  description: alerts-lung-oxy-major-desc
+
+- type: alert
+  id: RespiratoryArrest
+  category: Breathing
+  icons:
+  - sprite: /Textures/_Inky/Status/alerts.rsi
+    state: lung-oxy-fail
+  name: alerts-lung-oxy-fail-name
+  description: alerts-lung-oxy-fail-desc
+
+# brainms
+
+- type: alert
+  id: BrainOxy
+  category: Breathing
+  icons:
+  - sprite: /Textures/_Inky/Status/alerts.rsi
+    state: brain-oxy
+  name: alerts-brain-oxy-name
+  description: alerts-brain-oxy-desc
+
+# misc
+
+- type: alert
+  id: Bleeding
+  icons:
+  - sprite: /Textures/_Inky/Status/bleed.rsi
+    state: bleed0
+  - sprite: /Textures/_Inky/Status/bleed.rsi
+    state: bleed1
+  - sprite: /Textures/_Inky/Status/bleed.rsi
+    state: bleed2
+  - sprite: /Textures/_Inky/Status/bleed.rsi
+    state: bleed3
+  - sprite: /Textures/_Inky/Status/bleed.rsi
+    state: bleed4
+  - sprite: /Textures/_Inky/Status/bleed.rsi
+    state: bleed5
+  - sprite: /Textures/_Inky/Status/bleed.rsi
+    state: bleed6
+  - sprite: /Textures/_Inky/Status/bleed.rsi
+    state: bleed7
+  - sprite: /Textures/_Inky/Status/bleed.rsi
+    state: bleed8
+  - sprite: /Textures/_Inky/Status/bleed.rsi
+    state: bleed9
+  - sprite: /Textures/_Inky/Status/bleed.rsi
+    state: bleed10
+  name: alerts-bleed-name
+  description: alerts-bleed-desc
+  minSeverity: 0
+  maxSeverity: 10

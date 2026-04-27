@@ -265,15 +265,15 @@ namespace Content.Client.Options.UI.Tabs
             AddHeader("ui-options-header-targeting");
             AddButton(ContentKeyFunctions.TargetHead);
             AddButton(ContentKeyFunctions.TargetChest);
-            AddButton(ContentKeyFunctions.TargetGroin);
+            // AddButton(ContentKeyFunctions.TargetGroin);          // inkymed
             AddButton(ContentKeyFunctions.TargetLeftArm);
-            AddButton(ContentKeyFunctions.TargetLeftHand);
+            // AddButton(ContentKeyFunctions.TargetLeftHand);       // inkymed
             AddButton(ContentKeyFunctions.TargetRightArm);
-            AddButton(ContentKeyFunctions.TargetRightHand);
+            // AddButton(ContentKeyFunctions.TargetRightHand);      // inkymed
             AddButton(ContentKeyFunctions.TargetLeftLeg);
-            AddButton(ContentKeyFunctions.TargetLeftFoot);
+            // AddButton(ContentKeyFunctions.TargetLeftFoot);       // inkymed
             AddButton(ContentKeyFunctions.TargetRightLeg);
-            AddButton(ContentKeyFunctions.TargetRightFoot);
+            // AddButton(ContentKeyFunctions.TargetRightFoot);      // inkymed
             // </Trauma>
 
             AddHeader("ui-options-header-misc");

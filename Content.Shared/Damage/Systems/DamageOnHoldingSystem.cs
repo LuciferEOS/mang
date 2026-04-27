@@ -59,7 +59,7 @@ public sealed class DamageOnHoldingSystem : EntitySystem
                     continue;
                 // </Trauma>
                 _damageableSystem.TryChangeDamage(container.Owner, component.Damage, origin: uid,
-                    targetPart: TargetBodyPart.Hands); // Trauma
+                    targetPart: TargetBodyPart.Arms); // Trauma // inkymed - changed to arms
             }
             component.NextDamage = _timing.CurTime + TimeSpan.FromSeconds(component.Interval);
         }

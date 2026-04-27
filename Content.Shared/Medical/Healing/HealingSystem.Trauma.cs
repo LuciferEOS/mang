@@ -190,6 +190,9 @@ public sealed partial class HealingSystem
         var healingLeft = healing.Damage * _damageable.UniversalTopicalsHealModifier;
         if (TryComp<BodyComponent>(ent, out var bodyComp))
         {
+            // inkymed edit start - kill autotargetting limbs
+
+            /*
             // Create parts to go over queue: targetted part -> head -> torso -> everything else
             // Iterate over the parts in the predefined order until we run out of parts or run out of healing
             var woundablesQueue = new Queue<EntityUid>();
@@ -221,6 +224,30 @@ public sealed partial class HealingSystem
                 healedTotal -= damageChanged;
                 healingLeft -= damageChanged;
             }
+            */
+            // inkymed edit still going \/
+
+            var ev = new PartHealAttemptEvent();
+            RaiseLocalEvent(targetedWoundable, ref ev);
+            if (!ev.Cancelled)
+            {
+                if (!(healing.BloodlossModifier == 0 && healing.ModifyBloodLevel >= 0 && ev.Bleeding))
+                {
+                    var damageChanged = _damageable.ChangeDamage(targetedWoundable, healingLeft, true, origin: args.User, ignoreBlockers: healedBleed || healing.BloodlossModifier == 0); // GOOBEDIT
+                    healedTotal -= damageChanged;
+                    healingLeft -= damageChanged;
+                }
+                else
+                {
+                    leftoverHealAndBleed = true;
+                }
+            }
+            else
+            {
+                // if it wasn't healed then a trauma blocked it? goida
+                leftoverHealAndTrauma |= !healedBleedLevel;
+            }
+            // /inkymed
         }
         else
         {
@@ -266,7 +293,7 @@ public sealed partial class HealingSystem
         _audio.PlayPredicted(healing.HealingEndSound, ent, ent, AudioParams.Default.WithVariation(0.125f).WithVolume(1f)); // Goob edit
 
         // Logic to determine whether or not to repeat the healing action
-        args.Repeat = IsAnythingToHeal(args.User, ent, (args.Used.Value, healing)); // GOOBEDIT
+        args.Repeat = IsBodyDamaged((ent, comp), args.User, healing, targetedWoundable) && !dontRepeat; // inkymed change: IsAnythingToHeal -> IsBodyDamaged
         args.Handled = true;
 
         if (args.Repeat || dontRepeat)

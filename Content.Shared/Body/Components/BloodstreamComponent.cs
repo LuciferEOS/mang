@@ -202,5 +202,5 @@ public sealed partial class BloodstreamComponent : Component
     /// Alert to show when bleeding.
     /// </summary>
     [DataField]
-    public ProtoId<AlertPrototype> BleedingAlert = "Bleed";
+    public ProtoId<AlertPrototype> BleedingAlert = "Bleeding"; // inkymed - new icons
 }

@@ -375,6 +375,11 @@ public sealed partial class BodyBloodstreamSystem : EntitySystem
     private void OnBodyUpdate(Entity<BodyComponent> ent, ref BloodstreamUpdateEvent args)
     {
         var total = FixedPoint2.Zero;
+
+        // inkymed
+        OnBodyUpdateLimbAlerts(ent, total);
+        // /inkymed
+
         foreach (var part in _body.GetOrgans<WoundableComponent>(ent.AsNullable()))
         {
             var totalPartBleeds = FixedPoint2.Zero;
@@ -387,7 +392,14 @@ public sealed partial class BodyBloodstreamSystem : EntitySystem
 
             part.Comp.Bleeds = totalPartBleeds;
             // not dirtied because jesus christ that would spam packets
+
+            // inkymed
+            OnBodyUpdateLimbBleeding(ent, part, totalPartBleeds);
+            // /inkymed
         }
+        // inkymed
+        OnBodyUpdateLimbAlertsFinalize(ent);
+        // /inkymed
 
         var blood = Comp<BloodstreamComponent>(ent);
         blood.BleedAmountFromWounds = (float) total;

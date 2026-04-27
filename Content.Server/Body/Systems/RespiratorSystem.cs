@@ -2,6 +2,8 @@
 using Content.Medical.Common.Body;
 using Content.Medical.Common.Targeting;
 using Content.Goobstation.Common.Body.Components;
+using Content.Medical.Common._Inky.Events; // inkymed
+using Content.Medical.Shared.Body; // inkymed
 using Content.Trauma.Common.MartialArts;
 using Content.Trauma.Common.Body;
 using Content.Shared.Movement.Pulling.Components;
@@ -36,7 +38,7 @@ using Robust.Shared.Timing;
 namespace Content.Server.Body.Systems;
 
 [UsedImplicitly]
-public sealed class RespiratorSystem : EntitySystem
+public sealed partial class RespiratorSystem : EntitySystem // inkymed - made partial
 {
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
@@ -52,6 +54,10 @@ public sealed class RespiratorSystem : EntitySystem
     [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
 
     private static readonly ProtoId<MetabolismStagePrototype> RespirationStage = new("Respiration");
+
+    // inkymed
+    public static readonly ProtoId<OrganCategoryPrototype> LungsCategory = "Lungs";
+    // /inkymed
 
     public override void Initialize()
     {
@@ -74,6 +80,10 @@ public sealed class RespiratorSystem : EntitySystem
         SubscribeLocalEvent<LungComponent, BodyRelayedEvent<CanMetabolizeGasEvent>>(CanBodyMetabolizeGas);
         SubscribeLocalEvent<LungComponent, BodyRelayedEvent<SuffocationEvent>>(OnSuffocation);
         SubscribeLocalEvent<LungComponent, BodyRelayedEvent<StopSuffocatingEvent>>(OnStopSuffocating);
+
+        // inkymed
+        InitializeInky();
+        // /inkymed
     }
 
     // Goobstation start
@@ -86,12 +96,27 @@ public sealed class RespiratorSystem : EntitySystem
             && pullable.GrabStage == GrabStage.Suffocate)
             return false;
 
-        return !HasComp<BlockedBreathingComponent>(uid);
+        if (HasComp<BlockedBreathingComponent>(uid)) // inkymed - converted into an if statement (was just return !HasComр
+            return false;
+
+        // inkymed
+        if (TryGetLungs(uid, out var lungComp) && lungComp != null)
+        {
+            if (!lungComp.IsActive)
+                return false;
+        }
+        // /inkymed
+
+        return true;
     }
     // Goobstation end
     private void OnMapInit(Entity<RespiratorComponent> ent, ref MapInitEvent args)
     {
         ent.Comp.NextUpdate = _gameTiming.CurTime + ent.Comp.AdjustedUpdateInterval;
+        // inkymed
+        if (TryGetLungs(ent.Owner, out var lungComp))
+            ent.Comp.Lungs = lungComp;
+        // /inkymed
     }
 
     public override void Update(float frameTime)
@@ -170,7 +195,12 @@ public sealed class RespiratorSystem : EntitySystem
             return;
 
         // <Trauma> - let event change how much you inhale
-        var volumeEv = new ModifyInhaledVolumeEvent(entity.Comp.BreathVolume);
+        // inkymed
+        if (entity.Comp.Lungs == null
+            || !entity.Comp.Lungs.IsActive)
+            return;
+        // /inkymed
+        var volumeEv = new ModifyInhaledVolumeEvent(entity.Comp.Lungs.BreathVolume); // inkymed
         RaiseLocalEvent(entity, ref volumeEv);
         var gas = ev.Gas.RemoveVolume(volumeEv.Volume);
         // </Trauma>
@@ -188,6 +218,12 @@ public sealed class RespiratorSystem : EntitySystem
     public void Exhale(Entity<RespiratorComponent> entity)
     {
         // exhale gas
+
+        // inkymed
+        if (entity.Comp.Lungs == null
+            || !entity.Comp.Lungs.IsActive)
+            return;
+        // /inkymed
 
         var ev = new ExhaleLocationEvent();
         RaiseLocalEvent(entity, ref ev, broadcast: false);
@@ -354,8 +390,33 @@ public sealed class RespiratorSystem : EntitySystem
         if (ent.Comp.SuffocationCycles == 2)
             _adminLogger.Add(LogType.Asphyxiation, $"{ToPrettyString(ent):entity} started suffocating");
 
-        _damageableSys.ChangeDamage(ent.Owner, HasComp<DebrainedComponent>(ent) ? ent.Comp.Damage * 4.5f : ent.Comp.Damage,
+        var damageAmount = HasComp<DebrainedComponent>(ent) ? ent.Comp.Damage * 4.5f : ent.Comp.Damage; // inkymed - putted this thing into its own var (taken from _damageableSys.ChangeDamage below)
+
+        // inkymed - suffocation cap
+        // TODO INKYMED: deshitcode + dehardcode this
+        if (ent.Comp.SuffocationDamageCap.HasValue)
+        {
+            var currentDmg = _damageableSys.GetAllDamage((ent.Owner, null));
+            currentDmg.DamageDict.TryGetValue("Asphyxiation", out var currentAsphyx);
+            var total = currentAsphyx + damageAmount.GetTotal();
+
+            if (total > ent.Comp.SuffocationDamageCap.Value)
+            {
+                var left = total - ent.Comp.SuffocationDamageCap.Value;
+
+                if (damageAmount.DamageDict.ContainsKey("Asphyxiation"))
+                    damageAmount.DamageDict["Asphyxiation"] -= left;
+            }
+        }
+        // /inkymed // TODO INKYMED /\ TS MAY NOT BE WORKING RN
+
+        _damageableSys.ChangeDamage(ent.Owner, damageAmount, // inkymed
             targetPart: TargetBodyPart.All, interruptsDoAfters: false, ignoreResistances: true); // Shitmed
+
+        // inkymed
+        var goidaEv = new SuffocationAlertUpdateEvent(damageAmount.GetTotal().Float()); // i have entered the next layer of hell by doing .Float
+        RaiseLocalEvent(ent, ref goidaEv);
+        // /inkymed
 
         if (ent.Comp.SuffocationCycles < ent.Comp.SuffocationCycleThreshold)
             return;
@@ -370,7 +431,11 @@ public sealed class RespiratorSystem : EntitySystem
             _adminLogger.Add(LogType.Asphyxiation, $"{ToPrettyString(ent):entity} stopped suffocating");
 
         _damageableSys.ChangeDamage(ent.Owner, ent.Comp.DamageRecovery,
-            targetPart: TargetBodyPart.All, ignoreBlockers: true); // Shitmed
+            targetPart: TargetBodyPart.All, ignoreBlockers: true);
+
+        // inkymed
+        UpdateAsphyxiationAlert(ent.Owner);
+        // /inkymed
 
         var ev = new StopSuffocatingEvent();
         RaiseLocalEvent(ent, ref ev);
@@ -378,12 +443,12 @@ public sealed class RespiratorSystem : EntitySystem
 
     private void OnSuffocation(Entity<LungComponent> ent, ref BodyRelayedEvent<SuffocationEvent> args)
     {
-        _alertsSystem.ShowAlert(args.Body.Owner, ent.Comp.Alert);
+        // _alertsSystem.ShowAlert(args.Body.Owner, ent.Comp.Alert); //inkymed - stuff now in RespiratorSystem.Inky
     }
 
     private void OnStopSuffocating(Entity<LungComponent> ent, ref BodyRelayedEvent<StopSuffocatingEvent> args)
     {
-        _alertsSystem.ClearAlert(args.Body.Owner, ent.Comp.Alert);
+        // _alertsSystem.ClearAlert(args.Body.Owner, ent.Comp.Alert); //inkymed - stuff now in RespiratorSystem.Inky
     }
 
     public void UpdateSaturation(EntityUid uid, float amount, RespiratorComponent? respirator = null)

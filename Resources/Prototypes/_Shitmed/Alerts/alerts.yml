@@ -1,8 +1,8 @@
 - type: alert
   id: BrokenBones
   icons:
-    - sprite: /Textures/_Shitmed/Interface/Alerts/alerts.rsi
-      state: brokenbones
+    - sprite: /Textures/_Inky/Status/alerts.rsi # inkymed
+      state: bone-break # inkymed # todo move to its own file
   name: alerts-broken-bones-name
   description: alerts-broken-bones-desc
 

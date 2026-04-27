@@ -81,9 +81,9 @@
     coverage: # full coverage, idk, magic
     - Torso
     - Arm
-    - Hand
+#    - Hand # inkymed
     - Leg
-    - Foot
+#    - Foot # inkymed
     - Tail
     - Other
     traumaDeductions: # prevents traumas at all (kinda)
@@ -332,9 +332,9 @@
     coverage:
     - Torso
     - Arm
-    - Hand
+#    - Hand # inkymed
     - Leg
-    - Foot
+#    - Foot # inkymed
     modifiers:
       coefficients:
         Blunt: 0.45

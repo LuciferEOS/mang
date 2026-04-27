@@ -255,6 +255,9 @@
       params:
         volume: 1.0
         variation: 0.125
+    # inkymed
+    dollOnly: false # no reason to make it not
+    # /inkymed
   - type: Stack
     stackType: Bloodpack
     count: 15 #Was 10, Buffed due to limb damage changes (Goobstation)
@@ -399,6 +402,9 @@
       params:
         volume: 1.0
         variation: 0.125
+    # inkymed
+    dollOnly: false
+    # /inkymed
 
 # Pills
 - type: entity

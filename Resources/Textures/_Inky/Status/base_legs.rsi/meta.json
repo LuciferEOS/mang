@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "sprited by @dlooodyspy(1439558070773747785) on Discord",
+    "size": {
+        "x": 128,
+        "y": 196
+    },
+    "states": [
+        {
+            "name": "LegRight"
+        },
+        {
+            "name": "LegLeft"
+        }
+    ]
+}

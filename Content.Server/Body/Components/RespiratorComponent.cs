@@ -14,12 +14,14 @@ namespace Content.Server.Body.Components
         ///     Volume of our breath in liters
         /// </summary>
         [DataField]
+        [Obsolete("Use LungComponent.BreathVolume instead")] // inkymed
         public float BreathVolume = Atmospherics.BreathVolume;
 
         /// <summary>
         ///     How much of the gas we inhale is metabolized? Value range is (0, 1]
         /// </summary>
         [DataField]
+        [Obsolete("Use LungComponent.Ratio instead")] // inkymed also what the fuck?? this shit IS NEVER EVEN USED ANYWHERE?????
         public float Ratio = 1.0f;
 
         /// <summary>

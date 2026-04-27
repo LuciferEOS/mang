@@ -1,0 +1,5 @@
+- type: damageContainer # TODO INKYMED: nuke this
+  id: Brain
+  supportedGroups:
+  - Airloss
+  - Toxin

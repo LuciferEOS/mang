@@ -39,7 +39,11 @@ public sealed class BrainSystem : EntitySystem
         EnsureComp<MindContainerComponent>(newEntity);
         EnsureComp<MindContainerComponent>(oldEntity);
 
-        var ghostOnMove = EnsureComp<GhostOnMoveComponent>(newEntity);
+        // inkymed
+        // var ghostOnMove = EnsureComp<GhostOnMoveComponent>(newEntity); // inkymed change - this was commented out
+        if (!TryComp<GhostOnMoveComponent>(newEntity, out var ghostOnMove)) // no ghostonmove on ents that dont have it defined in yaml. Just /ghost bro
+            return;
+        // /inkymed
         ghostOnMove.MustBeDead = HasComp<MobStateComponent>(newEntity); // Don't ghost living players out of their bodies.
 
         if (!_mindSystem.TryGetMind(oldEntity, out var mindId, out var mind))

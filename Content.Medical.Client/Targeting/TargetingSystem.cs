@@ -43,24 +43,24 @@ public sealed class TargetingSystem : SharedTargetingSystem
             InputCmdHandler.FromDelegate((session) => HandleTargetChange(session, TargetBodyPart.Head)))
         .Bind(ContentKeyFunctions.TargetChest,
             InputCmdHandler.FromDelegate((session) => HandleTargetChange(session, TargetBodyPart.Chest)))
-        .Bind(ContentKeyFunctions.TargetGroin,
-            InputCmdHandler.FromDelegate((session) => HandleTargetChange(session, TargetBodyPart.Groin)))
+        // .Bind(ContentKeyFunctions.TargetGroin,                                                                               // inkymed
+            // InputCmdHandler.FromDelegate((session) => HandleTargetChange(session, TargetBodyPart.Groin)))                    // inkymed
         .Bind(ContentKeyFunctions.TargetLeftArm,
             InputCmdHandler.FromDelegate((session) => HandleTargetChange(session, TargetBodyPart.LeftArm)))
-        .Bind(ContentKeyFunctions.TargetLeftHand,
-            InputCmdHandler.FromDelegate((session) => HandleTargetChange(session, TargetBodyPart.LeftHand)))
+        // .Bind(ContentKeyFunctions.TargetLeftHand,                                                                            // inkymed
+            // InputCmdHandler.FromDelegate((session) => HandleTargetChange(session, TargetBodyPart.LeftHand)))                 // inkymed
         .Bind(ContentKeyFunctions.TargetRightArm,
             InputCmdHandler.FromDelegate((session) => HandleTargetChange(session, TargetBodyPart.RightArm)))
-        .Bind(ContentKeyFunctions.TargetRightHand,
-            InputCmdHandler.FromDelegate((session) => HandleTargetChange(session, TargetBodyPart.RightHand)))
+        // .Bind(ContentKeyFunctions.TargetRightHand,                                                                           // inkymed
+            // InputCmdHandler.FromDelegate((session) => HandleTargetChange(session, TargetBodyPart.RightHand)))                // inkymed
         .Bind(ContentKeyFunctions.TargetLeftLeg,
             InputCmdHandler.FromDelegate((session) => HandleTargetChange(session, TargetBodyPart.LeftLeg)))
-        .Bind(ContentKeyFunctions.TargetLeftFoot,
-            InputCmdHandler.FromDelegate((session) => HandleTargetChange(session, TargetBodyPart.LeftFoot)))
+        // .Bind(ContentKeyFunctions.TargetLeftFoot,                                                                            // inkymed
+            // InputCmdHandler.FromDelegate((session) => HandleTargetChange(session, TargetBodyPart.LeftFoot)))                 // inkymed
         .Bind(ContentKeyFunctions.TargetRightLeg,
             InputCmdHandler.FromDelegate((session) => HandleTargetChange(session, TargetBodyPart.RightLeg)))
-        .Bind(ContentKeyFunctions.TargetRightFoot,
-            InputCmdHandler.FromDelegate((session) => HandleTargetChange(session, TargetBodyPart.RightFoot)))
+        // .Bind(ContentKeyFunctions.TargetRightFoot,                                                                           // inkymed
+            // InputCmdHandler.FromDelegate((session) => HandleTargetChange(session, TargetBodyPart.RightFoot)))                // inkymed
         .Register<SharedTargetingSystem>();
     }
 

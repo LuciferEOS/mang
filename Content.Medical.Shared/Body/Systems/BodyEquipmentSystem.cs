@@ -23,8 +23,8 @@ public sealed class BodyEquipmentSystem : EntitySystem
     {
         { BodyPartType.Head, [ "eyes", "ears", "head", "mask" ] },
         { BodyPartType.Torso, [ "innerclothing", "outerclothing" ] },
-        { BodyPartType.Hand, [ "gloves" ] },
-        { BodyPartType.Foot, [ "shoes" ] }
+        { BodyPartType.Arm, [ "gloves" ] }, // inkymed
+        { BodyPartType.Leg, [ "shoes" ] }   // inkymed
     };
 
     public override void Initialize()
@@ -79,9 +79,10 @@ public sealed class BodyEquipmentSystem : EntitySystem
             // TODO SHITMED: HOLY SHITCODE
             "innerclothing" or "outerclothing" => BodyPartType.Torso,
             "eyes" or "ears" or "head" or "mask" => BodyPartType.Head,
-            "gloves" => BodyPartType.Hand,
-            "shoes" => BodyPartType.Foot,
+            "gloves" => BodyPartType.Arm, // inkymed
+            "shoes" => BodyPartType.Leg,  // inkymed
             _ => null
+            // inkymed - WHAT THE FUCK IS THIS!!!! KILL YOURSELF!!!
         };
 
     /// <summary>

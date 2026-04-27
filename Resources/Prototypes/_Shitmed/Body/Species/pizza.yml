@@ -19,6 +19,8 @@
   - type: VisualOrgan
     data:
       sprite: _Shitmed/Mobs/Species/Misc/Pizza/parts.rsi
+    secondData: # inkymed - what the fuck is even the purpose of this
+      sprite: _Shitmed/Mobs/Species/Misc/Pizza/parts.rsi
   - type: VisualOrganMarkings
     markingData:
       group: None

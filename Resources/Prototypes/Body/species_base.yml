@@ -3,7 +3,7 @@
   parent:
   - BaseMob
   - MobCombat
-  - MobDamageable
+#  - MobDamageable # inkymed - FUCK!
   - MobPolymorphable
   - StripableInventoryBase
   #- BaseSpeciesAppearance # Trauma - every species inherits this itself
@@ -45,18 +45,54 @@
     damagePenalty: 0.2
   - type: ExaminableCharacter
   - type: MindControllable
-  - type: MobState # humanoids can be in softcrit
-    allowedStates:
-    - Alive
-    - SoftCrit
-    - Critical
-    - Dead
-  - type: MobThresholds
-    thresholds:
-      0: Alive
-      100: SoftCrit
-      150: Critical
-      200: Dead
+    # inkymed start
+
+    # inkymed - removed mobstate from basespecies due to all of shite being on the brain
+#  - type: MobState # humanoids can be in softcrit
+#    allowedStates:
+#    - Alive
+#    - SoftCrit
+#    - Critical
+#    - Dead
+#  - type: MobThresholds
+#    thresholds:
+#      0: Alive
+#      100: SoftCrit
+#      150: Critical
+#      200: Dead
+
+  # all of this shite is here due to mobdamageable being gone due to it having mobstate :tear:
+  - type: Damageable
+    damageContainer: Biological
+  - type: RadiationReceiver
+  - type: Stamina
+#  - type: StunVisuals
+  - type: StoreDamageTakenOnMind
+  - type: Deathgasp
+  - type: HealthExaminable
+    examinableTypes:
+    - Blunt
+    - Slash
+    - Piercing
+    - Heat
+    - Shock
+    - Cold
+    - Caustic
+  - type: DamageOnHighSpeedImpact
+    damage:
+      types:
+        Blunt: 5
+    soundHit:
+      path: /Audio/Effects/hit_kick.ogg
+  - type: Pullable
+  - type: LightningTarget
+    priority: 2
+    lightningExplode: false
+#  - type: GhostOnMove # inkymed - turns out when you dont have a mobstate, youre always dead.
+#    mustBeDead: true
+
+  # /inkymed
+
   - type: Destructible
     thresholds: [] # remove gib threshold, you can gib the torso instead
   - type: Tackler
@@ -304,5 +340,8 @@
     damageRecovery:
       types:
         Asphyxiation: -1.0
+    # inkymed
+    suffocationDamageCap: 101
+    # /inkymed
   - type: FireVisuals
     alternateState: Standing

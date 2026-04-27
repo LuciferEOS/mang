@@ -102,15 +102,15 @@ namespace Content.Client.Input
             // Shitmed Change Start - TODO: Add hands, feet and groin targeting.
             human.AddFunction(ContentKeyFunctions.TargetHead);
             human.AddFunction(ContentKeyFunctions.TargetChest);
-            human.AddFunction(ContentKeyFunctions.TargetGroin);
+            // human.AddFunction(ContentKeyFunctions.TargetGroin);
             human.AddFunction(ContentKeyFunctions.TargetLeftArm);
-            human.AddFunction(ContentKeyFunctions.TargetLeftHand);
+            // human.AddFunction(ContentKeyFunctions.TargetLeftHand);   // inkymed
             human.AddFunction(ContentKeyFunctions.TargetRightArm);
-            human.AddFunction(ContentKeyFunctions.TargetRightHand);
+            // human.AddFunction(ContentKeyFunctions.TargetRightHand);  // inkymed
             human.AddFunction(ContentKeyFunctions.TargetLeftLeg);
-            human.AddFunction(ContentKeyFunctions.TargetLeftFoot);
+            // human.AddFunction(ContentKeyFunctions.TargetLeftFoot);   // inkymed
             human.AddFunction(ContentKeyFunctions.TargetRightLeg);
-            human.AddFunction(ContentKeyFunctions.TargetRightFoot);
+            // human.AddFunction(ContentKeyFunctions.TargetRightFoot);  // inkymed
             // Shitmed Change End
 
             // actions should be common (for ghosts, mobs, etc)

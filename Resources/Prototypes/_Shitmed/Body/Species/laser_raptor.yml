@@ -13,8 +13,8 @@
       Torso: OrganRaptorTorso
       LegLeft: OrganRaptorLegLeft
       LegRight: OrganRaptorLegRight
-      FootLeft: OrganRaptorFootLeft
-      FootRight: OrganRaptorFootRight
+#      FootLeft: OrganRaptorFootLeft # inkymed
+#      FootRight: OrganRaptorFootRight # inkymed
       # Organs
       Eyes: OrganLaserEyes
       Lungs: OrganAnimalLungs

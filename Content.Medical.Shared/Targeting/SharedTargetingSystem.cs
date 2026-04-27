@@ -21,15 +21,15 @@ public abstract class SharedTargetingSystem : EntitySystem
     [
         TargetBodyPart.Head,
         TargetBodyPart.Chest,
-        TargetBodyPart.Groin,
+        // TargetBodyPart.Groin,        // inkymed
         TargetBodyPart.LeftArm,
-        TargetBodyPart.LeftHand,
+        // TargetBodyPart.LeftHand,     // inkymed
         TargetBodyPart.LeftLeg,
-        TargetBodyPart.LeftFoot,
+        // TargetBodyPart.LeftFoot,     // inkymed
         TargetBodyPart.RightArm,
-        TargetBodyPart.RightHand,
+        // TargetBodyPart.RightHand,    // inkymed
         TargetBodyPart.RightLeg,
-        TargetBodyPart.RightFoot,
+        // TargetBodyPart.RightFoot,    // inkymed
     ];
 
     public override void Initialize()

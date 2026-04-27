@@ -89,8 +89,8 @@
     - ArmRight
     - LegLeft
     - LegRight
-    - FootLeft
-    - FootRight
+#    - FootLeft # inkymed
+#    - FootRight # inkymed
   - type: Clothing
     equipDelay: 0.4
     unequipDelay: 0.6 # Slightly higher delay to protect against accidental unequips

@@ -69,8 +69,8 @@ public sealed class ExplosiveShockSystem : EntitySystem
         var target = Transform(uid).ParentUid;
 
         // gloves go under armor so ignore resistances
-        foreach (var part in _part.GetBodyParts(target, BodyPartType.Hand))
-            _damageable.ChangeDamage(part, explosiveShock.HandsDamage, true);
+        // foreach (var part in _part.GetBodyParts(target, BodyPartType.Hand))  // inkymed - fuck off
+        //     _damageable.ChangeDamage(part, explosiveShock.HandsDamage, true); // a week later i forgot why i did this todo inkymed?
 
         foreach (var part in _part.GetBodyParts(target, BodyPartType.Arm))
             _damageable.ChangeDamage(part, explosiveShock.ArmsDamage, true);

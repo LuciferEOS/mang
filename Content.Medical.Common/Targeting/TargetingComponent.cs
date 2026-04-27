@@ -6,6 +6,11 @@ namespace Content.Medical.Common.Targeting;
 /// <summary>
 /// Controls entity limb targeting for actions.
 /// </summary>
+///
+///
+/// THIS FILE WAS HEAVILY EDITED BY INKY IF YOURE FUTURE ME DOING AN UPSTREAM PLEASE PROCEED TO KILL YOURSELF
+///                                                                  -lucifer
+///
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class TargetingComponent : Component
 {
@@ -31,32 +36,32 @@ public sealed partial class TargetingComponent : Component
                 { TargetBodyPart.Chest, 1f }, // If you change this, suicide system won't work properly. So I won't even be able to ask you to kill yourself for doing this.
             }
         },
-        {
+        /*{
             TargetBodyPart.Groin, new Dictionary<TargetBodyPart, float>
             {
                 { TargetBodyPart.Groin, 0.4f },
                 { TargetBodyPart.Chest, 0.6f },
             }
-        },
+        },*/
         {
             TargetBodyPart.RightArm, new Dictionary<TargetBodyPart, float>
             {
-                { TargetBodyPart.RightArm, 0.25f },
-                { TargetBodyPart.Chest, 0.6f },
-                { TargetBodyPart.Groin, 0.1f },
-                { TargetBodyPart.RightHand, 0.05f },
+                { TargetBodyPart.RightArm, 0.5f },
+                { TargetBodyPart.Chest, 0.5f },
+                /* { TargetBodyPart.Groin, 0.1f },
+                { TargetBodyPart.RightHand, 0.05f }, */
             }
         },
         {
             TargetBodyPart.LeftArm, new Dictionary<TargetBodyPart, float>
             {
-                { TargetBodyPart.LeftArm, 0.25f },
-                { TargetBodyPart.Chest, 0.6f },
-                { TargetBodyPart.Groin, 0.1f },
-                { TargetBodyPart.LeftHand, 0.05f },
+                { TargetBodyPart.LeftArm, 0.5f },
+                { TargetBodyPart.Chest, 0.5f },
+                /*{ TargetBodyPart.Groin, 0.1f },
+                { TargetBodyPart.LeftHand, 0.05f }, */
             }
         },
-        {
+        /*{
             TargetBodyPart.RightHand, new Dictionary<TargetBodyPart, float>
             {
                 { TargetBodyPart.RightHand, 0.2f },
@@ -73,26 +78,26 @@ public sealed partial class TargetingComponent : Component
                 { TargetBodyPart.Groin, 0.1f },
                 { TargetBodyPart.LeftArm, 0.1f },
             }
-        },
+        }, */
         {
             TargetBodyPart.RightLeg, new Dictionary<TargetBodyPart, float>
             {
-                { TargetBodyPart.RightLeg, 0.25f },
-                { TargetBodyPart.Chest, 0.6f },
-                { TargetBodyPart.Groin, 0.1f },
-                { TargetBodyPart.RightFoot, 0.05f },
+                { TargetBodyPart.RightLeg, 0.5f },
+                { TargetBodyPart.Chest, 0.5f },
+                /*{ TargetBodyPart.Groin, 0.1f },
+                { TargetBodyPart.RightFoot, 0.05f }, */
             }
         },
         {
             TargetBodyPart.LeftLeg, new Dictionary<TargetBodyPart, float>
             {
-                { TargetBodyPart.LeftLeg, 0.25f },
-                { TargetBodyPart.Chest, 0.6f },
-                { TargetBodyPart.Groin, 0.1f },
-                { TargetBodyPart.LeftFoot, 0.05f },
+                { TargetBodyPart.LeftLeg, 0.5f },
+                { TargetBodyPart.Chest, 0.5f },
+                /*{ TargetBodyPart.Groin, 0.1f },
+                { TargetBodyPart.LeftFoot, 0.05f }, */
             }
-        },
-        {
+        }
+        /*{
             TargetBodyPart.RightFoot, new Dictionary<TargetBodyPart, float>
             {
                 { TargetBodyPart.RightFoot, 0.2f },
@@ -109,7 +114,7 @@ public sealed partial class TargetingComponent : Component
                 { TargetBodyPart.Groin, 0.1f },
                 { TargetBodyPart.LeftLeg, 0.1f },
             }
-        },
+        },*/
     };
 
     /// <summary>

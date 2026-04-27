@@ -98,6 +98,10 @@
       - UndergarmentTop
       - UndergarmentBottom
       - Special
+  # inkymed
+  - type: Destructible
+    thresholds: [] # remove gib threshold due to ents no longer having mobstate, theoretically it can be alive even after like 1000 damage
+  # /inkymed
 
 - type: entity
   parent: OrganBaseExternal # Shitmed
@@ -170,17 +174,24 @@
   # <Shitmed>
   - type: BodyPart
     symmetry: Left
-    slots:
-    - HandLeft
+#    slots: # inkymed
+#    - HandLeft # inkymed
   # </Shitmed>
   - type: Organ
     category: ArmLeft
   - type: Sprite
     state: l_arm
+  - type: HandOrgan # inkymed
+    handID: left
+    data:
+      location: Left
   - type: VisualOrgan
     layer: enum.HumanoidVisualLayers.LArm
     data:
       state: l_arm
+    secondLayer: enum.HumanoidVisualLayers.LHand # inkymed
+    secondData:
+      state: l_hand
   - type: VisualOrganMarkings
     markingData:
       layers:
@@ -195,17 +206,24 @@
   # <Shitmed>
   - type: BodyPart
     symmetry: Right
-    slots:
-    - HandRight
+#    slots: # inkymed
+#    - HandRight # inkymed
   # </Shitmed>
   - type: Organ
     category: ArmRight
   - type: Sprite
     state: r_arm
+  - type: HandOrgan # inkymed
+    handID: right
+    data:
+      location: Right
   - type: VisualOrgan
     layer: enum.HumanoidVisualLayers.RArm
     data:
       state: r_arm
+    secondLayer: enum.HumanoidVisualLayers.RHand # inkymed
+    secondData:
+      state: r_hand
   - type: VisualOrganMarkings
     markingData:
       layers:
@@ -220,8 +238,8 @@
   # <Shitmed>
   - type: BodyPart
     symmetry: Left
-  - type: ChildOrgan
-    parents: [ ArmLeft ]
+#  - type: ChildOrgan # inkymed
+#    parents: [ ArmLeft ] # inkymed
   # </Shitmed>
   - type: Organ
     category: HandLeft
@@ -249,8 +267,8 @@
   # <Shitmed>
   - type: BodyPart
     symmetry: Right
-  - type: ChildOrgan
-    parents: [ ArmRight ]
+#  - type: ChildOrgan # inkymed
+#    parents: [ ArmRight ] # inkymed
   # </Shitmed>
   - type: Organ
     category: HandRight
@@ -278,8 +296,8 @@
   # <Shitmed>
   - type: BodyPart
     symmetry: Left
-    slots:
-    - FootLeft
+#    slots:  # inkymed
+#    - FootLeft  # inkymed-foot
   # </Shitmed>
   - type: Organ
     category: LegLeft
@@ -289,6 +307,9 @@
     layer: enum.HumanoidVisualLayers.LLeg
     data:
       state: l_leg
+    secondLayer: enum.HumanoidVisualLayers.LFoot # inkymed
+    secondData:
+      state: l_foot
   - type: VisualOrganMarkings
     markingData:
       layers:
@@ -303,8 +324,8 @@
   # <Shitmed>
   - type: BodyPart
     symmetry: Right
-    slots:
-    - FootRight
+#    slots:  # inkymed
+#    - FootRight  # inkymed-feet
   # </Shitmed>
   - type: Organ
     category: LegRight
@@ -314,6 +335,9 @@
     layer: enum.HumanoidVisualLayers.RLeg
     data:
       state: r_leg
+    secondLayer: enum.HumanoidVisualLayers.RFoot # inkymed
+    secondData:
+      state: r_foot
   - type: VisualOrganMarkings
     markingData:
       layers:
@@ -328,8 +352,8 @@
   # <Shitmed>
   - type: BodyPart
     symmetry: Left
-  - type: ChildOrgan
-    parents: [ LegLeft ]
+#  - type: ChildOrgan # inkymed
+#    parents: [ LegLeft ] # inkymed
   # </Shitmed>
   - type: Organ
     category: FootLeft
@@ -353,8 +377,8 @@
   # <Shitmed>
   - type: BodyPart
     symmetry: Right
-  - type: ChildOrgan
-    parents: [ LegRight ]
+#  - type: ChildOrgan # inkymed
+#    parents: [ LegRight ] # inkymed
   # </Shitmed>
   - type: Organ
     category: FootRight

@@ -168,7 +168,8 @@ public sealed partial class HealingSystem : EntitySystem // Trauma - made partia
 
     private void OnHealingUse(Entity<HealingComponent> healing, ref UseInHandEvent args)
     {
-        if (args.Handled)
+        if (args.Handled
+            || healing.Comp.DollOnly) // inkymed
             return;
 
         if (TryHeal(healing, args.User, args.User))
@@ -177,14 +178,15 @@ public sealed partial class HealingSystem : EntitySystem // Trauma - made partia
 
     private void OnHealingAfterInteract(Entity<HealingComponent> healing, ref AfterInteractEvent args)
     {
-        if (args.Handled || !args.CanReach || args.Target == null)
+        if (args.Handled || !args.CanReach || args.Target == null
+            || healing.Comp.DollOnly) // inkymed
             return;
 
         if (TryHeal(healing, args.Target.Value, args.User))
             args.Handled = true;
     }
 
-    private bool TryHeal(Entity<HealingComponent> healing, Entity<DamageableComponent?> target, EntityUid user)
+    public bool TryHeal(Entity<HealingComponent> healing, Entity<DamageableComponent?> target, EntityUid user) // inkymed - made public
     {
         if (!Resolve(target, ref target.Comp, false))
             return false;

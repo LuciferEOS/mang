@@ -51,12 +51,12 @@
       Head: OrganDionaHead
       ArmLeft: OrganDionaArmLeft
       ArmRight: OrganDionaArmRight
-      HandRight: OrganDionaHandRight
-      HandLeft: OrganDionaHandLeft
+#      HandRight: OrganDionaHandRight # inkymed
+#      HandLeft: OrganDionaHandLeft # inkymed
       LegLeft: OrganDionaLegLeft
       LegRight: OrganDionaLegRight
-      FootLeft: OrganDionaFootLeft
-      FootRight: OrganDionaFootRight
+#      FootLeft: OrganDionaFootLeft # inkymed
+#      FootRight: OrganDionaFootRight # inkymed
       Brain: OrganDionaBrainNymphing
       Eyes: OrganDionaEyes
       Tongue: OrganDionaTongue # Trauma
@@ -210,6 +210,8 @@
   components:
   - type: VisualOrgan
     data:
+      sprite: Mobs/Species/Diona/parts.rsi
+    secondData: # inkymed
       sprite: Mobs/Species/Diona/parts.rsi
   - type: VisualOrganMarkings
     markingData:

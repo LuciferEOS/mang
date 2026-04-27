@@ -44,8 +44,8 @@
           - Arm
           - Leg
           - Tail
-          - Hand
-          - Foot
+#          - Hand # inkymed
+#          - Foot # inkymed
           modifiers:
             coefficients:
               Blunt: 0.7

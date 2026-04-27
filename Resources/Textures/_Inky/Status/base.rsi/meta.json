@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "sprited by @dlooodyspy(1439558070773747785) on Discord",
+    "size": {
+        "x": 128,
+        "y": 128
+    },
+    "states": [
+        {
+            "name": "Torso"
+        },
+        {
+            "name": "Head"
+        },
+        {
+            "name": "ArmLeft"
+        },
+        {
+            "name": "ArmRight"
+        }
+    ]
+}

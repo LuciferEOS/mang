@@ -29,7 +29,7 @@ public sealed partial class DevilContractSystem
 
     private void OnLosePart(DevilContractLosePartEvent args)
     {
-        var parts = _part.GetBodyParts(args.Target, BodyPartType.Hand);
+        var parts = _part.GetBodyParts(args.Target, BodyPartType.Arm); // inkymed
         if (parts.Count <= 0)
             return;
 

@@ -27,6 +27,10 @@ public sealed class PartStatusUIController : UIController, IOnStateEntered<Gamep
     private BodyStatusComponent? _comp;
     private PartStatusControl? PartStatusControl;
 
+    // inkymed
+    public event Action? OnStatusClicked;
+    // /inkymed
+
     public override void Initialize()
     {
         base.Initialize();
@@ -112,5 +116,8 @@ public sealed class PartStatusUIController : UIController, IOnStateEntered<Gamep
             return;
 
         _entNet.SendSystemNetworkMessage(new GetPartStatusEvent());
+        // inkymed
+        OnStatusClicked?.Invoke();
+        // /inkymed
     }
 }

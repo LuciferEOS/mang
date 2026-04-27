@@ -7,10 +7,10 @@
     modifiers:
       coefficients:
         Caustic: 0.95
-  - type: IgniteFromGasImmunity
-    parts:
-    - HandLeft
-    - HandRight
+#  - type: IgniteFromGasImmunity # inkymed - kill
+#    parts:
+#    - HandLeft
+#    - HandRight
   - type: Tag
     tags:
     - ClothMade

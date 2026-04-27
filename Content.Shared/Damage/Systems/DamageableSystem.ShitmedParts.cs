@@ -25,13 +25,13 @@ public sealed partial class DamageableSystem
         TargetBodyPart.Head,
         TargetBodyPart.Chest,
         TargetBodyPart.LeftArm,
-        TargetBodyPart.LeftHand,
+        // TargetBodyPart.LeftHand,     // inkymed
         TargetBodyPart.RightArm,
-        TargetBodyPart.RightHand,
+        // TargetBodyPart.RightHand,    // inkymed
         TargetBodyPart.LeftLeg,
-        TargetBodyPart.LeftFoot,
+        // TargetBodyPart.LeftFoot,     // inkymed
         TargetBodyPart.RightLeg,
-        TargetBodyPart.RightFoot
+        // TargetBodyPart.RightFoot     // inkymed
     ];
 
     /// <summary>

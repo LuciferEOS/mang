@@ -118,12 +118,12 @@
       Tail: OrganReptilianTail # Trauma
       ArmLeft: OrganReptilianArmLeft
       ArmRight: OrganReptilianArmRight
-      HandRight: OrganReptilianHandRight
-      HandLeft: OrganReptilianHandLeft
+#      HandRight: OrganReptilianHandRight # inkymed
+#      HandLeft: OrganReptilianHandLeft # inkymed
       LegLeft: OrganReptilianLegLeft
       LegRight: OrganReptilianLegRight
-      FootLeft: OrganReptilianFootLeft
-      FootRight: OrganReptilianFootRight
+#      FootLeft: OrganReptilianFootLeft # inkymed
+#      FootRight: OrganReptilianFootRight # inkymed
       Brain: OrganReptilianBrain
       Eyes: OrganReptilianEyes
       Tongue: OrganReptilianTongue
@@ -240,6 +240,8 @@
   - type: VisualOrgan
     data:
       sprite: Mobs/Species/Reptilian/parts.rsi
+    secondData: # inkymed
+      sprite: Mobs/Species/Reptilian/parts.rsi
   - type: VisualOrganMarkings
     markingData:
       group: Reptilian
@@ -290,6 +292,9 @@
     data:
       sprite: _White/Mobs/Species/Reptilian/parts.rsi
       state: l_leg_digi
+    secondData: # inkymed
+      sprite: _White/Mobs/Species/Reptilian/parts.rsi
+      state: l_foot_digi # FUCKING KILLL YOURSELF WHAT THE FUCK IS THISSSS HOLY FUCKING SHIT MY HATE FOR THIS THING IS INCOMPREHENSIBLE BY REGULAR BEINGS OF FLESH AND BONES
   # </Trauma>
 
 - type: entity
@@ -304,6 +309,9 @@
     data:
       sprite: _White/Mobs/Species/Reptilian/parts.rsi
       state: r_leg_digi
+    secondData: # inkymed
+      sprite: _White/Mobs/Species/Reptilian/parts.rsi
+      state: r_foot_digi
   # </Trauma>
 
 - type: entity
