@@ -433,6 +433,10 @@
     entries:
       Burger: Brain
       Taco: Brain
+  # inkymed
+  - type: InkyBrain
+  - type: InkyBrainDamageable # it took me writing them one by another to get that i should probably merge them into one # todo inkymed
+  # /inkymed
 
 - type: entity
   parent: OrganBaseInternal # Shitmed

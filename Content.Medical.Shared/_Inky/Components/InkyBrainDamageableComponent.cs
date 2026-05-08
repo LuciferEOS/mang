@@ -14,14 +14,16 @@ public sealed partial class InkyBrainDamageableComponent : Component
 
     [DataField]
     [AutoNetworkedField]
-    public List<ProtoId<DamageContainerPrototype>> DamageContainers = new()
+    public List<ProtoId<DamageContainerPrototype>> DamageContainers = new() // todo inkymed obsolete?
     {
         "Brain"
     };
 
     [AutoNetworkedField, ViewVariables]
-    public float TotalDamage { get; set; } // larp yes
-    // TODO INKYMED /\ ISNT YET IMPLEMENTED
+    public float BrainHealth = 100f;
+
+    [ViewVariables, AutoNetworkedField]
+    public float TotalDamage { get; set; } // todo inkymed isnt used
 
     /// <summary>
     /// Current oxygen level of the brain.
@@ -29,5 +31,10 @@ public sealed partial class InkyBrainDamageableComponent : Component
     /// </summary>
     [AutoNetworkedField, ViewVariables]
     public float OxygenLevel = 100f;
-    // TODO INKYMED /\ ISNT YET IMPLEMENTED
+
+    /// <summary>
+    /// Ammount of oxygen being consumed by the brain every 2 seconds
+    /// </summary>
+    [DataField]
+    public float ConsumeRate = 4f;
 }

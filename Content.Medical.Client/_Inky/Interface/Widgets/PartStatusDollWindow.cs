@@ -230,7 +230,7 @@ public sealed class PartStatusDollWindow : Control
         WoundableSeverity.Severe => Color.FromHex("#d15e5e"),
         WoundableSeverity.Critical => Color.FromHex("#b81414"),
         WoundableSeverity.Mangled => Color.FromHex("#4a0a0a"),
-        WoundableSeverity.Severed => Color.FromHex("#0a0a0a"),
+        WoundableSeverity.Severed => Color.FromHex("#0a0a0a00"),
         _ => Color.White,
     };
 }

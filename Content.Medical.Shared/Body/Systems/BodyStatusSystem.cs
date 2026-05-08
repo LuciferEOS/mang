@@ -6,7 +6,7 @@ using Content.Shared.Mobs;
 
 namespace Content.Medical.Shared.Body;
 
-public sealed class BodyStatusSystem : EntitySystem
+public sealed partial class BodyStatusSystem : EntitySystem // inkymed - made partial
 {
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly WoundSystem _wound = default!;
@@ -19,11 +19,19 @@ public sealed class BodyStatusSystem : EntitySystem
         SubscribeLocalEvent<BodyStatusComponent, MobStateChangedEvent>(OnMobStateChange);
         SubscribeLocalEvent<BodyStatusComponent, OrganInsertedIntoEvent>(OnOrganInserted);
         SubscribeLocalEvent<BodyStatusComponent, OrganRemovedFromEvent>(OnOrganRemoved);
+
+        // inkymed
+        InitializeInky();
+        // /inkymed
     }
 
     private void OnMapInit(Entity<BodyStatusComponent> ent, ref MapInitEvent args)
     {
         UpdateStatus(ent.AsNullable());
+
+        // inkymed
+        InitializeLimbShit(ent.AsNullable());
+        // /inkymed
     }
 
     private void OnMobStateChange(Entity<BodyStatusComponent> ent, ref MobStateChangedEvent args)

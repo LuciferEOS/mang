@@ -16,12 +16,18 @@ public sealed partial class InkyBrainComponent : Component
     public HashSet<BrainState> AllowedStates = new()
     {
         BrainState.Alive,
-        BrainState.Unconscious,
+        BrainState.Critical,
         BrainState.Dead
     };
 
     [AutoNetworkedField, ViewVariables]
     public float Consciousness = 100f;
+
+    /// <summary>
+    /// Below what number should you go into BrainState.Critical
+    /// </summary>
+    [ViewVariables]
+    public float ConsciousnessUnconciousnessThreshold = 40f;
 
     [DataField]
     public float ConsciousnessHealRate = 1f;

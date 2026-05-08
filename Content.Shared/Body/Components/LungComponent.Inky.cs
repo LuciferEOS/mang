@@ -42,6 +42,11 @@ public sealed partial class LungComponent
         { "Asphyxia", 0.5f },
         { "ResArrest", 0.0f }
     };
-    // TODO INKYMED /\ THIS SHIT ISNT IMPLEMENTED FULLY YET SEE: INKYBRAINCOMP
+
+    /// <summary>
+    /// How much oxygen is restored to the brain per inhaling
+    /// </summary>
+    [DataField]
+    public float OxygenRestoreRate = 15f;
 
 }

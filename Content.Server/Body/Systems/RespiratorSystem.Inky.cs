@@ -2,6 +2,7 @@ using Content.Medical.Common._Inky.Events;
 using Content.Medical.Shared.Body;
 using Content.Server.Body.Components;
 using Content.Shared.Body.Components;
+using Content.Trauma.Common.Body;
 
 namespace Content.Server.Body.Systems;
 
@@ -28,7 +29,6 @@ public sealed partial class RespiratorSystem
         allDamage.DamageDict.TryGetValue("Asphyxiation", out var currentAsphyxDamage); // not rewkirking the whole dmg sys just for inkymed btw
         var totalDmg = currentAsphyxDamage;
 
-        bodyStat.LimbAlerts.TryAdd("Torso", new HashSet<string>());
         var alerts = bodyStat.LimbAlerts["Torso"];
 
         alerts.Remove(lungComp.HypoxiaAlertId);

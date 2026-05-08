@@ -209,7 +209,17 @@ public sealed partial class RespiratorSystem : EntitySystem // inkymed - made pa
         RaiseLocalEvent(entity, ref inhaleEv);
 
         if (inhaleEv.Handled && inhaleEv.Succeeded)
+        {
+            // inkymed
+            var volume = gas.TotalMoles > 0 // holy fucking slop
+                ? Math.Min(gas.Volume / entity.Comp.Lungs.BreathVolume, 1f)
+                : 0f;
+            var oxyModif = GetOxygenSupplyModifier(entity);
+            var evShit = new BrainOxygenRestoreEvent(volume, oxyModif);
+            RaiseLocalEvent(entity, ref evShit);
+            // /inkymed
             return;
+        }
 
         // If nothing could inhale the gas give it back.
         _atmosSys.Merge(ev.Gas, gas);
