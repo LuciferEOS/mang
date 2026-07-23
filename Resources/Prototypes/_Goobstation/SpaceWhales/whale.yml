@@ -18,7 +18,6 @@
         - BulletImpassable
         - LowImpassable
         - MidImpassable
-        - WallLayer # inky edit
   - type: DamageOnCollide
     inverted: true # fuck you wrath components!
     damage:
@@ -44,16 +43,10 @@
     whitelist:
       tags:
       - SpaceWhaleSegment
-  # inky
-  - type: FTLSmashImmune
-  - type: SupermatterImmune
-  - type: EventHorizonIgnore
-  - type: GravityAffected
-  # /inky
 
 - type: entity
+  parent: [MobSpaceLeviathanSegmentBase, SimpleSpaceMobBase, FlyingMobBase, MobCombat, MobNightVision]
   id: SpaceLeviathan
-  parent: [MobSpaceLeviathanSegmentBase] # inky edit
   name: space whale
   description: When the space becomes too quiet, there is no hope, there is no escape, but there is this.
   components:
@@ -62,7 +55,7 @@
     spacing: 1
     prototype: SpaceWhaleSegment
   - type: MovementSpeedModifier
-    baseSprintSpeed: 40
+    baseSprintSpeed: 70
     baseWalkSpeed: 11
     baseWeightlessFriction: 1 # inky edit
     weightlessFriction: 1 # inky edit
@@ -99,10 +92,6 @@
     interactFailureString: petting-failure-leviathan
     interactFailureSound:
       path: /Audio/Effects/bite.ogg
-  - type: NightVision
-    color: "#808080"
-    activateSound: null
-    deactivateSound: null
   - type: AmbientSound
     enabled: true
     volume: 1
@@ -160,6 +149,12 @@
         Slash: 33 # inky edit
         Structural: 800 #lol
   - type: NoRotateOnMove
+  - type: PortalTransitEffects # its like an apple getting cored
+    effects:
+    - !type:HealthChange
+      damage:
+        types:
+          Slash: 2000
   # inky
   - type: LimitedInstances
     key: SpaceLeviathan
@@ -250,7 +245,7 @@
   suffix: despawns
   components:
   - type: TimedDespawn
-    lifetime: 190 # to further prevent shitters from abusing it if something came up
+    lifetime: 110 # to further prevent shitters from abusing it if something came up
 
 - type: entity
   id: SpaceLeviathanMobCaller
@@ -307,7 +302,6 @@
     price: 4000
   - type: Appearance
   - type: Stack
-    count: 5
     stackType: Leviathan
     baseLayer: base
     layerStates:
