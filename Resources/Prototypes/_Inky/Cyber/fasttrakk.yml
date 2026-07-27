@@ -1,0 +1,154 @@
+- type: entity
+  id: FastTrakkBase
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: Tag
+      tags:
+        - HideContextMenu
+    - type: PointLight
+      radius: 6
+      energy: 3
+      color: green
+
+- type: entity
+  id: FastTrakkEffect
+  parent: FastTrakkBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: PointLight
+    radius: 3
+    energy: 1
+  - type: TimedDespawn
+    lifetime: 0.45
+  - type: Sprite
+    sprite: _Inky/Cyber/fasttrakk-teleport.rsi
+    state: teleport
+    netsync: false
+    drawdepth: Effects
+    offset: 0, 1
+  - type: EvaporationSparkle
+  - type: Transform
+    noRot: true
+    anchored: true
+
+- type: entity
+  id: HologramFastTrakk
+  name: fasttrakk hologram
+  parent: FastTrakkBase
+  components:
+    - type: Sprite
+      sprite: _Inky/Cyber/fasttrakk.rsi
+      state: start
+      layers:
+        - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+          state: start
+          shader: unshaded
+    - type: TimedDespawn
+      lifetime: 2.3
+    - type: SpawnOnDespawn
+      prototype: HologramFastTrakkBase
+
+- type: entity
+  id: HologramFastTrakkBase
+  parent: FastTrakkBase
+  name: fasttrakk hologram
+  components:
+    - type: FadingTimedDespawn
+      lifetime: 13
+    - type: Sprite
+      sprite: _Inky/Cyber/fasttrakk.rsi
+      state: loop
+      layers:
+        - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+          state: loop
+          shader: unshaded
+
+- type: entity
+  id: HologramFastTrakkDeparture
+  parent: HologramFastTrakkBase
+  components:
+  - type: FadingTimedDespawn
+    lifetime: 15.3
+  - type: Sprite
+    state: departure
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: departure
+      shader: unshaded
+
+- type: entity
+  id: FastTrakkTeleport
+  name: fasttrakk teleporter pad
+  parent: BaseStructure
+  components:
+    - type: Sprite
+      sprite: _Shitmed/Structures/abductor_alien_pad.rsi
+      state: idle
+    - type: WirelessNetworkConnection
+      range: 200
+    - type: Appearance
+    - type: DeviceLinkSink
+      ports:
+        - Trigger
+    - type: FastTrakkTeleport
+    - type: InteractionOutline
+    - type: Physics
+      bodyType: Static
+      canCollide: false
+    - type: Transform
+      anchored: true
+      noRot: true
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.45,-0.45,0.45,0.00"
+          density: 190
+          mask:
+            - MachineMask
+
+- type: entity
+  parent: BaseComputer
+  id: FastTrakkTeleportConsole
+  name: fasttrakk console
+  description: A computer that is used for deploying people or objects to the station.
+  components:
+  - type: Sprite
+    sprite: _Shitmed/Structures/Machines/abductor_console.rsi
+    layers:
+    - map: ["console"]
+      state: console
+  - type: PointLight
+    enabled: true
+    radius: 1.5
+    energy: 1.6
+    color: green
+  - type: ActivatableUI
+    key: enum.AbductorCameraConsoleUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.AbductorCameraConsoleUIKey.Key:
+        type: AbductorCameraConsoleBui
+  - type: FastTrakkConsole
+  - type: DeviceLinkSource
+    ports:
+      - Trigger
+    range: 200
+
+- type: entity
+  id: AreaBioTekk
+  suffix: area
+  name: BioTekk
+  parent: BaseArea
+  components:
+    - type: DepartmentArea
+      department: CentralCommand # technically
+
+- type: entity
+  id: AreaBioTekkTeleport
+  suffix: area
+  name: BioTekk Teleporter
+  parent: AreaBioTekk

@@ -1,0 +1,14 @@
+- type: entity
+  parent: BaseMentalAction
+  id: ActionFastTrakkDeploy
+  name: Deploy FastTrakk
+  description: Deploy a FastTrakk hologram at the CURRENT camera location and exit the console.
+  components:
+  - type: Action
+    checkCanInteract: false
+    itemIconStyle: BigAction
+    icon:
+      sprite: _Inky/Cyber/fasttrakk.rsi
+      state: appear
+  - type: InstantAction
+    event: !type:FastTrakkStartEvent
