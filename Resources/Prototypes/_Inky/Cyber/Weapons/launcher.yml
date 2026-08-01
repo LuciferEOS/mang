@@ -1,0 +1,94 @@
+- type: entity
+  id: BaseCybernetic
+  abstract: true
+  components:
+  - type: Cybernetics
+
+- type: entity
+  id: BaseCyberneticLimb
+  abstract: true
+  components:
+  - type: Cybernetics
+
+- type: entity
+  id: CyberneticLauncher
+  parent: [BaseItem, BaseCybernetic]
+  suffix: Unremoveable
+  name: cybernetic launcher
+  components:
+  - type: Sprite
+    sprite: _Inky/Cyber/launcher.rsi
+    state: icon
+  - type: Unremoveable
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: [ ]
+  - type: AmmoCounter
+  - type: BallisticAmmoProvider
+    autoCycle: false
+    whitelist:
+      tags:
+      - Grenade
+    capacity: 1
+    proto: GrenadeFrag
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+  - type: Gun
+    fireRate: 1
+    projectileSpeed: 25
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+
+- type: entity
+  parent: BaseAction
+  id: ActionCyberneticLauncher
+  name: Deploy launcher
+  description: Deploy the integrated grenade launcher into your active hand.
+  components:
+  - type: Action
+    useDelay: 2
+    raiseOnAction: true
+    icon:
+      sprite: _Inky/Cyber/launcher.rsi
+      state: icon
+  - type: InstantAction
+    event: !type:OnRetractableItemActionEvent
+  - type: RetractableItemAction
+    spawnedPrototype: CyberneticLauncher
+    summonSounds:
+      collection: gib # Placeholder
+    retractSounds:
+      collection: gib # Placeholder
+
+- type: entity
+  id: OrganCyberneticArmLeftLauncher
+  parent: [ OrganCyberneticExternal, OrganBaseArmLeft, BaseCyberneticLimb]
+  name: left launcher arm
+  components:
+  - type: OrganActions
+    actions:
+    - ActionCyberneticLauncher
+
+- type: entity
+  id: OrganCyberneticArmRightLauncher
+  parent: [ OrganCyberneticExternal, OrganBaseArmRight, BaseCyberneticLimb]
+  name: right launcher arm
+  components:
+  - type: OrganActions
+    actions:
+    - ActionCyberneticLauncher
+
+- type: entity
+  parent: BaseAutosurgeon
+  id: AutosurgeonLeftLauncher
+  name: autosurgeon (left launcher)
+  components:
+  - type: AutoSurgeon
+    doAfterTime: 1
+    entries:
+    - targetCategory: Torso
+      newOrganProto: OrganCyberneticArmLeftLauncher
