@@ -7,6 +7,7 @@ using Content.Shared.Body.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
+using Content.Shared.Power.Components;
 using Content.Shared.Rejuvenate;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
@@ -37,14 +38,10 @@ public sealed partial class HeartRateSystem : EntitySystem // todo godmode bypas
     }
 
     private void OnComponentInit(EntityUid uid, HeartComponent heart, ComponentInit args)
-    {
-        SetRate(uid, heart, heart.NormalRate, true);
-    }
+        => SetRate(uid, heart, heart.NormalRate, true);
 
     private void OnRejuvenate(EntityUid uid, HeartComponent heart, RejuvenateEvent args)
-    {
-        SetRate(uid, heart, heart.NormalRate, true);
-    }
+        => SetRate(uid, heart, heart.NormalRate, true);
 
     public override void Update(float frameTime)
     {
@@ -131,6 +128,9 @@ public sealed partial class HeartRateSystem : EntitySystem // todo godmode bypas
         float rate,
         bool canRestart)
     {
+        if (HasComp<BatteryComponent>(uid)) // clanker kys
+            return;
+
         var oldState = GetState(heart);
         if (oldState == HeartState.Stopped && !canRestart)
             return;
