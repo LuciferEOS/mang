@@ -85,7 +85,7 @@ public sealed partial class FlashbangSystem : EntitySystem
 
         // inky edit - concussion
         ev.ConcussionDamage = float.Lerp(comp.ConcussionDamage, 0f, ratio);
-        RaiseLocalEvent(args.Target, ev);
+        RaiseLocalEvent(args.Target, ref ev);
         // inky edit - concussion
     }
 }
