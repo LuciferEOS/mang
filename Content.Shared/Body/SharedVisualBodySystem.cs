@@ -21,8 +21,8 @@ public abstract partial class SharedVisualBodySystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<VisualOrganComponent, BodyRelayedEvent<OrganCopyAppearanceEvent>>(OnVisualOrganCopyAppearance);
-        SubscribeLocalEvent<VisualOrganMarkingsComponent, BodyRelayedEvent<OrganCopyAppearanceEvent>>(OnMarkingsOrganCopyAppearance);
-        SubscribeLocalEvent<VisualOrganComponent, BodyRelayedEvent<ApplyOrganProfileDataEvent>>(OnVisualOrganApplyProfile);
+        // SubscribeLocalEvent<VisualOrganMarkingsComponent, BodyRelayedEvent<OrganCopyAppearanceEvent>>(OnMarkingsOrganCopyAppearance);
+        // SubscribeLocalEvent<VisualOrganComponent, BodyRelayedEvent<ApplyOrganProfileDataEvent>>(OnVisualOrganApplyProfile);
         SubscribeLocalEvent<VisualOrganMarkingsComponent, BodyRelayedEvent<ApplyOrganMarkingsEvent>>(OnMarkingsOrganApplyMarkings);
 
         InitializeModifiers();
@@ -103,9 +103,7 @@ public abstract partial class SharedVisualBodySystem : EntitySystem
 
         if (other.Layer.Equals(ent.Comp.Layer)) // inkymed - removed !
             SetOrganAppearance(ent, other.Data, ent.Comp.Displacement);
-            }
-            // /inkymed
-        }
+        // /inkymed
     }
 
     private void OnMarkingsOrganApplyMarkings(Entity<VisualOrganMarkingsComponent> ent, ref BodyRelayedEvent<ApplyOrganMarkingsEvent> args)
