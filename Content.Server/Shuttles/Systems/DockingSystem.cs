@@ -88,6 +88,7 @@ public sealed partial class DockingSystem : SharedDockingSystem
         }
     }
 
+    /* eeenkee
     [SubscribeLocalEvent]
     private void OnAnchorChange(Entity<DockingComponent> entity, ref AnchorStateChangedEvent args)
     {
@@ -96,9 +97,10 @@ public sealed partial class DockingSystem : SharedDockingSystem
             Undock(entity);
         }
     }
+    */ // eeenkee
 
     [SubscribeLocalEvent]
-    private void OnDockingReAnchor(Entity<DockingComponent> entity, ref ReAnchorEvent args)
+    private void OnDockingReAnchor(Entity<DockingComponent> entity, ref AnchorStateChangedEvent args) // inky
     {
         var uid = entity.Owner;
         var component = entity.Comp;

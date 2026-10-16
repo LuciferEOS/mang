@@ -77,13 +77,19 @@ public sealed partial class GenericFieldGeneratorSystem : EntitySystem
     {
         if (!args.Anchored && !args.Detaching)
             RemoveConnections(ent);
+
+        // inky
+        GridCheck(ent);
+        // /inky
     }
 
+    /* inky
     [SubscribeLocalEvent]
     private void OnReAnchor(Entity<GenericFieldGeneratorComponent> ent, ref ReAnchorEvent args)
     {
         GridCheck(ent);
     }
+    */
 
     [SubscribeLocalEvent]
     private void OnComponentRemoved(Entity<GenericFieldGeneratorComponent> ent, ref ComponentRemove args)

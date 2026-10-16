@@ -78,7 +78,7 @@ public sealed partial class PylonSystem : EntitySystem
         {
             _audio.PlayPredicted(pylon.Comp.BurnHandSound, pylon, user);
             _popup.PopupEntity(Loc.GetString("powered-light-component-burn-hand"), pylon, user);
-            _damage.ChangeDamage(user, pylon.Comp.DamageOnInteract, increaseOnly: true, targetPart: TargetBodyPart.Hands, canMiss: false);
+            _damage.ChangeDamage(user, pylon.Comp.DamageOnInteract, increaseOnly: true, targetPart: TargetBodyPart.Arms, canMiss: false); // inkymed
             return;
         }
 
