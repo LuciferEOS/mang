@@ -1,5 +1,6 @@
 using Content.Inky.Common.CCVar;
 using Content.Server.GameTicking;
+using Content.Shared.GameTicking;
 using Content.Shared.Humanoid;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
