@@ -52,6 +52,12 @@
     <Project Path="Content.Medical.Server/Content.Medical.Server.csproj" />
     <Project Path="Content.Medical.Shared/Content.Medical.Shared.csproj" />
   </Folder>
+  <Folder Name="/Content.Game/Factory/">
+    <Project Path="Content.Factory.Server/Content.Factory.Server.csproj" />
+    <Project Path="Content.Factory.Shared/Content.Factory.Shared.csproj" />
+    <Project Path="Content.Factory.Client/Content.Factory.Client.csproj" />
+    <Project Path="Content.Factory.Common/Content.Factory.Common.csproj" />
+  </Folder>
   <!-- /Inky -->
   <Folder Name="/MSBuild/">
     <File Path="MSBuild/Content.props" />
