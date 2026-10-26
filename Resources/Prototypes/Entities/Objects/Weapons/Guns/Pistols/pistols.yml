@@ -80,12 +80,10 @@
     maxAngle: 25
     angleIncrease: 2
     angleDecay: 20
+    fireRate: 6 # inky
     selectedMode: FullAuto # Override of BaseWeaponPistol to default to full-auto
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/viper.rsi
-  - type: Gun
-    fireRate: 6 # inky
-    selectedMode: FullAuto # Override of BaseWeaponPistol to default to full-auto
   - type: ItemSlots
     slots:
       gun_magazine:
