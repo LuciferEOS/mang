@@ -63,7 +63,7 @@
   - type: Projectile
     damage:
       types:
-        Ballistic: 10 # Trauma - was Piercing
+        Piercing: 10 # Trauma - was Piercing
 
 - type: entity
   id: GrapplingHook

@@ -3036,7 +3036,7 @@
     - Alive
     damage:
       types:
-        Ballistic: -0.03 # Trauma
+#        Ballistic: -0.03 # Trauma
         Poison: -0.07
         Blunt: -0.03
         Slash: -0.03

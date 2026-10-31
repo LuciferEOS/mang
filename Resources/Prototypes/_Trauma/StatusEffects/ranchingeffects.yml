@@ -40,7 +40,7 @@
           Blunt: -5
           Piercing: -5
           Slash: -5
-          Ballistic: -5
+#          Ballistic: -5
           Heat: -5
           Cold: -5
           Caustic: -5
@@ -151,7 +151,7 @@
           Blunt: -5
           Slash: -5
           Piercing: -5
-          Ballistic: -5
+#          Ballistic: -5
           Heat: -5
           Cold: -5
           Caustic: -5

@@ -8,7 +8,7 @@
     # <Trauma>
     damage:
       types:
-        Ballistic: 75 # was Ballistic
+        Piercing: 75 # was Ballistic
         #Structural: 100
       armorPenetration: 0.5
     penetrationThreshold: 100 # was 601

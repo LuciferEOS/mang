@@ -120,7 +120,7 @@
     Blunt: 0.5
     Slash: 0.25
     Piercing: 0.5
-    Ballistic: 0.75
+#    Ballistic: 0.75
     Heat: 0.5
     Radiation: 0
   flatReductions:
@@ -134,7 +134,7 @@
     Blunt: 0.8
     Slash: 0.8
     Piercing: 0.8
-    Ballistic: 0.8
+#    Ballistic: 0.8
 
 # Blob
 
@@ -144,7 +144,7 @@
     Blunt: 0.5
     Slash: 0.5
     Piercing: 0.5
-    Ballistic: 0.5
+#    Ballistic: 0.5
 
 - type: damageModifierSet
   id: ReplicatingFoamBlob
@@ -152,7 +152,7 @@
     Blunt: 2
     Slash: 2
     Piercing: 2
-    Ballistic: 2
+#    Ballistic: 2
 
 # Blood Cult
 

@@ -175,13 +175,14 @@
   - type: Implanter
     implant: KravMagaImplant
 
-- type: entity
-  parent: BaseImplantOnlyImplanterSyndi
-  id: ClumsyImplanter
-  suffix: Clumsy
-  components:
-  - type: Implanter
-    implant: ClumsyImplant
+# inky - it doesnt exist anymo'
+#- type: entity
+#  parent: BaseImplantOnlyImplanterSyndi
+#  id: ClumsyImplanter
+#  suffix: Clumsy
+#  components:
+#  - type: Implanter
+#    implant: ClumsyImplant
 
 - type: entity
   id: BinaryImplanter
