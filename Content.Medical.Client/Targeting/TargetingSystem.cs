@@ -24,6 +24,7 @@ public sealed partial class TargetingSystem : SharedTargetingSystem
     public override void Initialize()
     {
         base.Initialize();
+        InitialiseInky(); // inkymed
 
         SubscribeLocalEvent<TargetingComponent, LocalPlayerAttachedEvent>(OnTargetingAttached);
         SubscribeLocalEvent<TargetingComponent, LocalPlayerDetachedEvent>(OnTargetingDetached);

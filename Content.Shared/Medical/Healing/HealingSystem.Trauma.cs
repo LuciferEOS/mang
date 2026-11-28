@@ -28,13 +28,13 @@ public sealed partial class HealingSystem
         "Head",
         "Torso",
         "ArmLeft",
-        "HandLeft",
+        // "HandLeft",
         "ArmRight",
-        "HandRight",
+        // "HandRight",
         "LegLeft",
-        "FootLeft",
+        // "FootLeft",
         "LegRight",
-        "FootRight",
+        // "FootRight",
         "Tail",
         "Wings"
     };

@@ -30,6 +30,8 @@ using System.Linq;
 
 namespace Content.Medical.Shared.Surgery;
 
+// MOCHO WHAT IS THIS KILL YOURSELF IMMEDIATELY
+
 public sealed partial class SurgerySystem
 {
     [Dependency] private BodyPartSystem _part = default!;

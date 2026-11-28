@@ -1,5 +1,11 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+// inkymed
+using Content.Medical.Shared.Body;
+using Content.Medical.Shared.Inkymed.PartStatus;
+using Content.Shared.Humanoid;
+using Robust.Shared.Player;
+// /inkymed
 using Content.Medical.Common.CCVar;
 using Content.Medical.Shared.Surgery.Tools;
 using Content.Shared.Verbs;
@@ -22,14 +28,25 @@ public sealed partial class SurgerySystem
 
     private void AttemptStartSurgery(Entity<SurgeryToolComponent> ent, EntityUid user, EntityUid target)
     {
-        if (!IsLyingDown(target, user))
-            return;
+        // inky
+        // if (!IsLyingDown(target, user))
+        //     return;
+        // /inky
 
         if (_noSelfOperate && user == target)
         {
             _popup.PopupEntity(Loc.GetString("surgery-error-self-surgery"), user, user);
             return;
         }
+
+        // inkymed
+        if (HasComp<HumanoidProfileComponent>(target) && TryComp<BodyStatusComponent>(target, out var status))
+        {
+            if (_net.IsServer && TryComp<ActorComponent>(user, out var actor))
+                RaiseNetworkEvent(new OpenPartStatusEvent(GetNetEntity(target), new(status.BodyStatus)), actor.PlayerSession);
+            return;
+        }
+        // /inkymed
 
         _ui.OpenUi(target, SurgeryUIKey.Key, user);
     }

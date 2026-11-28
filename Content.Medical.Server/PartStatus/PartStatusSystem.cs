@@ -7,6 +7,7 @@ using Content.Medical.Common.Body;
 using Content.Medical.Common.Traumas;
 using Content.Medical.Common.Wounds;
 using Content.Medical.Shared.Body;
+using Content.Medical.Shared.Inkymed.PartStatus; // inky
 using Content.Medical.Shared.PartStatus;
 using Content.Medical.Shared.Traumas;
 using Content.Medical.Shared.Wounds;
@@ -87,6 +88,15 @@ public sealed partial class PartStatusSystem : EntitySystem
         {
             Act = () =>
             {
+                // inkymed
+                if (TryComp<BodyStatusComponent>(uid, out var bodyStatus)
+                    && TryComp<ActorComponent>(args.User, out var actor))
+                {
+                    RaiseNetworkEvent(new OpenPartStatusEvent(GetNetEntity(uid), new(bodyStatus.BodyStatus)), actor.PlayerSession);
+                    return;
+                }
+                // /inkymed
+
                 var markup = CreateMarkup(uid, args.User, component, damage);
                 var userEv = new UserExaminedEvent(markup, uid);
                 RaiseLocalEvent(args.User, ref userEv);

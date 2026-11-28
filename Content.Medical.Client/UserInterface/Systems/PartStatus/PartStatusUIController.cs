@@ -20,6 +20,8 @@ public sealed partial class PartStatusUIController : UIController, IOnStateEnter
     [Dependency] private IPlayerManager _player = default!;
     private SpriteSystem _sprite = default!;
 
+    public event Action? OnStatusClicked; // inky
+
     private BodyStatusComponent? _comp;
     private PartStatusControl? PartStatusControl;
 
@@ -60,7 +62,7 @@ public sealed partial class PartStatusUIController : UIController, IOnStateEnter
     {
         PartStatusControl?.Orphan();
         var control = new PartStatusControl(this);
-        control.OnPartStatusClicked += GetPartStatusMessage;
+        control.OnPartStatusClicked += () => OnStatusClicked?.Invoke(); // inkly
         PartStatusControl = control;
         alerts.PartStatus.AddChild(control);
         UpdateVisibility();
